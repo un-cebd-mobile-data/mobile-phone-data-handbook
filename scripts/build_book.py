@@ -12,15 +12,15 @@ FOOTNOTE_CITES = {
     "3": "[@gsma2016mobileprivacy]",
     "4": "[@uncebd_information_society]",
     "5": "[@itu_sdg_case_study]",
-    "6": "[@uncebd_dynamic_population]",
+    "6": "[@uncebd_dynamic_population; @deville2014dynamic_population; @ricciato2020present_population]",
     "7": "[@uncebd_migration_statistics]",
     "8": "[@uncebd_tourism_statistics]",
-    "9": "[@caceres2007origin_destination]",
-    "10": "[@blumenstock2015poverty]",
+    "9": "[@caceres2007origin_destination; @alexander2015od]",
+    "10": "[@blumenstock2015poverty; @steele2017poverty]",
     "11": "[@aiken2022machine_learning]",
     "12": "[@worldbank2021novissi]",
     "13": "[@gpsdd2025roadmap]",
-    "14": "[@flowminder2023bias]",
+    "14": "[@flowminder2023bias; @wesolowski2013biases; @ricciato2020present_population]",
     "16": "[@wesolowski2013biases; @cabrera_rowe2025bias]",
     "17": "[@flowminder2023standards]",
     "18": "[@ess2019qaf]",
@@ -86,13 +86,22 @@ Publisher/imprint wording, licence, and DOI are TBC. The public website is confi
 """
 
 
+AUTHORS_PREFACE = """
+
+## Authors {.unnumbered}
+
+Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood, Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
+
+"""
+
+
 RECOMMENDED_CITATION = """
 
 ## Recommended citation {.unnumbered}
 
 ::: {.callout-note icon="false"}
 
-Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
 """
@@ -123,6 +132,76 @@ BIBTEX = r"""
   year = {2015},
   doi = {10.1140/epjds/s13688-015-0046-0},
   url = {https://link.springer.com/article/10.1140/epjds/s13688-015-0046-0}
+}
+
+@article{gonzalez2008human_mobility,
+  title = {Understanding individual human mobility patterns},
+  author = {Gonzalez, Marta C. and Hidalgo, Cesar A. and Barabasi, Albert-Laszlo},
+  journal = {Nature},
+  volume = {453},
+  number = {7196},
+  pages = {779--782},
+  year = {2008},
+  doi = {10.1038/nature06958},
+  url = {https://doi.org/10.1038/nature06958}
+}
+
+@article{song2010predictability,
+  title = {Limits of predictability in human mobility},
+  author = {Song, Chaoming and Qu, Zehui and Blumm, Nicholas and Barabasi, Albert-Laszlo},
+  journal = {Science},
+  volume = {327},
+  number = {5968},
+  pages = {1018--1021},
+  year = {2010},
+  doi = {10.1126/science.1177170},
+  url = {https://doi.org/10.1126/science.1177170}
+}
+
+@article{deville2014dynamic_population,
+  title = {Dynamic population mapping using mobile phone data},
+  author = {Deville, Pierre and Linard, Catherine and Martin, Samuel and Gilbert, Marius and Stevens, Forrest R. and Gaughan, Andrea E. and Blondel, Vincent D. and Tatem, Andrew J.},
+  journal = {Proceedings of the National Academy of Sciences},
+  volume = {111},
+  number = {45},
+  pages = {15888--15893},
+  year = {2014},
+  doi = {10.1073/pnas.1408439111},
+  url = {https://doi.org/10.1073/pnas.1408439111}
+}
+
+@article{lu2012haiti_displacement,
+  title = {Predictability of population displacement after the 2010 Haiti earthquake},
+  author = {Lu, Xin and Bengtsson, Linus and Holme, Petter},
+  journal = {Proceedings of the National Academy of Sciences},
+  volume = {109},
+  number = {29},
+  pages = {11576--11581},
+  year = {2012},
+  doi = {10.1073/pnas.1203882109},
+  url = {https://doi.org/10.1073/pnas.1203882109}
+}
+
+@article{demontjoye2013unique,
+  title = {Unique in the Crowd: The privacy bounds of human mobility},
+  author = {de Montjoye, Yves-Alexandre and Hidalgo, Cesar A. and Verleysen, Michel and Blondel, Vincent D.},
+  journal = {Scientific Reports},
+  volume = {3},
+  pages = {1376},
+  year = {2013},
+  doi = {10.1038/srep01376},
+  url = {https://doi.org/10.1038/srep01376}
+}
+
+@article{demontjoye2018privacy,
+  title = {On the privacy-conscientious use of mobile phone data},
+  author = {de Montjoye, Yves-Alexandre and Gambs, Sebastien and Blondel, Vincent D. and others},
+  journal = {Scientific Data},
+  volume = {5},
+  pages = {180286},
+  year = {2018},
+  doi = {10.1038/sdata.2018.286},
+  url = {https://doi.org/10.1038/sdata.2018.286}
 }
 
 @misc{gsma2016mobileprivacy,
@@ -198,6 +277,17 @@ BIBTEX = r"""
   url = {https://digital-library.theiet.org/doi/10.1049/iet-its%3A20060020}
 }
 
+@article{alexander2015od,
+  title = {Origin-destination trips by purpose and time of day inferred from mobile phone data},
+  author = {Alexander, Lauren and Jiang, Shan and Murga, Mikel and Gonzalez, Marta C.},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {58},
+  pages = {240--250},
+  year = {2015},
+  doi = {10.1016/j.trc.2015.02.018},
+  url = {https://doi.org/10.1016/j.trc.2015.02.018}
+}
+
 @article{blumenstock2015poverty,
   title = {Predicting poverty and wealth from mobile phone metadata},
   author = {Blumenstock, Joshua and Cadamuro, Gabriel and On, Robert},
@@ -208,6 +298,18 @@ BIBTEX = r"""
   year = {2015},
   doi = {10.1126/science.aac4420},
   url = {https://www.science.org/doi/10.1126/science.aac4420}
+}
+
+@article{steele2017poverty,
+  title = {Mapping poverty using mobile phone and satellite data},
+  author = {Steele, Jessica E. and Sundsoy, Pal Roe and Pezzulo, Carla and Alegana, Victor A. and Bird, Tomas J. and Blumenstock, Joshua and Bjelland, Johannes and Engo-Monsen, Kenth and de Montjoye, Yves-Alexandre and Iqbal, Asif M. and Hadiuzzaman, Khandakar N. and Lu, Xin and Wetter, Erik and Tatem, Andrew J. and Bengtsson, Linus},
+  journal = {Journal of the Royal Society Interface},
+  volume = {14},
+  number = {127},
+  pages = {20160690},
+  year = {2017},
+  doi = {10.1098/rsif.2016.0690},
+  url = {https://doi.org/10.1098/rsif.2016.0690}
 }
 
 @article{aiken2022machine_learning,
@@ -267,6 +369,18 @@ BIBTEX = r"""
   doi = {10.1098/rsif.2012.0986}
 }
 
+@article{wesolowski2012malaria,
+  title = {Quantifying the impact of human mobility on malaria},
+  author = {Wesolowski, Amy and Eagle, Nathan and Tatem, Andrew J. and Smith, David L. and Noor, Abdisalan M. and Snow, Robert W. and Buckee, Caroline O.},
+  journal = {Science},
+  volume = {338},
+  number = {6104},
+  pages = {267--270},
+  year = {2012},
+  doi = {10.1126/science.1223467},
+  url = {https://doi.org/10.1126/science.1223467}
+}
+
 @article{bengtsson2015cholera,
   title = {Using mobile phone data to predict the spatial spread of cholera},
   author = {Bengtsson, Linus and Gaudart, Jean and Lu, Xin and Moore, Sandra and Wetter, Erik and Sallah, Kankoe and Rebaudet, Stanislas and Piarroux, Renaud},
@@ -276,6 +390,40 @@ BIBTEX = r"""
   year = {2015},
   doi = {10.1038/srep08923},
   url = {https://www.nature.com/articles/srep08923}
+}
+
+@article{tizzoni2014epidemics,
+  title = {On the Use of Human Mobility Proxies for Modeling Epidemics},
+  author = {Tizzoni, Michele and Bajardi, Paolo and Decuyper, Adeline and Kon Kam King, Guillaume and Schneider, Christian M. and Blondel, Vincent D. and Smoreda, Zbigniew and Gonzalez, Marta C. and Colizza, Vittoria},
+  journal = {PLOS Computational Biology},
+  volume = {10},
+  number = {7},
+  pages = {e1003716},
+  year = {2014},
+  doi = {10.1371/journal.pcbi.1003716},
+  url = {https://doi.org/10.1371/journal.pcbi.1003716}
+}
+
+@article{ricciato2020present_population,
+  title = {Towards a methodological framework for estimating present population density from mobile network operator data},
+  author = {Ricciato, Fabio and Lanzieri, Giampaolo and Wirthmann, Albrecht and Seynaeve, Gerdy},
+  journal = {Pervasive and Mobile Computing},
+  volume = {68},
+  pages = {101263},
+  year = {2020},
+  doi = {10.1016/j.pmcj.2020.101263},
+  url = {https://doi.org/10.1016/j.pmcj.2020.101263}
+}
+
+@article{salgado2021end_to_end,
+  title = {An end-to-end statistical process with mobile network data for official statistics},
+  author = {Salgado, David and Sanguiao, Luis and Oancea, Bogdan and Barragan, Sandra and Necula, Marian},
+  journal = {EPJ Data Science},
+  volume = {10},
+  number = {20},
+  year = {2021},
+  doi = {10.1140/epjds/s13688-021-00275-w},
+  url = {https://doi.org/10.1140/epjds/s13688-021-00275-w}
 }
 
 @article{li2021ghana_cdr,
@@ -429,6 +577,25 @@ book:
   author:
     - "Cathy Riley"
     - "Francisco Rowe"
+    - "Esperanza Magpantay"
+    - "Robert Eyre"
+    - "Sophie Delaporte"
+    - "James Harrison"
+    - "Roland Hosner"
+    - "Veronique Lefebvre"
+    - "Thomas Smallwood"
+    - "Luisa Chavez"
+    - "Pablo Ruiz"
+    - "Maria Henar Sales"
+    - "Miguel Picornell"
+    - "Egle Rüütli"
+    - "Kaisa Vent"
+    - "Siim Esko"
+    - "Erki Saluveer"
+    - "Ayumi Arai"
+    - "Paul Blanchard"
+    - "Sveta Milusheva"
+    - "Trevor Monroe"
   date: "2026-05-26"
   publisher: "TBC"
   edition: "Version 1.4"
@@ -475,6 +642,7 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
+    number-depth: 3
     code-copy: true
     include-in-header:
       text: |
@@ -500,12 +668,14 @@ format:
     pdf-engine: xelatex
     toc: true
     number-sections: true
+    number-depth: 3
     colorlinks: true
     include-in-header: style/pdf-preamble.tex
     include-before-body: style/pdf-before-body.tex
   epub:
     toc: true
     number-sections: true
+    number-depth: 3
     cover-image: assets/manual-cover.png
 
 editor: visual
@@ -608,6 +778,14 @@ figcaption {
   color: #0077a8;
 }
 
+#quarto-sidebar .menu-text > .chapter-number {
+  display: none;
+}
+
+#quarto-sidebar .menu-text > .chapter-number + .chapter-title {
+  margin-left: -0.28em;
+}
+
 .quarto-title .chapter-number {
   display: none;
 }
@@ -691,12 +869,20 @@ figcaption {
 .header-section-number {
   color: #6ecff6;
 }
+
+#quarto-sidebar .menu-text > .chapter-number {
+  display: none;
+}
+
+#quarto-sidebar .menu-text > .chapter-number + .chapter-title {
+  margin-left: -0.28em;
+}
 """
 
 
 README = """# Design and Implementation of Mobile Phone Data Initiatives
 
-This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley and Francisco Rowe.
+This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood, Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
 
 Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
@@ -996,10 +1182,72 @@ def clean_text(text: str) -> str:
     for note, replacement in INLINE_FOOTNOTES.items():
         text = text.replace(f"[^{note}]", replacement)
 
+    # Add directly relevant academic sources where the manuscript makes methodological claims.
+    text = text.replace(
+        "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics.",
+        "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics [@gonzalez2008human_mobility; @song2010predictability; @blondel2015survey].",
+    )
+    text = text.replace(
+        "This training manual focuses exclusively on the former, and more specifically on Call Detail Records, because this is the data type most commonly available at national scale and most frequently used in official statistics and public policy applications.",
+        "This training manual focuses exclusively on the former, and more specifically on Call Detail Records, because this is the data type most commonly available at national scale and most frequently used in official statistics and public policy applications [@unstats2019mpdhandbook; @ricciato2020present_population; @salgado2021end_to_end].",
+    )
+    text = text.replace(
+        "The spatial resolution of CDR data is determined by the mobile network infrastructure rather than the device itself. Location is inferred from the cell site providing the service. This acts as a proxy for the user’s position, capturing the interaction between the mobile network infrastructure and geographic position of devices. In dense urban environments, cell towers may cover relatively small areas, resulting in finer spatial granularity. In rural or remote areas, a single tower may cover a larger area, leading to coarser location estimates. Planners must account for this variability when assessing whether CDRs are suitable for a particular analytical purpose and application.",
+        "The spatial resolution of CDR data is determined by the mobile network infrastructure rather than the device itself. Location is inferred from the cell site providing the service. This acts as a proxy for the user’s position, capturing the interaction between the mobile network infrastructure and geographic position of devices. In dense urban environments, cell towers may cover relatively small areas, resulting in finer spatial granularity. In rural or remote areas, a single tower may cover a larger area, leading to coarser location estimates. Planners must account for this variability when assessing whether CDRs are suitable for a particular analytical purpose and application [@blondel2015survey; @ricciato2020present_population].",
+    )
+    text = text.replace(
+        "The frequency events may affect the temporal resolution of CDR data. Data are generated based on the occurrence of events reflecting user behaviour, rather than being a continuous data stream per se (other forms of higher resolution data from mobile network operators include what may be called signalling or ping data). In CDRs, a user’s location can only be estimated when the user actively uses the network. As a result, the temporal density of CDRs can vary widely across individuals and contexts, influenced by factors such as phone ownership, usage patterns, socioeconomic status and network pricing. This intermittency introduces analytical challenges that must be addressed through appropriate statistical methods, data integration and careful interpretation. ",
+        "The frequency of events may affect the temporal resolution of CDR data. Data are generated based on the occurrence of events reflecting user behaviour, rather than being a continuous data stream per se (other forms of higher resolution data from mobile network operators include what may be called signalling or ping data). In CDRs, a user’s location can only be estimated when the user actively uses the network. As a result, the temporal density of CDRs can vary widely across individuals and contexts, influenced by factors such as phone ownership, usage patterns, socioeconomic status and network pricing. This intermittency introduces analytical challenges that must be addressed through appropriate statistical methods, data integration and careful interpretation [@blondel2015survey; @wesolowski2013biases; @ricciato2020present_population]. ",
+    )
+    text = text.replace(
+        "MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households.",
+        "MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households [@wesolowski2013biases; @cabrera_rowe2025bias].",
+    )
+    text = text.replace(
+        "The pipeline begins with data generation and collection at the mobile network operator, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use.",
+        "The pipeline begins with data generation and collection at the mobile network operator, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use [@ricciato2020present_population; @salgado2021end_to_end].",
+    )
+    text = text.replace(
+        "Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the mobile network operator. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination.",
+        "Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the mobile network operator. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination [@demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "Understanding these tiers helps organisations design appropriate technical and organisational safeguards at each stage of the pipeline. Access controls, encryption, auditing, and strict role-based permissions are essential for Tier 1 and Tier 2 data, where risks of re-identification or commercial sensitivity are highest. Even at Tier 3, where data are aggregated and prepared for release, disclosure control remains necessary to ensure that small cell sizes, rare combinations of attributes, or extreme values do not inadvertently reveal information about individuals or commercially sensitive patterns. Privacy by design therefore operates as a continuous principle across the entire pipeline, rather than a single compliance step.",
+        "Understanding these tiers helps organisations design appropriate technical and organisational safeguards at each stage of the pipeline. Access controls, encryption, auditing, and strict role-based permissions are essential for Tier 1 and Tier 2 data, where risks of re-identification or commercial sensitivity are highest. Even at Tier 3, where data are aggregated and prepared for release, disclosure control remains necessary to ensure that small cell sizes, rare combinations of attributes, or extreme values do not inadvertently reveal information about individuals or commercially sensitive patterns. Privacy by design therefore operates as a continuous principle across the entire pipeline, rather than a single compliance step [@demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "In MPD initiatives, this distinction is particularly important because mobility data are inherently identifying. Even when explicit identifiers such as phone numbers or subscriber IDs are removed or replaced, individual movement patterns are often unique and highly regular. As a result, individual-level mobility data remain personal data, regardless of whether direct identifiers are present. Removing names or numbers alone does not anonymise such data.",
+        "In MPD initiatives, this distinction is particularly important because mobility data are inherently identifying. Even when explicit identifiers such as phone numbers or subscriber IDs are removed or replaced, individual movement patterns are often unique and highly regular. As a result, individual-level mobility data remain personal data, regardless of whether direct identifiers are present. Removing names or numbers alone does not anonymise such data [@gonzalez2008human_mobility; @song2010predictability; @demontjoye2013unique].",
+    )
+    text = text.replace(
+        "Non-personal data, by contrast, do not relate to any identifiable individual. In practice, most MPD initiatives rely on aggregated data products that summarise patterns across large groups of subscribers, rather than individual trajectories. However, whether data are genuinely non-personal depends on the level of aggregation, the availability of auxiliary information, and the evolving state of reidentification techniques. Governance frameworks must therefore adopt a cautious and context-aware approach to classification, recognising that what is considered anonymised today may not remain so in the future.",
+        "Non-personal data, by contrast, do not relate to any identifiable individual. In practice, most MPD initiatives rely on aggregated data products that summarise patterns across large groups of subscribers, rather than individual trajectories. However, whether data are genuinely non-personal depends on the level of aggregation, the availability of auxiliary information, and the evolving state of reidentification techniques. Governance frameworks must therefore adopt a cautious and context-aware approach to classification, recognising that what is considered anonymised today may not remain so in the future [@demontjoye2013unique; @demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "MPD initiatives entail a range of interrelated risks that must be proactively identified and mitigated. Privacy risks include unauthorised access to sensitive data, reidentification of individuals, and the use of data for surveillance or profiling. Security risks encompass data breaches, whether through malicious attacks, inadequate access controls, or accidental disclosure. Ethical risks arise when data are misused, misinterpreted, or applied in ways that exacerbate bias, exclusion, or harm to vulnerable populations.",
+        "MPD initiatives entail a range of interrelated risks that must be proactively identified and mitigated. Privacy risks include unauthorised access to sensitive data, reidentification of individuals, and the use of data for surveillance or profiling. Security risks encompass data breaches, whether through malicious attacks, inadequate access controls, or accidental disclosure. Ethical risks arise when data are misused, misinterpreted, or applied in ways that exacerbate bias, exclusion, or harm to vulnerable populations [@demontjoye2013unique; @demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "However, aggregation may not be sufficient to protect the individual privacy of all subscribers. Aggregation relies on there being a sufficient number of subscribers in each area in each time frame to prevent any individual being reidentified. Without any further checks, only aggregating CDR data risks producing outputs in which there is only a single or very few subscribers in a given location at a given time which may risk their reidentification. This is more likely to occur at high spatial and temporal resolution.",
+        "However, aggregation may not be sufficient to protect the individual privacy of all subscribers. Aggregation relies on there being a sufficient number of subscribers in each area in each time frame to prevent any individual being reidentified. Without any further checks, only aggregating CDR data risks producing outputs in which there is only a single or very few subscribers in a given location at a given time which may risk their reidentification. This is more likely to occur at high spatial and temporal resolution [@demontjoye2013unique].",
+    )
+    text = text.replace(
+        "While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed.",
+        "While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed [@demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "Two broad categories of sensitive information commonly arise. The first is personal data, such as individual-level call detail record trajectories, which can reveal patterns of movement even when direct identifiers are removed. The second is commercially sensitive information, such as detailed network infrastructure data, which mobile network operators may need to protect for competitive or security reasons.",
+        "Two broad categories of sensitive information commonly arise. The first is personal data, such as individual-level call detail record trajectories, which can reveal patterns of movement even when direct identifiers are removed. The second is commercially sensitive information, such as detailed network infrastructure data, which mobile network operators may need to protect for competitive or security reasons [@demontjoye2013unique; @demontjoye2018privacy].",
+    )
+    text = text.replace(
+        "It is particularly important to explain data protection measures, such as pseudonymisation performed by operators and aggregation of results to population-level indicators. Explicitly stating that content of calls or messages is never accessed can help address common concerns and prevent misunderstanding.",
+        "It is particularly important to explain data protection measures, such as pseudonymisation performed by operators and aggregation of results to population-level indicators. Explicitly stating that content of calls or messages is never accessed can help address common concerns and prevent misunderstanding [@demontjoye2018privacy].",
+    )
+
     # Add a small number of directly relevant, verified Rowe references.
     text = text.replace(
         "Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of:",
-        "Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of displacement, return, and recovery when digital trace data are carefully adjusted, validated, and triangulated with other sources [@uncebd_disaster_statistics; @rowe2022digitalfootprint; @iradukunda_rowe_pietrostefani2025ukraine; @pietrostefani2025dynamic_displacement]. MPD can enable rapid estimation of:",
+        "Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of displacement, return, and recovery when digital trace data are carefully adjusted, validated, and triangulated with other sources [@uncebd_disaster_statistics; @lu2012haiti_displacement; @rowe2022digitalfootprint; @iradukunda_rowe_pietrostefani2025ukraine; @pietrostefani2025dynamic_displacement]. MPD can enable rapid estimation of:",
     )
     text = text.replace(
         "During the Ebola response in Sierra Leone and COVID-19 responses across multiple countries, CDR analysis showed measurable reductions in mobility following restrictions (and their reversal once measures were lifted), often within just a few days of implementation.",
@@ -1007,7 +1255,7 @@ def clean_text(text: str) -> str:
     )
     text = text.replace(
         "This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic.",
-        "This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic [@bengtsson2015cholera].",
+        "This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic [@bengtsson2015cholera; @wesolowski2012malaria; @tizzoni2014epidemics].",
     )
     text = text.replace(
         "Ghana during COVID-19 (2020): Data from Vodafone Ghana was used to support government decision making by the Presidential Task Force around the effectiveness of COVID-19 lockdowns and what non-pharmaceutical interventions were working in the country, informing subsequent policies on movement restrictions.",
@@ -1054,6 +1302,10 @@ def clean_text(text: str) -> str:
         " [@aiken2022machine_learning], [@worldbank2021novissi]",
         " [@aiken2022machine_learning; @worldbank2021novissi]",
     )
+    output = re.sub(r"(?m)^\s*\d+\)\s+(####\s+)", r"\1", output)
+    output = re.sub(r"(?m)^####\s+", "#### ", output)
+    output = re.sub(r"(?m)([^\n])\n(####\s+)", r"\1\n\n\2", output)
+    output = output.replace("{#call-detail-records-(cdrs)}", "{#call-detail-records-cdrs}")
     output = output.replace("and  routinely", "and routinely")
     output = output.replace(".  [@", ". [@")
     return output
@@ -1094,7 +1346,7 @@ def main() -> None:
         elif title in FRONT_MATTER_SECTIONS:
             content = content.replace(f"# {title}", f"# {title} {{.unnumbered}}", 1)
         if path == "index.qmd":
-            content = INDEX_INTRO + content + RECOMMENDED_CITATION
+            content = INDEX_INTRO + content + AUTHORS_PREFACE + RECOMMENDED_CITATION
         write(path, content)
 
     write("chapters/references.qmd", REFERENCES_QMD)

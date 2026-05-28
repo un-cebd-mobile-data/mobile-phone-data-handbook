@@ -67,3 +67,11 @@ figcaption {
 .header-section-number {
   color: #6ecff6;
 }
+
+#quarto-sidebar .menu-text > .chapter-number {
+  display: none;
+}
+
+#quarto-sidebar .menu-text > .chapter-number + .chapter-title {
+  margin-left: -0.28em;
+}

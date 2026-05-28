@@ -53,7 +53,7 @@ Building on general communication good practice, MPD initiatives require additio
 
 Sensitivity in MPD work is context-dependent. What is considered sensitive information may vary across organisations, projects, countries, and regulatory environments. It is therefore essential to discuss and agree on sensitivities early in the initiative.
 
-Two broad categories of sensitive information commonly arise. The first is personal data, such as individual-level CDR trajectories, which can reveal patterns of movement even when direct identifiers are removed. The second is commercially sensitive information, such as detailed network infrastructure data, which MNOs may need to protect for competitive or security reasons.
+Two broad categories of sensitive information commonly arise. The first is personal data, such as individual-level CDR trajectories, which can reveal patterns of movement even when direct identifiers are removed. The second is commercially sensitive information, such as detailed network infrastructure data, which MNOs may need to protect for competitive or security reasons [@demontjoye2013unique; @demontjoye2018privacy].
 
 Clear internal agreements on what is sensitive, why it is sensitive, and how it will be handled are a prerequisite for responsible communication. Being transparent internally and, where appropriate, externally about these boundaries helps manage expectations and build trust among partners and stakeholders.
 
@@ -61,7 +61,7 @@ Clear internal agreements on what is sensitive, why it is sensitive, and how it 
 
 Many audiences are unfamiliar with mobile operator data and may have misconceptions about what it contains. Communications should therefore include simple, accurate explanations of key data sources, such as CDRs, emphasising what they are and what they are not.
 
-It is particularly important to explain data protection measures, such as pseudonymisation performed by operators and aggregation of results to population-level indicators. Explicitly stating that content of calls or messages is never accessed can help address common concerns and prevent misunderstanding.
+It is particularly important to explain data protection measures, such as pseudonymisation performed by operators and aggregation of results to population-level indicators. Explicitly stating that content of calls or messages is never accessed can help address common concerns and prevent misunderstanding [@demontjoye2018privacy].
 
 The aim is to provide enough information to support informed engagement without overwhelming the audience with unnecessary technical detail.
 

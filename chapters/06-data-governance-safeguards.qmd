@@ -21,9 +21,9 @@ Effective governance requires acknowledging these differing interests and establ
 
 A central task in data governance is determining whether data qualify as personal data. While definitions vary across jurisdictions, personal data are generally understood to be any information relating to an identified or identifiable natural person. Identification may be direct, such as through a name or phone number, or indirect, where identification becomes possible through combination with other data.
 
-In MPD initiatives, this distinction is particularly important because mobility data are inherently identifying. Even when explicit identifiers such as phone numbers or subscriber IDs are removed or replaced, individual movement patterns are often unique and highly regular. As a result, individual-level mobility data remain personal data, regardless of whether direct identifiers are present. Removing names or numbers alone does not anonymise such data.
+In MPD initiatives, this distinction is particularly important because mobility data are inherently identifying. Even when explicit identifiers such as phone numbers or subscriber IDs are removed or replaced, individual movement patterns are often unique and highly regular. As a result, individual-level mobility data remain personal data, regardless of whether direct identifiers are present. Removing names or numbers alone does not anonymise such data [@gonzalez2008human_mobility; @song2010predictability; @demontjoye2013unique].
 
-Non-personal data, by contrast, do not relate to any identifiable individual. In practice, most MPD initiatives rely on aggregated data products that summarise patterns across large groups of subscribers, rather than individual trajectories. However, whether data are genuinely non-personal depends on the level of aggregation, the availability of auxiliary information, and the evolving state of reidentification techniques. Governance frameworks must therefore adopt a cautious and context-aware approach to classification, recognising that what is considered anonymised today may not remain so in the future.
+Non-personal data, by contrast, do not relate to any identifiable individual. In practice, most MPD initiatives rely on aggregated data products that summarise patterns across large groups of subscribers, rather than individual trajectories. However, whether data are genuinely non-personal depends on the level of aggregation, the availability of auxiliary information, and the evolving state of reidentification techniques. Governance frameworks must therefore adopt a cautious and context-aware approach to classification, recognising that what is considered anonymised today may not remain so in the future [@demontjoye2013unique; @demontjoye2018privacy].
 
 ## Legal and Regulatory Context
 
@@ -35,7 +35,7 @@ Importantly, there is no single governance model that applies universally. Legal
 
 ## Risks Associated with MPD Initiatives
 
-MPD initiatives entail a range of interrelated risks that must be proactively identified and mitigated. Privacy risks include unauthorised access to sensitive data, reidentification of individuals, and the use of data for surveillance or profiling. Security risks encompass data breaches, whether through malicious attacks, inadequate access controls, or accidental disclosure. Ethical risks arise when data are misused, misinterpreted, or applied in ways that exacerbate bias, exclusion, or harm to vulnerable populations.
+MPD initiatives entail a range of interrelated risks that must be proactively identified and mitigated. Privacy risks include unauthorised access to sensitive data, reidentification of individuals, and the use of data for surveillance or profiling. Security risks encompass data breaches, whether through malicious attacks, inadequate access controls, or accidental disclosure. Ethical risks arise when data are misused, misinterpreted, or applied in ways that exacerbate bias, exclusion, or harm to vulnerable populations [@demontjoye2013unique; @demontjoye2018privacy].
 
 These risks are not hypothetical. Experience shows that even well-intentioned initiatives can undermine public trust if governance arrangements are weak or poorly communicated. Risk management must therefore be treated as an ongoing process rather than a one-time compliance exercise.
 
@@ -57,7 +57,7 @@ Personal data must have strong protections to preserve the privacy of individual
 * Aggregation
 * Redaction
 
-1) #### **Pseudonymisation** {#pseudonymisation}
+#### **Pseudonymisation** {#pseudonymisation}
 
 Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical). For MPD, this might involve replacing subscribers identifiers (e.g. phone number, IMSI, MSISDN) with a random string.
 
@@ -65,7 +65,7 @@ Known as ‘hashing’ this process removes the personal information which allow
 
 As result, pseudonymisation obscures subscribers identity but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process.
 
-2) #### **Aggregation** {#aggregation}
+#### **Aggregation** {#aggregation}
 
 By combining or aggregating MPD data for very large numbers of subscribers we can help preserve their privacy by making the movements of any single subscriber difficult, if not impossible, to discern. However, we still can make inferences about the distribution and mobility of the population as a whole from aggregated data.
 
@@ -73,13 +73,13 @@ Data is aggregated spatially (e.g. by district or region) and temporally (e.g. b
 
 In addition to helping protect the individual privacy of the subscribers, the spatial aggregation of CDR data may remove other sensitive information about the number and locations of cell towers in each area which may be a concern of other stakeholders such as the operator.
 
-However, aggregation may not be sufficient to protect the individual privacy of all subscribers. Aggregation relies on there being a sufficient number of subscribers in each area in each time frame to prevent any individual being reidentified. Without any further checks, only aggregating CDR data risks producing outputs in which there is only a single or very few subscribers in a given location at a given time which may risk their reidentification. This is more likely to occur at high spatial and temporal resolution.
+However, aggregation may not be sufficient to protect the individual privacy of all subscribers. Aggregation relies on there being a sufficient number of subscribers in each area in each time frame to prevent any individual being reidentified. Without any further checks, only aggregating CDR data risks producing outputs in which there is only a single or very few subscribers in a given location at a given time which may risk their reidentification. This is more likely to occur at high spatial and temporal resolution [@demontjoye2013unique].
 
-3) #### **Redaction** {#redaction}
+#### **Redaction** {#redaction}
 
 To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity. A dataset can be described as k-anonymised if each subset of data points for a given individual (i.e. their location at each time point) is shared by at least k-1 other subscribers. For example, if we set k to 15 this means that the aggregated CDR must have at least 16 subscribers associated with (present or resident in) each location at each time point. Any combinations of location and time associated with fewer than 15 subscribers are redacted from the data set.
 
-While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed.
+While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed [@demontjoye2018privacy].
 
 ### Emerging and novel Privacy-Enhancing Technologies (PETs)
 

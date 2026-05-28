@@ -5,7 +5,7 @@ MPD initiatives rely on complex data processing and pipeline architectures to tr
 
 An MPD pipeline can be understood as a sequence of interdependent stages that progressively transform raw network data into usable statistical outputs. While implementations differ across countries and institutions, most pipelines share five core stages: data collection, extract–transform–load (ETL), data cleaning and processing, aggregation and scaling, and dissemination. Each stage introduces specific technical, methodological, and governance considerations, and weaknesses at any point can compromise the integrity of the final results.
 
-The pipeline begins with data generation and collection at the MNO, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use.
+The pipeline begins with data generation and collection at the MNO, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use [@ricciato2020present_population; @salgado2021end_to_end].
 
 ## Data Collection and Generation
 
@@ -53,16 +53,16 @@ Beyond space and time, aggregation also reflects analytical intent. In tourism s
 
 ## Scaling, Bias Adjustment, and Quality Assurance
 
-MPD does not directly represent the total population. Some individuals carry multiple devices, while others may not use mobile phones at all. As a result, raw counts must be scaled and adjusted to correct for over-coverage and under-coverage. [@flowminder2023bias]
+MPD does not directly represent the total population. Some individuals carry multiple devices, while others may not use mobile phones at all. As a result, raw counts must be scaled and adjusted to correct for over-coverage and under-coverage. [@flowminder2023bias; @wesolowski2013biases; @ricciato2020present_population]
 
 Scaling models often rely on operator market shares or external benchmarks to align mobile phone-based indicators with known population totals. This step is methodologically challenging due to limited ground truth data, but it is essential for producing credible official statistics.
 Quality assurance accompanies scaling. Analysts must assess completeness, consistency, and plausibility, and apply statistical disclosure control techniques to prevent re-identification, particularly when publishing highly granular data.
 
 ## Privacy by Design in the Pipeline
 
-Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the MNO. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination.
+Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the MNO. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination [@demontjoye2018privacy].
 
-Understanding these tiers helps organisations design appropriate technical and organisational safeguards at each stage of the pipeline. Access controls, encryption, auditing, and strict role-based permissions are essential for Tier 1 and Tier 2 data, where risks of re-identification or commercial sensitivity are highest. Even at Tier 3, where data are aggregated and prepared for release, disclosure control remains necessary to ensure that small cell sizes, rare combinations of attributes, or extreme values do not inadvertently reveal information about individuals or commercially sensitive patterns. Privacy by design therefore operates as a continuous principle across the entire pipeline, rather than a single compliance step.
+Understanding these tiers helps organisations design appropriate technical and organisational safeguards at each stage of the pipeline. Access controls, encryption, auditing, and strict role-based permissions are essential for Tier 1 and Tier 2 data, where risks of re-identification or commercial sensitivity are highest. Even at Tier 3, where data are aggregated and prepared for release, disclosure control remains necessary to ensure that small cell sizes, rare combinations of attributes, or extreme values do not inadvertently reveal information about individuals or commercially sensitive patterns. Privacy by design therefore operates as a continuous principle across the entire pipeline, rather than a single compliance step [@demontjoye2018privacy].
 
 ## Pipeline Deployment Models
 

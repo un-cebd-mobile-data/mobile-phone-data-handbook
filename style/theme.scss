@@ -94,6 +94,14 @@ figcaption {
   color: #0077a8;
 }
 
+#quarto-sidebar .menu-text > .chapter-number {
+  display: none;
+}
+
+#quarto-sidebar .menu-text > .chapter-number + .chapter-title {
+  margin-left: -0.28em;
+}
+
 .quarto-title .chapter-number {
   display: none;
 }

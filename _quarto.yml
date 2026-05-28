@@ -9,6 +9,25 @@ book:
   author:
     - "Cathy Riley"
     - "Francisco Rowe"
+    - "Esperanza Magpantay"
+    - "Robert Eyre"
+    - "Sophie Delaporte"
+    - "James Harrison"
+    - "Roland Hosner"
+    - "Veronique Lefebvre"
+    - "Thomas Smallwood"
+    - "Luisa Chavez"
+    - "Pablo Ruiz"
+    - "Maria Henar Sales"
+    - "Miguel Picornell"
+    - "Egle Rüütli"
+    - "Kaisa Vent"
+    - "Siim Esko"
+    - "Erki Saluveer"
+    - "Ayumi Arai"
+    - "Paul Blanchard"
+    - "Sveta Milusheva"
+    - "Trevor Monroe"
   date: "2026-05-26"
   publisher: "TBC"
   edition: "Version 1.4"
@@ -55,6 +74,7 @@ format:
     toc: true
     toc-depth: 3
     number-sections: true
+    number-depth: 3
     code-copy: true
     include-in-header:
       text: |
@@ -80,12 +100,14 @@ format:
     pdf-engine: xelatex
     toc: true
     number-sections: true
+    number-depth: 3
     colorlinks: true
     include-in-header: style/pdf-preamble.tex
     include-before-body: style/pdf-before-body.tex
   epub:
     toc: true
     number-sections: true
+    number-depth: 3
     cover-image: assets/manual-cover.png
 
 editor: visual

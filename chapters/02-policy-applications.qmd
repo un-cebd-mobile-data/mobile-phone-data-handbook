@@ -58,7 +58,7 @@ Accurate population data is critical for governments to plan services, allocate 
 
 ### Dynamic Population Mapping and Migration
 
-Dynamic Population Mapping uses MPD to estimate where people are located at different times of day or year, capturing the ***de facto*** **population** rather than the static, *de jure* population recorded in censuses. This approach captures the actual presence and movement of populations over time. [@uncebd_dynamic_population]
+Dynamic Population Mapping uses MPD to estimate where people are located at different times of day or year, capturing the ***de facto*** **population** rather than the static, *de jure* population recorded in censuses. This approach captures the actual presence and movement of populations over time. [@uncebd_dynamic_population; @deville2014dynamic_population; @ricciato2020present_population]
 
 Dynamic population mapping is useful for several use cases, including:
 
@@ -69,7 +69,7 @@ Dynamic population mapping is useful for several use cases, including:
 * Creation of dynamic sample frames for surveys
 * Census preparation and implementation
 
-MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households.
+MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households [@wesolowski2013biases; @cabrera_rowe2025bias].
 
 Some of the key design principles for using MPD for dynamic population mapping include:
 
@@ -87,7 +87,7 @@ Estonia (2012 to 2015): From 2012 to 2015, the Estonian Police and Border Guard 
 
 ### Disaster Management
 
-Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of displacement, return, and recovery when digital trace data are carefully adjusted, validated, and triangulated with other sources [@uncebd_disaster_statistics; @rowe2022digitalfootprint; @iradukunda_rowe_pietrostefani2025ukraine; @pietrostefani2025dynamic_displacement]. MPD can enable rapid estimation of:
+Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of displacement, return, and recovery when digital trace data are carefully adjusted, validated, and triangulated with other sources [@uncebd_disaster_statistics; @lu2012haiti_displacement; @rowe2022digitalfootprint; @iradukunda_rowe_pietrostefani2025ukraine; @pietrostefani2025dynamic_displacement]. MPD can enable rapid estimation of:
 
 * The scale of displacement
 * Destinations and duration of movements
@@ -107,7 +107,7 @@ Madrid during COVID-19 (2020): MPD showed a 10% drop in population during lockdo
 
 ### Public Health and Epidemiology
 
-MPD offers public health practitioners a powerful input for epidemiological surveillance and outbreak response. Because infectious disease spreads through human movement, it can provide a near-continuous, large-scale record of population mobility that can be used to model spatial transmission risk, identify hotspots, and predict where outbreaks are likely to emerge next. This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic [@bengtsson2015cholera]. Similar approaches have been applied to rubella in Kenya, where seasonal mobility patterns tied to school terms and holidays outperformed other variables in explaining transmission peaks, with direct implications for vaccination timing.
+MPD offers public health practitioners a powerful input for epidemiological surveillance and outbreak response. Because infectious disease spreads through human movement, it can provide a near-continuous, large-scale record of population mobility that can be used to model spatial transmission risk, identify hotspots, and predict where outbreaks are likely to emerge next. This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic [@bengtsson2015cholera; @wesolowski2012malaria; @tizzoni2014epidemics]. Similar approaches have been applied to rubella in Kenya, where seasonal mobility patterns tied to school terms and holidays outperformed other variables in explaining transmission peaks, with direct implications for vaccination timing.
 
 Beyond spread modelling, MPD enables real-time evaluation of non-pharmaceutical interventions such as travel restrictions and lockdowns, providing evidence on behavioural compliance that cannot be obtained from any other source. During the Ebola response in Sierra Leone and COVID-19 responses across multiple countries, CDR and other digital trace analyses showed measurable reductions in mobility following restrictions (and their reversal once measures were lifted), often within just a few days of implementation [@rowe2023urban_exodus; @cabrera2025latin_america_mobility].
 
@@ -161,7 +161,7 @@ In the transport arena, MPD has been applied to a wide range of policy-relevant 
 * the optimization of public transport services, and
 * the assessment of policy measures such as congestion management or low-emission zones, among others.
 
-Case studies, particularly from Latin America and Europe, have demonstrated the strong value of MPD, highlighting improvements in the quality, spatial coverage, and temporal continuity of mobility statistics, as well as the ability to analyse mobility patterns over multiple days and time periods. [@caceres2007origin_destination]
+Case studies, particularly from Latin America and Europe, have demonstrated the strong value of MPD, highlighting improvements in the quality, spatial coverage, and temporal continuity of mobility statistics, as well as the ability to analyse mobility patterns over multiple days and time periods. [@caceres2007origin_destination; @alexander2015od]
 
 MPD offers several advantages compared to traditional data collection methods. Its large sample size, often covering a significant share of the population, enhances representativeness and enables detailed spatial analysis, particularly for the estimation of origin–destination matrices. In addition, MPD provides continuous observations over time, allowing for more frequent updates and enabling the monitoring of mobility dynamics, including responses to transport policy interventions such as congestion pricing schemes, public transport reforms, or mobility restrictions. When combined with other data sources, such as surveys or smart card data, MPD can also support more comprehensive analyses, including modal segmentation.
 
@@ -181,7 +181,7 @@ Work in this area is still relatively nascent with exploratory analysis and in-d
 
 In Bangladesh, researchers have demonstrated how anonymised mobile phone metadata such as CDRs capturing patterns of mobility, airtime purchases, and social connectivity can be leveraged to estimate poverty at a much finer spatial resolution than traditional household surveys allow. By statistically linking these behavioural proxies to benchmark survey-based welfare measures, the studies produced high-resolution poverty maps capable of identifying significant regional disparities, including pockets of deprivation that are often masked in national or district-level averages.
 
-These poverty maps proved particularly valuable for policy analysis and planning, as they enabled near-real time updates and granular geographic targeting at relatively low marginal cost. In a context where surveys are expensive and infrequent, mobile phone based approaches complemented official statistics, offering decision-makers an evidence base to prioritise lagging regions, allocate resources more efficiently, and monitor spatial inequality over time. [@blumenstock2015poverty]
+These poverty maps proved particularly valuable for policy analysis and planning, as they enabled near-real time updates and granular geographic targeting at relatively low marginal cost. In a context where surveys are expensive and infrequent, mobile phone based approaches complemented official statistics, offering decision-makers an evidence base to prioritise lagging regions, allocate resources more efficiently, and monitor spatial inequality over time. [@blumenstock2015poverty; @steele2017poverty]
 
 ### Togo’s use of MPD for targeting social protection payments
 
