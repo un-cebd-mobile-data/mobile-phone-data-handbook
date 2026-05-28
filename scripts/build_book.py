@@ -172,9 +172,9 @@ BIBTEX = r"""
 
 @misc{uncebd_migration_statistics,
   title = {Methodological Guide on the Use of Mobile Phone Data: Migration Statistics},
-  author = {{UN-CEBD Task Team on Mobile Phone Data}},
-  year = {n.d.},
-  publisher = {United Nations Statistics Division},
+  author = {Rowe, F. and Magpantay, E. and Jalagonia, M. and Esko, S. and De Jesus, E. and Jansen, R. and Grum, F. and Blanchard, P. and Lumala, L.},
+  year = {2022},
+  publisher = {United Nations Statistics Division; UN-CEBD Task Team on Mobile Phone Data},
   url = {https://unstats.un.org/wiki/spaces/MPDMS/overview}
 }
 
@@ -736,22 +736,6 @@ The GitHub Actions workflow in `.github/workflows/publish.yml` renders the book 
 
 In the GitHub repository settings, set **Pages** source to **GitHub Actions**.
 
-## Source conversion
-
-The initial website book was generated from:
-
-`FINAL DRAFT (v1.4) MPD Design and Implementation Handbook - 26May26 [CLOSED FOR EDITS].docx.md`
-
-The conversion script is:
-
-`scripts/build_book.py`
-
-Run it only when intentionally regenerating the chapter files from the source manuscript:
-
-```bash
-python3 scripts/build_book.py
-```
-
 ## Logo assets
 
 The site uses the official UN-CEBD logo downloaded from the UN Big Data website:
@@ -833,6 +817,9 @@ assets/*-1280x640.png
 .Rproj.user/
 .Rhistory
 .DS_Store
+
+/.quarto/
+**/*.quarto_ipynb
 """
 
 
