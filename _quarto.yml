@@ -13,8 +13,8 @@ book:
   publisher: "TBC"
   edition: "Version 1.4"
   license: "TBC"
-  site-url: "https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/"
-  repo-url: "https://github.com/un-cebd-mobile-data/tt-mobile-data_practical-manual"
+  site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
+  repo-url: "https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook"
   repo-branch: main
   repo-actions: [edit, issue]
   downloads: [pdf, epub]
@@ -76,13 +76,16 @@ format:
         </script>
   pdf:
     documentclass: scrreprt
+    papersize: a4
     pdf-engine: xelatex
     toc: true
     number-sections: true
     colorlinks: true
+    include-in-header: style/pdf-preamble.tex
+    include-before-body: style/pdf-before-body.tex
   epub:
     toc: true
     number-sections: true
-    cover-image: assets/un-cebd-logo.png
+    cover-image: assets/manual-cover.png
 
 editor: visual

@@ -1,9 +1,15 @@
 # Preface {.unnumbered}
 
+::: {.content-visible when-format="html"}
+<div class="manual-cover-wrap">
+  <img class="manual-cover" src="assets/manual-cover.png" alt="Cover of Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual" />
+</div>
+:::
+
 ::: {.callout-note icon="false"}
 ## Project status
 
-Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>.
+Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
 :::
 
 
@@ -16,6 +22,6 @@ The handbook is intended for practitioners working in national statistical offic
 
 ::: {.callout-note icon="false"}
 
-Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>
+Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::

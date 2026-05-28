@@ -71,10 +71,16 @@ INDEX_INTRO = ""
 
 PROJECT_STATUS_CALLOUT = """
 
+::: {.content-visible when-format="html"}
+<div class="manual-cover-wrap">
+  <img class="manual-cover" src="assets/manual-cover.png" alt="Cover of Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual" />
+</div>
+:::
+
 ::: {.callout-note icon="false"}
 ## Project status
 
-Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>.
+Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
 :::
 
 """
@@ -86,7 +92,7 @@ RECOMMENDED_CITATION = """
 
 ::: {.callout-note icon="false"}
 
-Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>
+Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
 """
@@ -427,8 +433,8 @@ book:
   publisher: "TBC"
   edition: "Version 1.4"
   license: "TBC"
-  site-url: "https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/"
-  repo-url: "https://github.com/un-cebd-mobile-data/tt-mobile-data_practical-manual"
+  site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
+  repo-url: "https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook"
   repo-branch: main
   repo-actions: [edit, issue]
   downloads: [pdf, epub]
@@ -490,14 +496,17 @@ format:
         </script>
   pdf:
     documentclass: scrreprt
+    papersize: a4
     pdf-engine: xelatex
     toc: true
     number-sections: true
     colorlinks: true
+    include-in-header: style/pdf-preamble.tex
+    include-before-body: style/pdf-before-body.tex
   epub:
     toc: true
     number-sections: true
-    cover-image: assets/un-cebd-logo.png
+    cover-image: assets/manual-cover.png
 
 editor: visual
 """
@@ -539,6 +548,18 @@ $callout-color-caution: #e57d20;
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+.manual-cover-wrap {
+  margin: 0 0 1.75rem;
+}
+
+.manual-cover {
+  display: block;
+  width: min(420px, 100%);
+  height: auto;
+  border: 1px solid rgba(44, 62, 80, 0.14);
+  box-shadow: 0 18px 36px rgba(31, 49, 67, 0.18);
 }
 
 .navbar,
@@ -635,6 +656,18 @@ $toc-active-border: #00bed6;
   height: auto;
 }
 
+.manual-cover-wrap {
+  margin: 0 0 1.75rem;
+}
+
+.manual-cover {
+  display: block;
+  width: min(420px, 100%);
+  height: auto;
+  border: 1px solid rgba(237, 242, 248, 0.18);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+}
+
 .navbar,
 .quarto-title-banner {
   background: #0f1b26;
@@ -665,7 +698,7 @@ README = """# Design and Implementation of Mobile Phone Data Initiatives
 
 This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley and Francisco Rowe.
 
-Public site target: <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>
+Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 ## Status
 
@@ -726,6 +759,14 @@ The site uses the official UN-CEBD logo downloaded from the UN Big Data website:
 <https://unstats.un.org/bigdata/assets/img/logo/logo_2021_long.png>
 
 Logo usage is assumed to be appropriate for this UN-CEBD task-team manual, but final branding approval should be confirmed.
+
+## Cover asset
+
+The manual cover image at `assets/manual-cover.png` was extracted from the embedded media in:
+
+`Draft v1.3. Training Manual_ Design and Implementation of MPD Initiatives - References Added - 31Mar26 [SHARED].docx`
+
+It is used as the website cover image, the EPUB cover image, and the first page of the PDF output.
 """
 
 
@@ -790,6 +831,12 @@ index.out
 index.pdf
 index.tex
 index.toc
+*.log
+*.docx
+/Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.pdf
+/Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.epub
+chapters/*.html
+assets/*-1280x640.png
 
 .Rproj.user/
 .Rhistory

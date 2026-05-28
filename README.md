@@ -2,7 +2,7 @@
 
 This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley and Francisco Rowe.
 
-Public site target: <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>
+Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 ## Status
 
@@ -63,3 +63,11 @@ The site uses the official UN-CEBD logo downloaded from the UN Big Data website:
 <https://unstats.un.org/bigdata/assets/img/logo/logo_2021_long.png>
 
 Logo usage is assumed to be appropriate for this UN-CEBD task-team manual, but final branding approval should be confirmed.
+
+## Cover asset
+
+The manual cover image at `assets/manual-cover.png` was extracted from the embedded media in:
+
+`Draft v1.3. Training Manual_ Design and Implementation of MPD Initiatives - References Added - 31Mar26 [SHARED].docx`
+
+It is used as the website cover image, the EPUB cover image, and the first page of the PDF output.

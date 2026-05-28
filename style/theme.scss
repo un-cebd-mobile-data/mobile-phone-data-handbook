@@ -36,6 +36,18 @@ $callout-color-caution: #e57d20;
   height: auto;
 }
 
+.manual-cover-wrap {
+  margin: 0 0 1.75rem;
+}
+
+.manual-cover {
+  display: block;
+  width: min(420px, 100%);
+  height: auto;
+  border: 1px solid rgba(44, 62, 80, 0.14);
+  box-shadow: 0 18px 36px rgba(31, 49, 67, 0.18);
+}
+
 .navbar,
 .quarto-title-banner {
   background: #009edb;

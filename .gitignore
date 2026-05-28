@@ -11,6 +11,10 @@ index.tex
 index.toc
 *.log
 *.docx
+/Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.pdf
+/Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.epub
+chapters/*.html
+assets/*-1280x640.png
 
 .Rproj.user/
 .Rhistory
