@@ -1,0 +1,57 @@
+/*-- scss:defaults --*/
+$body-bg: #172433;
+$body-color: #edf2f8;
+$link-color: #6ecff6;
+$primary: #00bed6;
+$secondary: #3398dc;
+$success: #18ba9b;
+$info: #009edb;
+$warning: #ffb45f;
+$danger: #ff8f8f;
+$light: #24384a;
+$dark: #0f1b26;
+$font-family-sans-serif: "Open Sans", "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-monospace: "Fira Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+$headings-color: #ffffff;
+$sidebar-bg: #0f1b26;
+$toc-color: #edf2f8;
+$toc-active-border: #00bed6;
+
+/*-- scss:rules --*/
+.un-cebd-sidebar-logo {
+  display: block;
+  padding: 0.75rem 1rem 1rem;
+  border-bottom: 1px solid rgba(237, 242, 248, 0.16);
+  margin-bottom: 0.5rem;
+  background: #ffffff;
+}
+
+.un-cebd-sidebar-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar,
+.quarto-title-banner {
+  background: #0f1b26;
+}
+
+.sidebar-title,
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  letter-spacing: 0;
+}
+
+.subtitle,
+caption,
+figcaption {
+  color: #d6e2ee;
+}
+
+.chapter-number,
+.header-section-number {
+  color: #6ecff6;
+}

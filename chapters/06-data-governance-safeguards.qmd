@@ -1,0 +1,128 @@
+# Chapter 6: Data Governance and Safeguards in MPD Initiatives
+The processing of data within an MPD initiative must be conducted in a legal, ethical, and equitable manner, with due regard for the interests of all affected stakeholders. Because MPD initiatives rely on data generated through the everyday use of mobile networks, they raise distinct governance challenges related to privacy, security, commercial sensitivity, and public trust. These challenges are not peripheral to technical implementation; they are foundational to whether an initiative is lawful, credible, and sustainable.
+
+This chapter provides a structured overview of data governance as it applies to MPD initiatives. It explains what it means to process MPD, identifies the relevant stakeholders and their interests, clarifies the distinction between personal and non-personal data, and outlines the principal legal, ethical, and security risks. It then introduces practical safeguards and principles that support the responsible and sustainable use of MPD for public policy and statistical purposes. Introductory courses to data governance and online resources are signposted in Appendix 1. [@itu_academy_data_governance; @flowgeek_data_governance]
+
+## What Does It Mean to Process Data?
+
+Data processing encompasses a wide range of activities, including the collection, storage, transformation, analysis, sharing, and dissemination of data. In the context of MPD initiatives, processing most often involves handling data originally collected by MNOs for operational and billing purposes, such as CDRs. Although these data are not collected for analytical or policy use, any subsequent use constitutes processing and is therefore subject to legal and ethical constraints.
+
+Processing becomes particularly sensitive when it involves personal data or data derived from personal data. In addition to privacy considerations, MPD initiatives may also involve commercially sensitive information, national infrastructure data, or information relating to vulnerable populations. Effective data governance must therefore address a broad range of sensitivities and risks, not only those associated with individual privacy.
+
+## Data Governance and the Stakeholder Ecosystem
+
+Data governance refers to the policies, processes, and controls that ensure data are used responsibly, securely, and in compliance with applicable laws and ethical standards. In MPD initiatives, governance is inherently multi-stakeholder, reflecting the fact that data originate in the private sector, are often processed for public purposes, and affect individuals and society at large.
+
+Key stakeholders typically include mobile phone subscribers, MNOs, regulators, data users such as NSOs or government ministries, and civil society. These stakeholders have different, and sometimes competing, priorities. Subscribers are primarily concerned with privacy and protection from misuse. operators must safeguard both subscriber trust and commercially sensitive information. Regulators are responsible for enforcing legal compliance and protecting public interests. Data users require data that are accurate, timely, and fit for purpose. Civil society has a broader interest in ensuring that MPD is not misused in ways that undermine rights, equity, or public trust.
+
+Effective governance requires acknowledging these differing interests and establishing mechanisms to balance them. This includes clearly defining roles and responsibilities, ensuring transparency in how data are used, and implementing safeguards that address both privacy and commercial concerns.
+
+## Personal and Non-Personal Data in MPD Initiatives
+
+A central task in data governance is determining whether data qualify as personal data. While definitions vary across jurisdictions, personal data are generally understood to be any information relating to an identified or identifiable natural person. Identification may be direct, such as through a name or phone number, or indirect, where identification becomes possible through combination with other data.
+
+In MPD initiatives, this distinction is particularly important because mobility data are inherently identifying. Even when explicit identifiers such as phone numbers or subscriber IDs are removed or replaced, individual movement patterns are often unique and highly regular. As a result, individual-level mobility data remain personal data, regardless of whether direct identifiers are present. Removing names or numbers alone does not anonymise such data.
+
+Non-personal data, by contrast, do not relate to any identifiable individual. In practice, most MPD initiatives rely on aggregated data products that summarise patterns across large groups of subscribers, rather than individual trajectories. However, whether data are genuinely non-personal depends on the level of aggregation, the availability of auxiliary information, and the evolving state of reidentification techniques. Governance frameworks must therefore adopt a cautious and context-aware approach to classification, recognising that what is considered anonymised today may not remain so in the future.
+
+## Legal and Regulatory Context
+
+MPD initiatives operate within complex legal and regulatory environments that vary across jurisdictions. Most countries now have some form of data protection or privacy legislation, and many have sector-specific regulations governing telecommunications data, cybersecurity, or national security. These frameworks determine who may process personal data, for what purposes, under what conditions, and with what safeguards.
+
+For training purposes, the General Data Protection Regulation (GDPR) [@gdpr_eu] provides a useful reference point, as many jurisdictions have adopted similar principles. Core concepts include lawfulness and transparency, purpose limitation, data minimisation, accuracy, storage limitation, integrity and confidentiality, and accountability. While the specific legal obligations differ by context, these principles offer a broadly applicable framework for thinking about responsible data use.
+
+Importantly, there is no single governance model that applies universally. Legal obligations depend not only on the country where data originate, but also on where data are processed and who is involved. MPD initiatives must therefore be grounded in jurisdiction-specific legal analysis, supported by engagement with relevant regulators and legal experts.
+
+## Risks Associated with MPD Initiatives
+
+MPD initiatives entail a range of interrelated risks that must be proactively identified and mitigated. Privacy risks include unauthorised access to sensitive data, reidentification of individuals, and the use of data for surveillance or profiling. Security risks encompass data breaches, whether through malicious attacks, inadequate access controls, or accidental disclosure. Ethical risks arise when data are misused, misinterpreted, or applied in ways that exacerbate bias, exclusion, or harm to vulnerable populations.
+
+These risks are not hypothetical. Experience shows that even well-intentioned initiatives can undermine public trust if governance arrangements are weak or poorly communicated. Risk management must therefore be treated as an ongoing process rather than a one-time compliance exercise.
+
+## Safeguards and Mitigation Measures
+
+Mitigating governance risks requires a combination of technical, organisational, and procedural safeguards. From a privacy perspective, common measures include Pseudonymisation, aggregation, and redaction. Pseudonymisation replaces direct identifiers with random values, allowing records to be linked without revealing identities. Aggregation summarises data across space and time, reducing the visibility of individual behaviour. Redaction techniques, such as enforcing minimum group sizes, help prevent disclosure in sparsely populated areas or time periods.
+
+These measures must be applied thoughtfully, balancing privacy protection against data utility. Stronger safeguards generally reduce analytical precision, making it essential to align protection levels with clearly defined purposes.
+
+Security measures are equally critical. Sensitive data should be stored behind secure firewalls, encrypted at rest and in transit, and accessed only by authorised personnel under strict access controls. Wherever possible, anonymisation and aggregation should occur within the secure environments of operators or regulators, minimising data movement and exposure. Logging, auditing, and regular security reviews further strengthen accountability.
+
+## Best Practices for Protecting Privacy in CDR analysis
+
+### Current, standard methods for preserving individual privacy
+
+Personal data must have strong protections to preserve the privacy of individuals in the dataset. Current practice usually has three types of privacy-preserving methods applied at different stages of the data pipeline:
+
+* Pseudonymisation
+* Aggregation
+* Redaction
+
+1) #### **Pseudonymisation** {#pseudonymisation}
+
+Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical). For MPD, this might involve replacing subscribers identifiers (e.g. phone number, IMSI, MSISDN) with a random string.
+
+Known as ‘hashing’ this process removes the personal information which allows the direct identification of subscribers, whilst still enabling the records from an individual subscriber to be linked together in order to analyse mobility.
+
+As result, pseudonymisation obscures subscribers identity but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process.
+
+2) #### **Aggregation** {#aggregation}
+
+By combining or aggregating MPD data for very large numbers of subscribers we can help preserve their privacy by making the movements of any single subscriber difficult, if not impossible, to discern. However, we still can make inferences about the distribution and mobility of the population as a whole from aggregated data.
+
+Data is aggregated spatially (e.g. by district or region) and temporally (e.g. by day, month) at a resolution informed by the type of indicator being produced and the requirements of the data user. For example, MPD for population estimates may be spatially aggregated at a district-level resolution and temporally at a monthly resolution, while transport applications would require higher spatial and temporal resolution aggregates.
+
+In addition to helping protect the individual privacy of the subscribers, the spatial aggregation of CDR data may remove other sensitive information about the number and locations of cell towers in each area which may be a concern of other stakeholders such as the operator.
+
+However, aggregation may not be sufficient to protect the individual privacy of all subscribers. Aggregation relies on there being a sufficient number of subscribers in each area in each time frame to prevent any individual being reidentified. Without any further checks, only aggregating CDR data risks producing outputs in which there is only a single or very few subscribers in a given location at a given time which may risk their reidentification. This is more likely to occur at high spatial and temporal resolution.
+
+3) #### **Redaction** {#redaction}
+
+To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity. A dataset can be described as k-anonymised if each subset of data points for a given individual (i.e. their location at each time point) is shared by at least k-1 other subscribers. For example, if we set k to 15 this means that the aggregated CDR must have at least 16 subscribers associated with (present or resident in) each location at each time point. Any combinations of location and time associated with fewer than 15 subscribers are redacted from the data set.
+
+While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed.
+
+### Emerging and novel Privacy-Enhancing Technologies (PETs)
+
+Researchers continue to develop new tools and techniques to preserve individual privacy. Extensions of k-anonymity such as [historical k-anonymity](https://link.springer.com/chapter/10.1007/11552338_13) and [L-diversity](https://ieeexplore.ieee.org/document/1617392) have been proposed to provide further protection, particularly for GPS data which is more vulnerable than CDR data to reidentification attacks due to the greater spatial and temporal resolution. [Privacy researchers](https://dspace.mit.edu/handle/1721.1/129321) have also proposed using neural networks to generate synthetic mobility datasets. These are based on real datasets and maintain the same aggregated statistical properties and patterns, but are not generated directly from the mobility data of real subscribers, meaning no subscribers can be reidentified. However, these techniques are still being developed and are not currently necessary for the anonymisation of MPD.
+
+When considering the appropriate implementation of privacy-preserving methods, and especially the resolution that MPD is aggregated at, it is important to recognise the trade-off with data quality.
+
+## International frameworks and industry standards
+
+Existing international frameworks and industry standards can be a useful way of informing the sustainable and ethical use of MPD. Examples of these include the guiding principles developed by the UN-CEBD MPD task team for maintaining public trust when using MPD; the Locus Charter which has identified a set of ethical guidance principles for any type of location data and the GSMA’s Mobile Privacy Principles.
+
+### UN Guiding Principles for maintaining public trust when using MPD
+
+Whilst MPD can be useful for multiple applications (see Chapter 2), public trust cannot be assumed; it must be actively maintained through clear standards, transparent practices, and professional accountability. To support this, the UN-CEBD MPD task team developed a set of five guiding principles to frame the responsible use of mobile operator data in policy contexts, particularly by public institutions and national statistical systems. [@jansen2021publictrust; @un2014fundamental_principles] The five key principles for maintaining public trust when using MPD are:
+
+1. **Necessity and Proportionality:** Mobile operator data should only be used where there is a clearly defined public policy need and where existing data sources are insufficient. The scope, granularity, and frequency of data use should be limited to what is strictly necessary to achieve the stated policy objective.
+2. **Professional Independence:** The production and interpretation of indicators derived from mobile operator data should be carried out independently of political or commercial influence. Transparent methods and clear documentation are essential to ensure credibility and accountability, particularly when outputs inform public decision-making.
+3. **Privacy Protection:** Strong safeguards must be applied to prevent identification of individuals, including aggregation, anonymisation, and the use of minimum thresholds. Compliance with applicable data protection laws and clear communication about privacy measures are critical to sustaining public trust.
+4. **Commitment to Quality:** Outputs based on mobile operator data should meet standards comparable to official statistics, including accuracy, consistency, timeliness, and transparency about limitations or biases. Quality assurance processes should be embedded throughout data processing and analysis.
+5. **International Comparability:** Where feasible, methods and indicators should be harmonised across countries to enable meaningful comparison and shared learning. Alignment with international statistical standards enhances the broader policy value and legitimacy of these data products.
+
+### The Locus Charter
+
+[The Locus Charter](https://ethicalgeo.org/locus-charter/), [@locus_charter] launched in 2021, is a set of proposed common international ethical principles to help users of location data, including MPD, to make informed and responsible decisions. The Locus Charter proposes that “wider, shared understanding of risks and solutions relating to uses of location data can improve standards of practice, and help protect individuals and the public interest”. It has ten principles.
+
+::: {.callout-note title="Box 9: The 10 principles of the Locus Charter"}
+
+Realise opportunities – Location data offers many social and economic benefits, and these opportunities should be realised responsibly. Understand impacts – Users of location data have a responsibility to understand the potential effects of their uses of data, including knowing who (individuals and groups) and what could be affected, and how. That understanding should be used to make informed and proportionate decisions, and to minimise negative impacts. Do no harm – Physical proximity amplifies the potential harms that can befall people, flora and fauna. Data users should ensure that the individual or collective location data pertaining to all species should not be used to discriminate, exploit or harm. Rights established in the physical world must be protected in digital contexts and interactions.  Protect the vulnerable – Vulnerable people and places can be disproportionately harmed by the misuses of location data, and may lack the capacity to protect themselves. In these contexts, data users should take additional care, act proportionately, and positively avoid causing harm. Address bias – Bias in the collection, use, and combination of location datasets can either remove affected groups from mapping that conveys rights or services, or amplify negative impacts of inclusion in a dataset. Therefore care should be taken to understand bias in the datasets and avoid discriminatory outcomes. Minimise intrusion – Given the intimate and personal nature of location data, users should avoid unnecessary and intrusive examination of people’s lives and the places they live in, that would undermine human dignity. Minimise data – Most business and mission applications do not require the most invasive scale of location tracking available in order to provide the intended level of service. Users should comply with practices that adhere to the data minimisation principle of using only the necessary personal data that is adequate, relevant and limited to the objective, including abstracting location data to the least invasive scale feasible for the application. Protect privacy – Tracking the movement of individuals through space and time gives insights into the most intimate aspects of their lives. In the rare cases when aggregated and anonymised location data will not meet the specific business or mission need, location data that identifies individuals should be respected, protected, and used with informed consent where possible and proportionate. Prevent identification of individuals – As an individual’s mobile location data is situated within more and more geospatial context data, its anonymity erodes, measures should be put in place to prevent subsequent use of the data resulting in identification of individuals or their location. Provide accountability – People who are represented in location data collected, combined, and used by organisations should be able to interrogate how it is collected and used in relation to them and their interests, and appeal those uses proportionate to levels of detail and potential for harms.
+
+:::
+
+### GSMA Mobile Privacy Principles
+
+In 2011 the GSMA published Mobile Privacy Principles [@gsma2016mobileprivacy] that provide a widely recognised, globally applicable set of standards to guide how personal data is handled in the delivery of mobile services and applications. They noted that protecting user privacy has become essential to maintaining consumer trust and ensuring the long-term legitimacy of the mobile ecosystem. The principles established a common, user-centric framework intended to guide MNOs, application developers, and other ecosystem participants in the responsible collection, use, and sharing of personal data. The principles are designed to be applicable across jurisdictions, supporting consistent privacy practices while allowing flexibility to reflect local legal and regulatory requirements. The core principles are as follows:
+
+1. **Transparency and Notice**: Organisations should provide clear, accessible information to users about what personal data is collected, how it is used, who it is shared with, and for what purposes. Transparency is essential to enabling informed user engagement and sustaining trust.
+2. **User Choice and Control**: Users should be provided with meaningful choices regarding the collection and use of their personal data. Where appropriate, mechanisms should exist for users to grant, withhold, or withdraw consent and to manage their privacy preferences over time.
+3. **Data Minimisation and Purpose Limitation**: The collection and retention of personal data should be limited to what is necessary, relevant, and proportionate to deliver the stated service or meet legitimate business or legal objectives. Data should not be used in ways that are incompatible with the original purpose without appropriate safeguards.
+4. **Security Safeguards**: Appropriate technical and organisational measures should be implemented to protect personal data against unauthorised access, disclosure, alteration, or loss. The level of protection should reflect the sensitivity of the data and the risks associated with its use.
+5. **Accountability and Governance**: Organisations should be accountable for their data practices and able to demonstrate compliance with applicable privacy principles and laws. This includes embedding privacy considerations into product design, internal policies, and operational processes.
+
+These are supported by supplementary guidance, including privacy-by-design recommendations and accountability frameworks, intended to assist organisations in translating high-level principles into operational practices. Together, these resources promote consistent privacy standards, support regulatory compliance, and help ensure that innovation in mobile services does not undermine individual rights or public trust.
+
+## Conclusion
+
+Data governance, including safeguarding and ethical use, is not an ancillary component of MPD initiatives; it is central to their legitimacy and effectiveness. By clearly defining purposes, understanding the legal and ethical context, engaging stakeholders, and implementing robust safeguards, organisations can responsibly harness MPD for public benefit. Governance frameworks must remain adaptive, reflecting changes in technology, regulation, and societal expectations. When treated as a core design consideration rather than a constraint, data governance enables MPD initiatives to deliver meaningful insights while protecting the rights and interests of all stakeholders.

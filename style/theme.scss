@@ -1,0 +1,95 @@
+/*-- scss:defaults --*/
+$body-bg: #ffffff;
+$body-color: #2C3E50;
+$link-color: #0077a8;
+$primary: #009edb;
+$secondary: #3398dc;
+$success: #18ba9b;
+$info: #00bed6;
+$warning: #e57d20;
+$danger: #a10f2b;
+$light: #f7f7f7;
+$dark: #2C3E50;
+$font-family-sans-serif: "Open Sans", "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-monospace: "Fira Code", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+$headings-color: #1f3143;
+$sidebar-bg: #f7f7f7;
+$toc-color: #2C3E50;
+$toc-active-border: #009edb;
+$callout-color-note: #009edb;
+$callout-color-tip: #18ba9b;
+$callout-color-warning: #e57d20;
+$callout-color-important: #a10f2b;
+$callout-color-caution: #e57d20;
+
+/*-- scss:rules --*/
+.un-cebd-sidebar-logo {
+  display: block;
+  padding: 0.75rem 1rem 1rem;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.12);
+  margin-bottom: 0.5rem;
+}
+
+.un-cebd-sidebar-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.navbar,
+.quarto-title-banner {
+  background: #009edb;
+}
+
+.sidebar-title {
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+}
+
+h1.title {
+  max-width: 18ch;
+}
+
+.subtitle {
+  color: #585f69;
+}
+
+.callout {
+  border-radius: 4px;
+}
+
+.callout.callout-style-default > .callout-header {
+  background-color: rgba(0, 158, 219, 0.08);
+}
+
+table {
+  font-size: 0.92rem;
+}
+
+caption,
+figcaption {
+  color: #585f69;
+}
+
+.chapter-number,
+.header-section-number {
+  color: #0077a8;
+}
+
+.quarto-title .chapter-number {
+  display: none;
+}
+
+.quarto-title .chapter-number + .chapter-title {
+  margin-left: -0.28em;
+}
+
+.quarto-appendix-heading {
+  color: #2C3E50;
+}

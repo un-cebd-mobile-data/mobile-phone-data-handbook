@@ -1,0 +1,88 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Design and Implementation of Mobile Phone Data Initiatives"
+  subtitle: "A Practical Manual"
+  reader-mode: true
+  author:
+    - "Cathy Riley"
+    - "Francisco Rowe"
+  date: "2026-05-26"
+  publisher: "TBC"
+  edition: "Version 1.4"
+  license: "TBC"
+  site-url: "https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/"
+  repo-url: "https://github.com/un-cebd-mobile-data/tt-mobile-data_practical-manual"
+  repo-branch: main
+  repo-actions: [edit, issue]
+  downloads: [pdf, epub]
+  favicon: assets/un-cebd-logo.png
+  page-footer:
+    left: |
+      UN-CEBD Mobile Phone Data Task Team | Publisher/imprint TBC | Licence TBC
+    right: |
+      Built with <a href="https://quarto.org/">Quarto</a>.
+  chapters:
+    - index.qmd
+    - chapters/acknowledgements.qmd
+    - chapters/glossary.qmd
+    - chapters/01-planning.qmd
+    - chapters/02-policy-applications.qmd
+    - chapters/03-partnerships-data-access.qmd
+    - chapters/04-data-processing-pipelines.qmd
+    - chapters/05-data-quality-characteristics.qmd
+    - chapters/06-data-governance-safeguards.qmd
+    - chapters/07-communications.qmd
+  appendices:
+    - chapters/appendix-resources.qmd
+    - chapters/references.qmd
+
+bibliography: references.bib
+link-citations: true
+description: "A practical manual for designing and implementing mobile phone data initiatives."
+
+format:
+  html:
+    theme:
+      light:
+        - cosmo
+        - style/theme.scss
+      dark:
+        - darkly
+        - style/dark.scss
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-copy: true
+    include-in-header:
+      text: |
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            const sidebar = document.getElementById("quarto-sidebar");
+            if (!sidebar || sidebar.querySelector(".un-cebd-sidebar-logo")) return;
+            const anchor = document.createElement("a");
+            anchor.className = "un-cebd-sidebar-logo";
+            anchor.href = "https://unstats.un.org/bigdata/";
+            anchor.setAttribute("aria-label", "UN Committee of Experts on Big Data and Data Science for Official Statistics");
+            const image = document.createElement("img");
+            const offset = document.querySelector('meta[name="quarto:offset"]')?.getAttribute("content") || "./";
+            image.src = offset + "assets/un-cebd-logo.png";
+            image.alt = "UN Committee of Experts on Big Data and Data Science for Official Statistics";
+            anchor.appendChild(image);
+            sidebar.prepend(anchor);
+          });
+        </script>
+  pdf:
+    documentclass: scrreprt
+    pdf-engine: xelatex
+    toc: true
+    number-sections: true
+    colorlinks: true
+  epub:
+    toc: true
+    number-sections: true
+    cover-image: assets/un-cebd-logo.png
+
+editor: visual

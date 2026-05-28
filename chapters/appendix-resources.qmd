@@ -1,0 +1,109 @@
+# Appendix 1: Further recommended resources
+This annotated bibliography provides verified references for the material covered in each chapter of this manual, together with additional resources for further reading. References marked with a chapter number in the main text are listed here in full. All URLs and DOIs were verified prior to publication. Practitioners are encouraged to check for updated editions before citing.
+
+## Chapter 1: Planning a Mobile Phone Data Initiative
+
+UN Statistics Division (2019). Handbook on the Use of Mobile Phone Data for Official Statistics. United Nations. Available at: https://unstats.un.org/bigdata/task-teams/mobile-phone/MPD%20Handbook%2020191004.pdf
+   → The foundational UN reference for MPD practitioners. Covers all key aspects of MPD planning, data pipeline design, quality assurance, and governance. Recommended as the primary companion text to this manual.
+
+Blondel, V.D., Decuyper, A., & Krings, G. (2015). A survey of results on mobile phone datasets analysis. EPJ Data Science, 4(10). DOI: 10.1140/epjds/s13688-015-0046-0. Available at: https://link.springer.com/article/10.1140/epjds/s13688-015-0046-0
+   → A widely cited academic survey of CDR data analysis, covering social networks, mobility, urban planning, and development applications. Useful background reading for Sections 1.2.1 and 5.2.
+
+Flowminder Foundation (2023). Flowminder standards in producing mobility and population estimates from call detail records in low- and middle-income countries. Flowminder Foundation. Available at: https://www.flowminder.org/resources/publications-reports/flowminder-standards-in-producing-mobility-and-population-estimates-from-call-details-records-in-low-and-middle-income-countries
+   → Practical methodological standards from Flowminder covering CDR ingestion, cleaning, home/work detection, aggregation, bias adjustment, and quality assurance. Relevant to Chapters 1, 4, and 5.
+
+GSMA (2016). Mobile Privacy Principles. GSMA. Available at: https://www.gsma.com/solutions-and-impact/connectivity-for-good/public-policy/gsma_resources/mobile-privacy-principles/
+   → The industry benchmark for privacy principles in mobile data use.
+
+**Additional resources:**
+General introduction to Mobile Phone Data — UN CEBD Task Team website: https://unstats.un.org/bigdata/task-teams/mobile-phone/
+Maturity Assessment Framework tool: https://worldbank.github.io/GDF-MPD/docs/project-resources/maturity_assessment_framework.html
+Theory of Change guidance for MPD initiatives: https://worldbank.github.io/GDF-MPD/docs/project-resources/theory-of-change.html
+
+## Chapter 2: Policy Applications
+
+UN-CEBD Task Team on Mobile Phone Data (n.d.). Methodological Guide on the Use of Mobile Phone Data: Dynamic Population Mapping. United Nations Statistics Division. Available at: https://unstats.un.org/wiki/spaces/MPDDPM/overview
+   → Authoritative UN methodology for population mapping applications. See Section 2.3.1.
+
+UN-CEBD Task Team on Mobile Phone Data (n.d.). Methodological Guide on the Use of Mobile Phone Data: Displacement and Disaster Statistics. United Nations Statistics Division. Available at: https://unstats.un.org/wiki/spaces/MPDDS/overview
+   → Core reference for displacement tracking methodology. See Section 2.3.2.
+
+UN-CEBD Task Team on Mobile Phone Data (n.d.). Methodological Guide on the Use of Mobile Phone Data: Tourism Statistics. United Nations Statistics Division. Available at: https://unstats.un.org/wiki/display/MPDTS
+   → Full methodological guide covering concepts, methods, and case studies for tourism. See Section 2.3.4.
+
+UN-CEBD Task Team on Mobile Phone Data (n.d.). Methodological Guide on the Use of Mobile Phone Data: Migration Statistics. United Nations Statistics Division. Available at: https://unstats.un.org/wiki/spaces/MPDMS/overview
+   → Relevant to Section 2.3 and any references to migration applications.
+
+Caceres, N., Wideberg, J.P., & Benitez, F.G. (2007). Deriving origin–destination data from a mobile phone network. IET Intelligent Transport Systems, 1(1), 15–26. DOI: 10.1049/iet-its:20060020. Available at: https://digital-library.theiet.org/doi/10.1049/iet-its%3A20060020
+   → The foundational engineering paper demonstrating MPD-based origin–destination matrix derivation. See Section 2.3.5.
+
+Blumenstock, J., Cadamuro, G., & On, R. (2015). Predicting poverty and wealth from mobile phone metadata. Science, 350(6264), 1073–1076. DOI: 10.1126/science.aac4420. Available at: https://www.science.org/doi/10.1126/science.aac4420
+   → The foundational Science paper on using CDR data to predict wealth distribution (Rwanda). See Section 2.4 and 2.4.1.
+
+Aiken, E., Bedoya, G., Blumenstock, J., & Coville, A. (2022). Machine learning and phone data can improve targeting of humanitarian aid. Nature, 603, 864–870. DOI: 10.1038/s41586-022-04484-9. Available at: https://www.nature.com/articles/s41586-022-04484-9
+   → Peer-reviewed Nature paper documenting the Togo Novissi cash transfer targeting initiative. See Section 2.4.2.
+
+Aiken, E. et al. (2022). Togo Novissi programme — World Bank Results Brief. World Bank. Available at: https://www.worldbank.org/en/results/2021/04/13/prioritizing-the-poorest-and-most-vulnerable-in-west-africa-togo-s-novissi-platform-for-social-protection-uses-machine-l
+   → An accessible institutional reference on the Togo social protection programme for readers wanting a non-technical overview.
+
+**Additional resources:**
+Dynamic Population Mapping (Netherlands): https://www.cbs.nl/en-gb/background/2025/14/using-cell-phones-to-compute-dynamic-population-densities-safely
+Disaster management and displacement case studies: https://www.sciencedirect.com/science/article/abs/pii/S0198971522000217
+Migration statistics from MPD: https://www.migrationdataportal.org/resource/exploring-use-mobile-phone-data-national-migration-statistics
+Transport case studies (Latin America): https://www.nommon.es/case-studies/monitoring-travel-demand-bogota-buenos-aires-world-bank-transit-insights/
+Tourism statistics — Estonia: https://positium.com/blog/estonia-leads-the-production-of-tourism-statistics-using-mobile-positioning-data
+Poverty mapping with MPD: https://www.flowminder.org/resources/publications-reports/mapping-poverty-using-mobile-phone-and-satellite-data
+
+## Chapter 3: Arranging Partnerships and Data Access
+
+Positium (2025). A Roadmap to Accessing Mobile Network Data for Statistics. Produced for the Global Partnership for Sustainable Development Data. Available at: https://www.data4sdgs.org/roadmap-accessing-mobile-network-data-statistics
+   → An excellent step-by-step practical guide on accessing MNO data for statistical purposes. Recommended companion reading for Sections 3.1 and 3.8.
+
+GSMA (2019). Big Data for Social Good: Mobile Network Operator Data Sharing. GSMA. Available at: https://www.gsma.com/solutions-and-impact/connectivity-for-good/external-affairs/wp-content/uploads/2019/09/Big-Data-AI-Ethics_web.pdf
+   → GSMA guidance on data sharing models for social good. Useful background for Chapter 3 discussions on MNO incentives and data-sharing frameworks.
+
+Additional resources:
+Accessing Mobile Network Operator data — webinar: https://www.data4sdgs.org/accessing-mobile-data-national-strategies-and-challenges
+MoU templates for MPD partnerships: https://worldbank.github.io/GDF-MPD/docs/project-resources/mou_templates.html
+
+## Chapter 4: Data Processing and Data Pipelines
+
+UN Statistics Division (2019). Handbook on the Use of Mobile Phone Data for Official Statistics, Chapter 2: Data Sources, Attributes and General Data Extraction Process. United Nations. Available at: https://unstats.un.org/bigdata/task-teams/mobile-phone/MPD%20Handbook%2020191004.pdf
+   → Chapter 2 of the UN Handbook is the primary reference for MPD data sources, pipeline structure, and extraction processes covered in this chapter.
+
+Flowminder Foundation (2023). Flowminder standards in producing mobility and population estimates from call detail records in low- and middle-income countries. Flowminder Foundation. Available at: https://www.flowminder.org/resources/publications-reports/flowminder-standards-in-producing-mobility-and-population-estimates-from-call-details-records-in-low-and-middle-income-countries
+   → Detailed methodological standards document covering CDR ingestion, cleaning, home/work detection, aggregation, bias adjustment, and quality assurance as described in this chapter.
+
+Flowminder Foundation (2023). Correcting measurement biases in the detection of long and short stay locations in sparse Call Detail Records. Flowminder Foundation. Available at: https://www.flowminder.org/resources/publications-reports/correcting-measurement-biases-in-the-detection-of-long-and-short-stay-locations-in-sparse-call-detail-records-cdrs
+   → Technical paper on bias correction relevant to Sections 4.7 and 5.7 (scaling and bias adjustment).
+
+Blondel, V.D., Decuyper, A., & Krings, G. (2015). A survey of results on mobile phone datasets analysis. EPJ Data Science, 4(10). DOI: 10.1140/epjds/s13688-015-0046-0. Available at: https://link.springer.com/article/10.1140/epjds/s13688-015-0046-0
+   → Broad survey of CDR data analysis methods including pipeline approaches relevant to Chapter 4.
+
+## Chapter 5: Data Quality and Characteristics
+
+Flowminder Foundation (2023). Flowminder standards in producing mobility and population estimates from call detail records in low- and middle-income countries. Flowminder Foundation. Available at: https://www.flowminder.org/resources/publications-reports/flowminder-standards-in-producing-mobility-and-population-estimates-from-call-details-records-in-low-and-middle-income-countries
+   → Covers CDR strengths and limitations, spatial and temporal precision, and methodological standards for quality assurance, all directly relevant to Chapter 5.
+
+Flowminder Foundation (2023). Correcting measurement biases in the detection of long and short stay locations in sparse Call Detail Records. Flowminder Foundation. Available at: https://www.flowminder.org/resources/publications-reports/correcting-measurement-biases-in-the-detection-of-long-and-short-stay-locations-in-sparse-call-detail-records-cdrs
+   → Peer-reviewed technical paper on bias correction in CDR data. Directly relevant to Section 5.7 on adjusting for bias.
+
+Blondel, V.D., Decuyper, A., & Krings, G. (2015). A survey of results on mobile phone datasets analysis. EPJ Data Science, 4(10). DOI: 10.1140/epjds/s13688-015-0046-0. Available at: https://link.springer.com/article/10.1140/epjds/s13688-015-0046-0
+   → See for further details relevant to the overview of CDR strengths and limitations in Section 5.2.
+
+Wesolowski, A., Eagle, N., Tatem, A.J., Smith, D.L., Noor, A.M., Snow, R.W., & Buckee, C.O. (2013). The impact of biases in mobile phone ownership on estimates of human mobility. Journal of the Royal Society Interface, 10(81), 20120986. DOI: 10.1098/rsif.2012.0986.
+   → The foundational paper on representativeness bias in CDR data, covering differential phone ownership by gender, age, and wealth. Essential citation for Section 5.6. Note: this paper is paywalled and must be accessed via institutional library subscription.
+
+## Chapter 6: Data Governance and Safeguards
+
+GSMA (2016). Mobile Privacy Principles. GSMA. Available at: https://www.gsma.com/solutions-and-impact/connectivity-for-good/public-policy/gsma_resources/mobile-privacy-principles/
+   → The industry benchmark for privacy principles in mobile data use. Cited in Sections 1.4 and 6.8.3.
+
+Jansen, R. et al. (2021). Guiding principles to maintain public trust in the use of mobile operator data for policy purposes. Data & Policy, 3, E24. DOI: 10.1017/dap.2021.21.
+   → The peer-reviewed paper behind the UN guiding principles described in Section 6.8.1. Provides the full evidence base and rationale for the five principles.
+
+United Nations (2014). Fundamental Principles of Official Statistics. United Nations Statistics Division. Available at: https://unstats.un.org/unsd/dnss/gp/fundprinciples.aspx
+   → The UN Fundamental Principles apply to data governance, quality assurance, and public trust in official statistics. See Sections 6.2, 6.8, and throughout Chapter 6 where governance obligations are discussed.
+
+African Union (2018). African Union Convention on Cyber Security and Personal Data Protection (Malabo Convention). African Union. Available at: https://au.int/en/treaties/african-union-convention-cyber-security-and-personal-data-protection
+   → The continental African framework for data protection.

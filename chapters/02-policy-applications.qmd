@@ -1,0 +1,198 @@
+# Chapter 2: Policy Applications for MPD
+In recent years MPD has emerged as a transformative resource for governments, NSOs, and development partners who want timely, granular, and cost-effective forms of evidence to inform their policy-making. This chapter addresses the use of MPD for policy-making with an emphasis on policy applications in which MPD has already been demonstrated to add value. This chapter discusses *why* MPD is valuable, *how* it can be applied across key policy domains, and some *considerations* that must be addressed when designing an MPD initiative to achieve particular policy-informing objectives.
+
+## Why and How is MPD Useful?
+
+As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:
+
+* **High temporal resolution**: daily or even near–real-time indicators
+* **Fine spatial granularity**: insights at neighbourhood, district, or corridor level
+* **Cost efficiency**: lower marginal costs once partnerships and pipelines are established
+* **Resilience**: data collection continues during crises such as pandemics, disasters, or conflicts
+
+These characteristics make MPD particularly valuable in policy areas where *where people are* and *how they move* directly affects outcomes.
+
+The UN Committee of Experts on Big Data and Data Science for Official Statistics has an MPD task team which has published guidance on using this data source for different specific use cases [@uncebd_mobile_phone_task_team]. The task team has identified six domains where MPD is especially relevant and being actively used in different contexts:
+
+1. Measuring the Information Society
+2. Dynamic population mapping and migration statistics
+3. Disaster management, displacement and public health crises
+4. Tourism statistics
+5. Transport statistics
+
+For each of the above, detailed guides have been produced which provide in-depth information regarding how to approach using MPD for these purposes. For a comprehensive description of each, please refer to the specific topic’s Guide (see links provided in Appendix 1). The next section gives overview summaries for each with some illustrative examples. It is followed by a short description of another potential application for MPD, estimating the socio-economic variables such as distribution of wealth and poverty, which is being actively explored.
+
+## Information Society Statistics
+
+### Information Society and Digital Inclusion
+
+Access to digital technologies is now a core determinant of social and economic inclusion. Yet traditional household surveys often struggle to provide timely and geographically detailed information on Internet use and mobile connectivity. MPD can support SDG monitoring by producing indicators related to: [@uncebd_information_society]
+
+* **Internet usage** (SDG 17.8.1): proportion of individuals using the internet
+* **Network coverage** (SDG 9.C.1): proportion of the population covered by mobile networks
+
+**Practical Guidance**
+When using MPD for digital inclusion indicators:
+
+* Ensure the operator’s subscriber base is sufficiently representative of the population
+* Adjust for **technology type** (2G, 3G, 4G, 5G), as not all devices support internet use
+* Validate MPD-derived indicators against household surveys where possible
+
+**Box 3: Brief Case Studies of Information Society applications** [@itu_sdg_case_study]
+
+**Rio de Janeiro, Brazil**: MPD-based estimates of internet use differed by only 1% from household survey results at metropolitan level, demonstrating that MPD can reliably approximate traditional indicators while offering much finer geographic detail.
+**Bali, Indonesia (2020)**: MPD slightly overestimated internet use compared to socio-economic surveys, highlighting the importance of accounting for older technologies such as 2G phones that cannot access the internet.
+
+### Network Coverage and Infrastructure Planning
+
+MPD allows policymakers to distinguish between nominal coverage and *effective* access to high-speed connectivity. Mapping 2G versus 3G coverage, for example, reveals where populations may technically be covered but lack access to broadband-quality services.
+Such insights directly inform:
+
+* Infrastructure investment prioritisation
+* Universal service obligations
+* Digital equity strategies
+
+## Population Statistics and Mobility Analysis
+
+Accurate population data is critical for governments to plan services, allocate resources, and respond effectively to emergencies. In addition, accurate population data forms the basis of most other statistics, whether providing a reference base for the calculation of statistics or setting the frames for surveys. MPD can be used in different ways to understand and use population movement data.
+
+### Dynamic Population Mapping and Migration
+
+Dynamic Population Mapping uses MPD to estimate where people are located at different times of day or year, capturing the ***de facto*** **population** rather than the static, *de jure* population recorded in censuses. This approach captures the actual presence and movement of populations over time. [@uncebd_dynamic_population]
+
+Dynamic population mapping is useful for several use cases, including:
+
+* Service provision (health, policing, transport)
+* Infrastructure planning
+* Emergency preparedness
+* Event and seasonal population management
+* Creation of dynamic sample frames for surveys
+* Census preparation and implementation
+
+MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households.
+
+Some of the key design principles for using MPD for dynamic population mapping include:
+
+* Use sufficiently long historical windows to distinguish residents from visitors
+* Segment populations (residents, commuters, tourists, transit users)
+* Validate estimates against administrative or survey benchmarks
+
+Estimating the movements of populations in a country can also be taken a step further, and used to produce official migration statistics. The UN-CEBD Task Team on MPD has produced methodological guidance on how to do so. [@uncebd_migration_statistics]
+
+::: {.callout-note title="Box 4: Dynamic population data and internal migration"}
+
+Estonia (2012 to 2015): From 2012 to 2015, the Estonian Police and Border Guard needed accurate and up-to-date population statistics for all 237 municipalities. Their goal was to better plan the distribution of patrol units across the country. To do this, they needed more than just total population counts. They needed to understand seasonal and weekly fluctuations, and distinguish between permanent residents, domestic visitors such as workers and students, foreign visitors, and even people in transit. They turned to MPD, or MPD, to estimate the de facto population. By looking at longer-term patterns, MPD also allowed them to differentiate residents from visitors and people in transit. The rescue services of Estonia repeated the exercise with data for 2018 as well as 2021-2022. Madrid (2019, 2020): The project aimed to analyse migratory movements in the Autonomous Community of Madrid during the COVID-19 and post-pandemic periods using MPD. It found evidence of shifts in migration patterns, including increased inflows to rural and outer suburban areas and outflows from core urban areas, across different population groups.
+
+:::
+
+### Disaster Management
+
+Traditional statistics struggle to measure displacement and return dynamics. MPD can enable rapid estimation of displacement, return, and recovery when digital trace data are carefully adjusted, validated, and triangulated with other sources [@uncebd_disaster_statistics; @rowe2022digitalfootprint; @iradukunda_rowe_pietrostefani2025ukraine; @pietrostefani2025dynamic_displacement]. MPD can enable rapid estimation of:
+
+* The scale of displacement
+* Destinations and duration of movements
+* Return and recovery patterns
+
+As a result, MPD can be a very useful source of information for responding to disasters. How populations move after large and small-scale events, from earthquakes and hurricanes that destroy vast areas, to small-scale localised conflicts such as gang violence, the data can support an understanding of how populations who have been affected are responding in terms of movement out of specific geographies, where they are going to, how many are displaced, and for how long they are displaced. This data is extremely useful to organisations wanting to respond to disasters with needs assessments; emergency response interventions such as shelter, food, and health services; and cash transfers to affected populations. For example, during the gang violence in Haiti, information provided through the Haiti Mobility Data Platform since 2023 has been used by UN agencies and the humanitarian NGOs operating in the country to identify and where to send assessment teams, what parts of the country to prioritise for funding and assistance. Another example comes from Ghana, where Ghana’s National Disaster Management Organisation, NADMO, received reports on displaced populations after an initial response to flooding in the Lower Volta region in 2023. The assessment identified a population of affected people that had previously not been identified and to which they could send an assessment team to clarify needs and provide assistance.
+
+MPD can also be used to assess the impact of early warning, evacuation alerts and other government measures (e.g. lockdowns during COVID). For example, during the 2024 wildfires in Valparaíso, Chile, MPD from approximately 580,000 devices was analysed to evaluate the effectiveness of SMS messages warning the population about the fires and informing those in risk areas to evacuate. The data enabled high-frequency observation of evacuation behaviour at operational timescales.
+
+Finally, MPD can be used to understand connectivity access as well as mobility disruptions during an emergency. For example, during the 2025 Spain–Portugal blackout, MPD revealed how many people were away from home and how far they were displaced at the time of the outage.
+
+::: {.callout-note title="Box 5: Brief Case Studies of MPD for disaster management"}
+
+Madrid during COVID-19 (2020): MPD showed a 10% drop in population during lockdowns and identified destination regions, helping assess societal impacts of mobility restrictions. Ghana during COVID-19 (2020): Data from Vodafone Ghana was used to support government decision making by the Presidential Task Force around the effectiveness of COVID-19 lockdowns and what non-pharmaceutical interventions were working in the country, informing subsequent policies on movement restrictions [@li2021ghana_cdr]. Bangladesh (climate risk): MPD quantified migration linked to cyclones and environmental stress, informing adaptation and resilience strategies. Haiti earthquakes (2010, 2021): MPD provided rapid, reliable estimates of displacement that closely matched later survey results, supporting both emergency response and long-term recovery planning. Chile (2024): Researchers analysed MPD to assess how effective SMS evacuation messages had been. Haiti gang violence (2021-2025): MPD was used to demonstrate how the population affected by gang violence was relocating from areas affected, particularly in the capital, but moving to areas that are more prone to flooding during hurricane season. It was also used to study the effect on movements following announcement and deployments of peace and security missions to Haiti.
+
+:::
+
+### Public Health and Epidemiology
+
+MPD offers public health practitioners a powerful input for epidemiological surveillance and outbreak response. Because infectious disease spreads through human movement, it can provide a near-continuous, large-scale record of population mobility that can be used to model spatial transmission risk, identify hotspots, and predict where outbreaks are likely to emerge next. This has been demonstrated across multiple disease contexts: CDR-derived mobility metrics outperformed conventional gravity models in predicting the spread of cholera in Haiti in 2010 and revealed the role of mass gatherings as a transmission driver during the 2005 Senegal epidemic [@bengtsson2015cholera]. Similar approaches have been applied to rubella in Kenya, where seasonal mobility patterns tied to school terms and holidays outperformed other variables in explaining transmission peaks, with direct implications for vaccination timing.
+
+Beyond spread modelling, MPD enables real-time evaluation of non-pharmaceutical interventions such as travel restrictions and lockdowns, providing evidence on behavioural compliance that cannot be obtained from any other source. During the Ebola response in Sierra Leone and COVID-19 responses across multiple countries, CDR and other digital trace analyses showed measurable reductions in mobility following restrictions (and their reversal once measures were lifted), often within just a few days of implementation [@rowe2023urban_exodus; @cabrera2025latin_america_mobility].
+
+MPD-derived population statistics can also be used to support health monitoring and metrics by producing dynamic population denominators which reflect actual population density numbers, rather than static census counts. In Ghana, WFP supported analytical work by the Data for Good Partnership working with Ghana Health Service and Ministry of Health colleagues to combine CDR-based mobility estimates with disease case counts and generate per-capita indicators for resource allocation and outbreak preparedness which took dynamic population movements into account.
+
+By integrating MPD with environmental and health datasets, authorities can generate dynamic exposure indicators that reflect actual population movements. Some applications include:
+
+* Disease modelling
+* Environmental surveillance of diseases (e.g. polio)
+* Emergency health service planning
+* Pollution and heat exposure
+
+::: {.callout-note title="Box 6: Case study of MPD for Public Health and Epidemiology"}
+
+Haiti cholera outbreaks (2010, 2022): After the 2010 earthquake in Haiti, MPD was used to demonstrate how MPD-derived indicators of movement can be used to predict the spread of cholera; and in 2022 further analysis was done of how outbreaks would cause infectious pressure in specific parts of the country based on population movements.  MePreCISa Project (2024, 2025): The MePreCiSa Project, led by the Barcelona Supercomputing Center (BSC), developed an open cloud platform designed to support the management of health crises in complex scenarios by integrating MPD with health and environmental information to model pollution exposure and disease spread. It addresses key use cases such as air quality and health, social contact and epidemic transmission, and mobility and wastewater in the Autonomous Community of Catalonia. India Tuberculosis Spread (GSMA/Airtel): A GSMA study used anonymised Airtel CDRs to model and track the spread of tuberculosis (TB) in India, helping to identify high-risk areas and inform targeted public health interventions.
+
+:::
+
+### Tourism Statistics
+
+MPD can help to overcome some of the common limitations of tourism surveys by capturing cross-border and short-duration movements. [@uncebd_tourism_statistics] The specific ways in which MPD can be used for tourism statistics and data include:
+
+**Measuring inbound and cross-border visitor arrivals.** The most widespread use of MPD in tourism is to measure the number of people crossing international borders. This is particularly valuable where traditional border controls have been removed or weakened (see Estonia case study).
+
+**Measuring outbound travel.** MPD can equally capture the movement of residents travelling abroad. Estonia uses MPD to produce both inbound and outbound border crossing statistics, which feed directly into the Travel Services component of the Balance of Payments; a use case that illustrates how MPD contributes not just to tourism policy but also to macroeconomic accounting.
+
+**Domestic tourism measurement.** Beyond international travel, MPD has also been used to measure trips taken by residents within their own country. Indonesia, for example, combines MPD with digital surveys to track domestic tourist trip volumes and purpose of travel.
+
+**Visitor profiling and disaggregation.** Granular analysis of the profiles of tourists can also be helpful, and MPD can allow analysis of inflows and outflows of subscribers by, for instance, country or region of residence, type of visit (same-day visitor, overnight tourist, transit visitor), and geographic destination within the host country.
+
+**Length of stay estimation.** By tracking the duration of a mobile device's presence within a defined geographic area, MPD can estimate how long visitors remain in a destination, at national or sub-national level.
+
+**Event and venue visitor measurement.** MPD has been applied to measure visitor flows at specific events and locations. For instance, during the 2018 Asian Games in Indonesia, MPD was used to count attendees at venues in Jakarta and Palembang, identify visitor origins, track mobility between venues and cities, and estimate length of stay. This information could not be reliably produced through ticket sales, immigration records, or surveys alone. This visitor data was then used as an input into a Computable General Equilibrium (CGE) model for economic impact analysis.
+
+**Supporting official statistics and policy planning.** Across countries, a shared motivation for adopting MPD is to improve the timeliness, coverage and cost-efficiency of official statistics. Benefits can include timeliness, consistency, completeness of coverage and cost-effectiveness. MPD-derived tourism statistics can also feed upstream into national development planning, balance of payments, and sustainable tourism policy, including progress monitoring against SDG targets.
+
+::: {.callout-note title="Box 7: MPD for tourism statistics"}
+
+Indonesia (2016, 2018, 2019): MPD was used for inbound tourism, domestic tourism, outbound tourism, and event-impact analysis. It reduced work burdens, increased granularity from province to city/municipality level, and reduced the budget (by more than half). City/Municipality Local Tourism Authority used the data for development planning, investment and promoting local tourism spots. MPD also provided data on country of destination and increased the coverage especially at the areas where there is no immigration checkpoint (Outbound Tourism 2019, official statistics). The local and national authority use it for policy on increasing domestic tourism. In 2018, MPD is also used in study for the Impact of Asian Games 2018 on Indonesia (National/Regional) Economy. The results of the study is used to develop tourism nationally and regionally. Estonia (2008 onwards): Estonia's Bank of Estonia (Eesti Pank) began using MPD to compile border crossing statistics in 2008, prompted by Estonia's entry into the Schengen area which eliminated traditional border controls, and budget constraints that shifted responsibility for travel statistics away from Statistics Estonia. A methodology was developed to estimate the number of inbound and outbound travelers, trip durations, and visitor categories, feeding these figures into the Balance of Payments Current Account. Data is collected monthly from MNOs under a legal mandate requiring companies to supply data for official statistics, processed into anonymised aggregate outputs, and validated against payment card data, airport statistics, and accommodation surveys. Results have been published quarterly as "International Travel Statistics" since 2012.
+
+:::
+
+### Transport and Mobility Planning
+
+Designing effective transport policies requires a comprehensive understanding of how people and goods move. Information on travel demand, such as origin–destination patterns, trip frequency, distance, timing, and modal choices; is essential for infrastructure planning, service design, and policy evaluation. It also plays a critical role in monitoring progress towards sustainability objectives, including those related to climate change mitigation, air quality, and equitable access.
+
+In the transport arena, MPD has been applied to a wide range of policy-relevant use cases. These include:
+
+* the development and monitoring of national and urban mobility plans,
+* the evaluation of transport infrastructure investments,
+* the optimization of public transport services, and
+* the assessment of policy measures such as congestion management or low-emission zones, among others.
+
+Case studies, particularly from Latin America and Europe, have demonstrated the strong value of MPD, highlighting improvements in the quality, spatial coverage, and temporal continuity of mobility statistics, as well as the ability to analyse mobility patterns over multiple days and time periods. [@caceres2007origin_destination]
+
+MPD offers several advantages compared to traditional data collection methods. Its large sample size, often covering a significant share of the population, enhances representativeness and enables detailed spatial analysis, particularly for the estimation of origin–destination matrices. In addition, MPD provides continuous observations over time, allowing for more frequent updates and enabling the monitoring of mobility dynamics, including responses to transport policy interventions such as congestion pricing schemes, public transport reforms, or mobility restrictions. When combined with other data sources, such as surveys or smart card data, MPD can also support more comprehensive analyses, including modal segmentation.
+
+::: {.callout-note title="Box 8: MPD for transport statistics"}
+
+Ministry of Transport and Sustainable Mobility (MITMS), Spain (2017-2025). Within its responsibility for planning and managing transport infrastructure and services in Spain, the MITMS conducts so-called “Demand Prospective Studies” to assess the impact of new infrastructures, services, and regulations on the transport system. One of these focuses on analysing passenger mobility at the national level. Traditionally, this was carried out through the Movilia surveys, which required significant economic, technical, and human resources. To leverage emerging mobility data sources, in 2017 the MITMS launched the “Analysis of Interurban Mobility in Spain using Big Data Technologies,” a pioneering project based on MPD to study mobility patterns nationwide. This initiative demonstrated that MPD can provide high-quality mobility insights at a lower cost and with greater timeliness than traditional surveys. The project was extended in 2020–2021 to enable daily mobility monitoring and support decision-making during the COVID-19 crisis, and further consolidated in 2022-2025 with a continuous mobility analysis framework, integrating MPD with additional data sources, such as public transport ticketing data, to monitor the evolution of travel demand behaviour at national level. Metropolitan areas in Latin America (2021-2026). Since September 2021, the World Bank has used MPD to generate origin–destination matrices for several metropolitan areas in Latin America, with the overarching goal of providing strategic guidance and technical recommendations for the development of a regional transport planning platform in the LAC region. These projects aim to deliver high-quality, up-to-date passenger travel demand information based on new big data sources. Initially implemented in Bogotá (Colombia), Buenos Aires (Argentina), and Medellín (Colombia), the initiative was later extended to Asunción (Paraguay) in 2023 and to Rio de Janeiro, Belo Horizonte, and Florianópolis (Brazil) in 2025. Department for Transport UK: The UK Department for Transport (DfT) used MPD to understand national and regional travel patterns, particularly in response to major transport disruptions or for informing long-term strategic road network planning. This work, often referenced in the UN Handbook series, focused on deriving Origin-Destination (OD) matrices to gain timely insights into commuter and non-commuter movements, complementing traditional travel surveys with high-frequency, large-scale data.
+
+:::
+
+## Socio-Economic Applications: Poverty Mapping
+
+Traditional poverty data can often become quickly outdated, particularly in low- and middle-income countries and contexts with highly dynamic populations. In combination with traditional sources such as census and survey data, in periods between their data collection, and sometimes in combination with other forms of data such as geospatial datasets, MPD can be a useful tool for generating updated and spatially refined estimates of socio-economic variables such as wealth or poverty.
+
+Work in this area is still relatively nascent with exploratory analysis and in-depth research being undertaken by a number of researchers and institutions. Some initial findings and examples of application to real-world scenarios are described below.
+
+### Bangladesh poverty mapping study
+
+In Bangladesh, researchers have demonstrated how anonymised mobile phone metadata such as CDRs capturing patterns of mobility, airtime purchases, and social connectivity can be leveraged to estimate poverty at a much finer spatial resolution than traditional household surveys allow. By statistically linking these behavioural proxies to benchmark survey-based welfare measures, the studies produced high-resolution poverty maps capable of identifying significant regional disparities, including pockets of deprivation that are often masked in national or district-level averages.
+
+These poverty maps proved particularly valuable for policy analysis and planning, as they enabled near-real time updates and granular geographic targeting at relatively low marginal cost. In a context where surveys are expensive and infrequent, mobile phone based approaches complemented official statistics, offering decision-makers an evidence base to prioritise lagging regions, allocate resources more efficiently, and monitor spatial inequality over time. [@blumenstock2015poverty]
+
+### Togo’s use of MPD for targeting social protection payments
+
+In Togo, MPD played a more operational role during the COVID-19 pandemic, when rapid identification of vulnerable populations was essential. Anonymised mobile phone usage indicators were combined with geospatial data such as night-time lights and population density to infer economic vulnerability in areas where up-to-date poverty data were unavailable. This approach allowed authorities to estimate need dynamically as the crisis evolved.
+
+The resulting analytics underpinned a digitally delivered social protection programme that targeted informal workers and low-income households for emergency cash transfers. By using mobile phone–based proxies rather than relying solely on existing registries, Togo was able to expand coverage quickly and transparently, demonstrating how mobile data, when integrated with geospatial information, can support timely and adaptive social protection in crisis settings. [@aiken2022machine_learning; @worldbank2021novissi]
+
+### Testing the utility of MPD for poverty prediction in Ghana
+
+In 2024/25, a study was undertaken to explore how MPD can be used in model-based estimates of multi-dimensional poverty measures for Ghana. The analysis tested various data types (CDR-derived variables, geospatial data such as building footprints, and other forms of data from MNOs such as top-up data) to see which would be good predictors of multi-dimensional poverty indices (MPI) as estimated through census and survey instruments. The study found that covariates based on building footprints were consistently the strongest predictor for Ghana MPI; models built using a combination of CDR and geospatial covariates consistently provide marginally better performance than models using geospatial covariates alone; and models built using CDR covariates alone have consistently lower performance. Further areas of study have been identified.
+
+## Conclusion
+
+MPD offers a powerful complement to traditional statistical systems. When carefully planned, validated, and combined with other data sources, MPD initiatives can significantly enhance governments’ ability to understand populations, respond to crises, and design evidence-based policies. This manual provides a foundation for practitioners to move from isolated pilots toward sustainable, policy-relevant MPD programmes.

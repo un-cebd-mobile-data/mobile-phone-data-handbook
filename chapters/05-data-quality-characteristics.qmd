@@ -1,0 +1,163 @@
+# Chapter 5: Data Quality and Characteristics
+This chapter revisits what CDRs are, what information they contain, why its characteristics matter for statistical quality, how common biases arise and can be adjusted, and how to operationalise quality assurance so that CDR-derived statistics are reliable and trusted for policy use.
+
+
+## How CDRs are generated and key data fields
+
+As described in Chapter 1, CDR records are created when a subscriber makes or receives a call, sends or receives an SMS, and/or uses mobile data. Each record is associated with the network infrastructure that serviced the event; most importantly, the cell tower (cell ID) the device connected to at the moment of the event. A key implication is that the “location” in CDR is not the device’s precise coordinates; it is the tower location (or, more precisely, the tower identifier, which can be linked to coordinates via a separate reference table).
+
+At a minimum, to use CDR data for producing useful outputs three fields will be needed:
+
+1. **A Pseudonymised subscriber identifier** (the ‘hashed’ ID that removes personally identifiable information^[Substituting the identifier through pseudonymisation protects identity by stripping out easily identifiable data such as a telephone number. Maintaining a stable pseudonymised identifier can still enable longitudinal analysis where this is lawful, necessary, and appropriately governed.])
+2. **A cell ID** (tower identifier),
+3. **A timestamp** of the network event.
+
+
+Many implementations also include additional metadata such as the receiving party identifier (also Pseudonymised) and the type of event (voice/SMS/data). Critically, CDR does **not** include communication content (no call audio, no SMS text); it contains metadata about the event.
+
+
+### Pseudonymisation and identifiers: why they matter for quality
+
+Pseudonymisation is described as replacing personally identifying values with random strings, with the important property that the **same original value maps consistently to the same Pseudonymised value**. This allows analysts to follow a device/subscriber across many records without exposing direct identifiers. Pseudonymised data should still be treated as sensitive, because repeated location patterns may enable re-identification when combined with other information.
+
+CDR ecosystems also include multiple identifiers, and understanding them is useful because they can affect your unit of analysis (person vs SIM vs handset) and therefore your bias risks:
+
+* **MSISDN** (the phone number) is tied to the subscriber and is used for routing and billing.
+* **IMSI** is tied to the **SIM** and identifies the subscriber within the network.
+* **IMEI** is tied to the **handset/device** (the physical phone).
+
+CDR data should not be assumed to provide a direct record of individual persons. Records are typically associated with subscriber-, SIM-, device-, or subscription-level identifiers, which may not map one-to-one to people. From a quality standpoint, these distinctions become practical when dealing with realities like multiple SIM ownership, SIM swapping, or shared devices. Each of these can distort interpretations if we assume “one identifier equals one person” without testing that assumption.
+
+## Strengths and limitations of CDR data
+
+### Strengths: coverage, timeliness, and passive generation
+
+CDR’s major advantages for policy analytics are that it can include **all subscribers** (regardless of device type or operating system) because it is collected primarily for billing and network management. It is generated passively and routinely collected as part of ordinary network operation, without the need to design a new data-collection instrument. It can also be near real-time and granular in the sense of high record volume.
+
+### Limitations: spatial precision, temporal intermittency, and representativeness
+
+CDR quality constraints arise directly from how it is created:
+
+* **Spatial precision is tower-dependent.** Location is approximated at cell-tower level, not precise coordinates. Tower density varies, so spatial precision is typically much higher in urban areas and lower in rural areas.
+* **Temporal resolution is behaviour-dependent.** CDR observations occur when network events occur. A user who rarely calls/texts/uses data will have sparse observations, producing intermittent trajectories (unlike many GPS streams that are logged at regular intervals).
+* **Representativeness is not guaranteed.** Not everyone owns a phone, not everyone is on the same operator, and not everyone uses their phone in the same way. Demographics and socioeconomic factors influence who appears in the data and how. Note also that one subscription does not always equal one individual (shared phones, multiple SIMs per person).
+
+A useful way to internalise these limitations is to treat CDR as a high-volume observational dataset whose measurement properties vary across geography, network configuration, and subpopulations, rather than as a direct census of “people” or “movements.”
+
+## Interpreting location in CDR: from records to meaningful places
+
+### Mobility as “movement between towers,” not continuous location traces
+
+CDR-based mobility is observed as changes in connected tower IDs recorded in network events over time. For example, a day’s records might show a device associated with tower A in the early morning, tower B during commuting and working hours, tower C during mid-day, and tower A again at night, suggesting a simple sequence of tower-to-tower transitions. This is conceptually different from GPS-derived data, which may provide more frequent and detailed location traces, depending on how the data are collected.
+
+
+### Using timestamps to infer home and work
+
+CDR does not label locations as “home” or “work.” These locations are usually inferred from repeated time-of-day patterns, based on the assumption that people are typically at home at night, away during working hours, and return in the evening. Therefore, towers observed late at night may be used as proxies for home, while towers observed consistently during working hours are candidates for workplace location. This inference is not perfect, but it is a pragmatic, explainable method grounded in time-of-day behaviour.
+To apply this responsibly, it is generally necessary to:
+
+* Define time windows carefully (e.g., “night” vs “work hours”) and test sensitivity.
+* Require sufficient observation volume (sparse users may not support reliable inference).
+* Validate against reference data where available (surveys, travel studies, or known anchor points).
+
+## Spatial coverage and the Voronoi approximation: what it enables and what it hides
+
+### Voronoi cells as a workable model of tower coverage
+
+A useful tool for modeling spatial coverage is the **Voronoi diagram.** A tool for approximating coverage, Voronois partition space into regions where each point is closest to a given tower. Each polygon (“Voronoi cell”) can serve as a practical unit for associating CDR events to geographic areas. Note that Voronois are only a useful simplification of reality. The true network coverage will depend on factors such as terrain, capacity, and network configuration. But Voronoi cells provide a useful baseline for analysis in the absence of more detailed or nuanced network coverage data.
+
+### Why CDR trajectories can deviate from “actual mobility”
+
+Note that flows among towers can deviate from real-world movement paths. Two reasons for this are:
+
+1. **Variable cell size:** urban areas have many towers, smaller cells, and therefore finer spatial precision; rural areas can have large cells where within-cell movement is invisible.
+2. **Sparse observation:** if a device generates few events, you will only observe fragments of movement, and tower-to-tower transitions will appear as “straight jumps” that omit intermediate routes.
+
+Therefore, CDR data is often excellent for measuring *aggregate flows and population dynamics* at suitable spatial-temporal scales, while reconstructing precise routes or micro-mobility in low-density tower environments usually requires supplementary data, stronger assumptions, or additional modelling.
+
+## Key data-quality considerations driven by network behaviour
+
+### Tower density and the visibility of short trips
+
+Tower density is closely related to population density because operators deploy more infrastructure where there are more users and higher demand. In urban areas, the high tower density makes it more likely that short trips (e.g., within a neighbourhood) will register as changes in connected towers. In rural areas, short trips may remain entirely within one tower’s coverage and therefore appear as “no movement.”
+
+This matters because many downstream indicators (commuting intensity, localised displacement, neighbourhood-level service catchments) are highly sensitive to the minimum observable movement unit. If tower-density effects are not explicitly accounted for, the analysis may inadvertently under-detect mobility in rural or low-coverage regions.
+
+### Handover and location noise: false mobility signals
+
+ One common source of location noise is frequent tower switching (handover), which can occur due to fluctuating signal strength, load balancing, or switching among technologies. The key risk is that CDR may show multiple tower changes even when a person is essentially stationary, creating false mobility signals, especially where tower coverage overlaps.
+
+One possible mitigation approach is to **cluster nearby towers**: when towers are very close and frequent switching occurs among them, treating them as a single “location cluster” can reduce false movement and produce more stable mobility signals.
+
+In practice, clustering is not just a technical adjustment; it is part of making the measurement model explicit. This means that, at the spatial scale of interest, switching among certain towers should not be interpreted as meaningful movement.
+
+## Representativeness and bias: why “who is in the data” is central to quality
+
+CDR-based analysis observes only a subset of the population:
+
+* People with **no subscription** are absent.
+* People subscribed to **other operators** are absent unless you have multi-operator coverage.
+* Even within a given operator, **inactive subscribers** contribute little or no usable data because they rarely generate events.
+
+
+Survey data from Ghana has shown the differential phone use across groups, for example, differences by gender, age, and urban/rural locality, illustrating how underrepresentation can arise even when overall penetration is high. From a statistical-quality perspective, this creates a classic problem: the dataset is not a random sample of the target population. Instead, it is shaped by access (ownership), [@wesolowski2013biases; @cabrera_rowe2025bias] operator market share, and usage intensity, all of which correlate with demographic and socioeconomic factors. The result is **systematic bias** unless addressed explicitly.
+
+For practical quality assessment, representativeness bias can be organised into several layers, each reflecting how the observed CDR population may differ from the target population:
+
+* Population coverage bias: people without access to mobile phones or subscriptions are not represented in the data.
+* Operator coverage bias: subscribers of non-participating operators are not observed, and market share may vary by region or socioeconomic group.
+* Activity bias: even among subscribers of participating operators, people who do not use their phones frequently generate fewer records and are less visible in the data.
+* Identifier bias: one subscription, SIM, or device does not necessarily correspond to one person, due to multiple SIM ownership, shared phones, or device changes.
+
+## Adjusting for bias: population-weighted adjustment and triangulation with other sources
+
+**Population-weighted adjustment** is one approach to improving representativeness by combining CDR with other population data such as censuses, gridded population estimates, or surveys. The basic workflow is:
+
+* Estimate residential population associated with towers using CDR and aggregate to an administrative unit (e.g., district).
+* Compute a scaling factor per unit as (reference population) / (CDR-estimated population).
+* Multiply CDR-derived estimates by these scaling factors to align them with population benchmarks.
+
+Adjustments can be refined depending on what auxiliary data exists. For example, information about known user/non-user patterns, multiple-SIM ownership, or differences across operators. This framing is practical: bias correction is not a single formula, but a set of strategies that should be tailored to the country context and the specific indicator.
+
+Multiple sources can be combined in real projects (e.g. baseline gridded estimates such as WorldPop produces can be used in some contexts, national census in others, together with secondary and primary surveys). The point here is that **CDRs alone are not enough**; quality improves when CDR data gets triangulated with established statistical sources.
+
+Bias adjustment improves representativeness but does not remove all uncertainty. Because scaling factors depend on reference data quality and modelling assumptions, key assumptions should be documented, sensitivity checks conducted, and adjusted outputs validated against independent data sources where feasible. [@flowminder2023standards]
+
+
+
+## Quality assurance and trust: moving from analysis to statistics suitable for policy use
+
+### Why quality assurance is not optional
+
+When CDR is used for policy, maintaining **public trust** is essential, and that trust is not only about privacy (see also Chapter 6). If outputs are not reliable and well-documented, public trust and user confidence erodes even if security is strong.
+
+### A structured quality assurance approach: ESS QAF [@ess2019qaf] and “quality gates”
+
+A quality assurance framework has been developed by the European Statistical System. This is a collection of good practices and tools applicable at institutional, process, and output levels. For big-data projects, quality assurance can be organised around stages that align with the concept of the data pipeline: **input**, **throughput (processing)**, and **output.** [@ascari2024quality] In the context of CDR, input quality concerns the completeness, consistency, and statistical usability of the original event records and network reference data. Throughput quality covers the processing steps that transform these data into indicators, including cleaning, validation, integration, scaling, and aggregation. Output quality focuses on whether the resulting statistics are relevant, coherent, comparable, and accompanied by clear documentation of assumptions and limitations. A particularly useful concept here is the use of **three quality gates**, each acting as a checkpoint before proceeding.
+
+**Quality Gate 1: Input data (raw acquisition and validation).**
+At the start of the pipeline, review raw data as received from operators, check consistency, perform logical checks, and confirm validity for statistical use. If faults are detected, do not proceed. Request correction from the operator, since many issues (format changes, missing fields, inconsistent logs) are best resolved at source.
+
+**Quality Gate 2: Throughput (processing design, testing, and stabilisation).**
+During system design, multiple parameters and settings must be tuned. The training describes iterative “test loops” where alternative settings are run, processing logs are reviewed, and methods/algorithms are refined until the system produces stable, expected outputs. This gate is less about a single pass/fail rule and more about disciplined iteration with documented decisions.
+
+**Quality Gate 3: Output (statistical validation and coherence).**
+At the output stage, review results for accuracy, consistency, comparability, and coherence. Check that output tables align logically, and validate against reference data where feasible. One real challenge for big data is that some phenomena captured well by CDR (e.g., short-term mobility, daytime population) may lack direct reference datasets for validation, so validation may need to focus on specific geographies, periods, or subsets where comparisons are possible.
+
+
+## Conclusion
+
+Below summarizes key considerations for maintaining data quality in MPD initiatives:
+
+* **Treat CDR location as a measurement model, not a ground truth.**
+  Because CDR records the tower connection (and not device coordinates), “location” is a proxy with geography-dependent error. The analytical decisions such as tower-to-area mapping often using Voronoi cells, clustering, spatial aggregation, are part of a measurement model  and should be documented and justified.
+* **Make temporal assumptions explicit and test them.**
+  Many inferences (home/work, commuting, exposure) depend on time windows and routines. These can work well, but only when backed by sufficient observation density and sensitivity analysis. Sparse users and irregular schedules can otherwise introduce systematic misclassification.
+* **Control for network artifacts (handover) before interpreting mobility.**
+  If you do not address handover noise, you will systematically overestimate movement in overlapping-coverage regions. Clustering proximate towers is a practical mitigation, but it must be calibrated to the required spatial resolution and validated for stability.
+* **Interrogate representativeness at multiple layers: population, operator, and activity.**
+  MPD typically covers only (a) people with phones, (b) on the participating operator(s) network, (c) who are active users of their phones. Each filter can introduce demographic and geographic bias. This is not a minor caveat; it is a core quality dimension for policy statistics.
+* **Plan for bias adjustment and validation from the start.**
+  Population-weighted adjustment and triangulation with census/survey/gridded sources should not be an afterthought. They are central to making outputs interpretable and defensible. Projects should be designed in such a way that reference data can be integrated early. The assumptions and scaling factors that underpin analysis should also be made clear and shared transparently.
+* **Operationalise quality with gates, logs, and reproducible processes.**
+  The three quality gates provide a workable governance structure: validate inputs, stabilise processing, and verify outputs. This structure supports not only technical correctness but also auditability, an essential property when results are used for decisions and public communication.

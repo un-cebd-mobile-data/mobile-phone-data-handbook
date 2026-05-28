@@ -1,0 +1,21 @@
+# Preface {.unnumbered}
+
+::: {.callout-note icon="false"}
+## Project status
+
+Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>.
+:::
+
+
+This handbook provides an in-depth guide to planning and sustaining a Mobile Phone Data (MPD) initiative, with a primary focus on the use of Call Detail Records (CDRs) for public policy, statistical, and development purposes, including operational decision-making. It builds on, and develops further, the concepts and principles first described in the original Handbook on the Use of Mobile Phone Data for Official Statistics released by what was then known as the UN Global Working Group on Big Data for Official Statistics. [@unstats2019mpdhandbook]
+
+The handbook is intended for practitioners working in national statistical offices, telecom regulators, mobile network operators, government ministries, and partner organisations who would like to initiate an MPD initiative. It also contains advice and guidance for those who may already have embarked on the journey of establishing such an initiative but who are searching for more information or guidance on how to do so effectively and sustainably.  It is designed to enable such readers to understand not only the steps involved in planning an MPD initiative, but also the technical, institutional, legal, and ethical reasoning that underpins each decision. It is suitable for both technical and non-technical audiences, and does not assume deep prior technical expertise in MPD analytics.
+
+
+## Recommended citation {.unnumbered}
+
+::: {.callout-note icon="false"}
+
+Riley, C., & Rowe, F. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/tt-mobile-data_practical-manual/>
+
+:::

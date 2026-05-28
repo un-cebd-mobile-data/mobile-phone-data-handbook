@@ -1,0 +1,103 @@
+# Chapter 3: Arranging Partnerships and Data Access
+Planning an MPD initiative requires far more than technical capability or analytical ambition. At its core, such an initiative is an exercise in partnership-building, trust management, and institutional alignment. MPD is held by private-sector MNOs, is legally sensitive, and is embedded in complex commercial, regulatory, and public accountability environments. As a result, the success or failure of an initiative is often determined less by methodological sophistication than by how well partnerships are arranged and how data access is negotiated, governed, and sustained. This chapter is intended to guide practitioners, particularly those in NSOs or public-sector policy institutions, through the practical realities of arranging partnerships and securing appropriate data access models. It summarises the key steps and signposts additional useful considerations as well as resources. [@gpsdd2025roadmap]
+
+## Understanding the Central Role of MNOs
+
+Any MPD initiative must begin with a clear understanding of the role of the MNO. Operators are not simply data providers; they are keystone stakeholders whose engagement determines whether a project can move beyond concept to implementation.
+Operators are the primary data holders. Through the operation of their networks, they collect and store CDRs or signaling data for their own operational and business purposes. This gives them several forms of indispensable capacity: deep internal knowledge of how the data are generated, technical infrastructure capable of handling very large data volumes, and operational control over the pipelines that deliver data on an ongoing basis. For a statistical or policy initiative to function reliably, the operator must be able to provide regular access to new data, maintain accurate and up-to-date cell tower metadata, and intervene quickly when data pipelines fail or gaps emerge.
+The extent of the operator’s role may vary depending on country context, regulatory frameworks, and institutional maturity, but their centrality does not. Effective planning therefore requires practitioners to explicitly consider the operator’s perspective from the outset, rather than treating data access as a purely administrative or legal hurdle.
+
+## Why Operators May Hesitate to Share Data
+
+Before approaching an operator, it is essential to understand why data sharing is often perceived as risky or unattractive from the operator’s point of view. These concerns typically fall into three broad categories: compliance risks, capacity constraints, and business considerations. Recognising these concerns is not a concession; it is a prerequisite for designing an engagement strategy that is realistic and credible [@gsma2019bigdata].
+
+From a compliance perspective, operators are acutely sensitive to legal and reputational risk. Telecommunications data are subject to sector-specific regulation as well as general data protection and privacy laws. Even when a proposed use is lawful, operators may fear public backlash or civil society criticism if subscriber data are perceived to be misused. This risk is amplified in environments where public trust in data governance is fragile or where the legal framework for public–private data sharing is ambiguous.
+
+Capacity-related concerns are also common. While operators operate sophisticated IT systems, these systems are designed primarily for network management and commercial analytics, not for producing official statistics. An operator may lack the infrastructure to extract, store, or process the specific data fields required for statistical purposes, or may not have staff with the time or expertise to actively participate in a complex, long-term project.
+
+Finally, business considerations can present significant barriers. Participation may require investments in new hardware, software, or human resources. In addition, many operators are developing their own data monetisation strategies. From this perspective, sharing data for free with public institutions may appear to undermine potential revenue streams or create competition with existing commercial products.
+
+## Managing and Mitigating MNOs’ Risks
+
+Although these risks are real, they are not insurmountable. A central lesson from practice is that most MNOs’ concerns can be mitigated through careful project design and clear institutional arrangements.
+
+Compliance risks can be addressed through robust legal agreements and data governance frameworks. Where the legal environment is unclear, contracts can specify roles, responsibilities, and safeguards in detail, thereby reducing uncertainty. In some contexts, risk is further reduced when the statistical authority has a clear legal mandate and can make participation mandatory. In such cases, the legal responsibility for compliance shifts away from the operator and toward the public authority, which many operators view as a significant advantage.
+
+Capacity constraints can be managed by embedding training and support into the project design. This may include formal training courses, on-site technical assistance, or the use of third-party technical service providers to perform specialised tasks. In effect, capacity that does not exist within the operator can be supplemented or replaced through external expertise.
+
+Business concerns require the most careful handling. While costs and effort cannot be eliminated, they can be offset by clearly articulated benefits. Crucially, these benefits do not need to be financial. In many successful projects, one or two well-defined non-monetary incentives have been sufficient to secure sustained cooperation.
+
+## Articulating Clear Incentives for MNO Participation
+
+Experience shows that operators are far more willing to engage when they can clearly see how participation aligns with their interests. These incentives tend to fall into two broad groups: benefits arising from collaboration with a statistical authority, and longer-term capacity and innovation benefits.
+
+Key collaboration-related benefits include:
+
+* **Regulatory de-risking**: When a statistical authority assumes legal responsibility for data use, particularly in mandatory data-sharing arrangements, the operator’s exposure to regulatory and compliance risk is reduced.
+* **Public recognition and corporate social responsibility**: Participation in projects with visible public value allows operators to demonstrate positive societal impact. This can be reflected in corporate social responsibility reporting and public communications.
+* **Data exchange opportunities**: Statistical offices often hold high-quality demographic and socio-economic data from censuses or surveys. When appropriate, sharing aggregated or derived insights with operators can help them improve marketing strategies, business planning, and infrastructure investment decisions.
+
+In addition to these immediate benefits, MPD initiatives can support longer-term capacity building within operators. High-quality statistical projects often involve international experts, rigorous methodologies, and strict quality standards. By participating, operators can:
+
+* Develop advanced analytical capacity that can later be applied to commercial products.
+* Build infrastructure that supports both public-interest and private-sector analytics.
+* Improve the statistical robustness and credibility of their own data products by incorporating principles such as representativeness and quality assurance.
+
+For practitioners, the key task is not to offer all possible benefits, but to identify which incentives are most compelling for a specific operator and to focus negotiations accordingly.
+
+## Defining Boundaries Between Public and Private Data Use
+
+A frequent source of tension in negotiations is concern about market competition. Statistical offices produce public goods- official statistics intended for broad public use. Meanwhile, operators are private sector operators whose incentive structures mean they will often seek to monetise data and detailed insights for specific clients. Successful initiatives explicitly address this issue by agreeing on a clear division of these markets.
+
+In practice, this means that the statistical authority commits to producing high-level, validated indicators that serve the public interest and are disseminated openly, typically at relatively coarse levels of disaggregation. At the same time, the operator retains the right to develop and sell more granular, client-specific products that do not require the same level of statistical validation.
+
+For example, an NSO or Ministry of Transport might publish monthly commuting patterns between cities, while the operator offers daily or hourly movement data between neighbourhoods for commercial customers. By making these boundaries explicit, both parties can operate in the same data ecosystem without undermining each other’s objectives.
+
+## Understanding Data, Technical, and Legal Roles
+
+Planning data access requires clarity about both technical and legal roles. MPD projects involve multiple datasets, ranging from highly sensitive raw databases to publishable aggregate indicators. As data move along this processing chain, their sensitivity decreases, but governance requirements remain strict. From a technical perspective, responsibilities typically include:
+
+* **Data collection**, usually performed by the operator through its network operations.
+* **Data processing design**, often led by the statistical office, sometimes in collaboration with research institutions or technical service providers, and focused on methodology and quality frameworks.
+* **Data processing**, which may be carried out by the operator, a third-party provider, or in some cases the statistical office itself.
+* **Data evaluation, validation, and dissemination**, generally the responsibility of the statistical office or a relevant government ministry.
+
+Alongside these technical roles are legal roles defined by data protection frameworks. The data controller determines the purposes and means of processing personal data, while data processors act on the controller’s behalf under contract. Determining who can legally assume these roles, and under what conditions, is central to selecting an appropriate data access model.
+
+## Using Maturity Assessment to Select a Data Access Model
+
+There is no single “best” data access model. Rather, the appropriate model depends on institutional maturity, assessed across three key dimensions. First, legal authority: does the receiving party have a clear mandate to collect and control private-sector data, and can it compel data sharing if necessary? Second, technical capacity: does it have the infrastructure and expertise to securely store and process massive volumes of raw data, potentially from multiple operators? Third, public trust: does the institution enjoy sufficient credibility and political support to act as a steward of highly sensitive data?
+
+Depending on the answers to these questions, the statistical office may operate as:
+
+* A **data user**, receiving final aggregate indicators produced by an MNO or technical partner.
+*
+* A **data controller without being a data processor**, specifying the needs and data processing mechanisms for statistical production that are performed by the MNO or technical provider. The NSO performs the validation, dissemination and evaluation tasks. .
+* A **data controller and a data processor**, performing the above tasks, while collecting and processing raw data within its own secure environment or through authorised processors.
+
+|  |  | Data Protection Roles |  |  |
+| ----- | ----- | ----- | :---- | :---- |
+|  |  | **Data Controller** | **Data Processor** | **Data Owner** |
+| **Business Process** | **Specify needs** |   |   |   |
+|  | **Design** |   |   |   |
+|  | **Build** |   |   |   |
+|  | **Collect** |   |   |   |
+|  | **Process** |   |   |   |
+|  | **Analyze** |   |   |   |
+|  | **Disseminate** |   |   |   |
+|  | **Evaluate** |   |   |   |
+|  | Data User |  |  |  |
+
+Each model has been used successfully in different country contexts, and it’s also been the case that initiatives evolve over time as legal frameworks, capacity, and trust develop.
+
+## Formalising Partnerships Through Agreements
+
+Regardless of the chosen model, partnerships must eventually be formalised. Early stages may rely on non-disclosure agreements or memoranda of understanding, but sustained data access typically requires detailed data-sharing agreements.
+
+These agreements should clearly address issues such as anonymisation, data handling procedures, permitted uses, access controls, retention and deletion policies, and compliance with applicable data protection laws. Well-designed agreements not only protect individuals’ privacy but also provide clarity and reassurance to all participating institutions.
+
+## Conclusion
+
+Arranging partnerships and data access is the foundation of any MPD initiative. It requires a strong understanding of private-sector motives and concerns, rigor in legal and governance design, and strategic clarity about institutional roles and public value. By systematically assessing maturity, articulating incentives, defining boundaries, and formalising responsibilities, practitioners can create partnerships that are not only viable but sustainable over the long term.
+
+In practice, every initiative will differ. The concepts outlined in this chapter provide an indication of how to navigate the complexity of establishing this data access in order to turn MPD into a reliable resource for policy and public good.

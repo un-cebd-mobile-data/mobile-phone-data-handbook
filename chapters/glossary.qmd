@@ -1,0 +1,49 @@
+# Glossary of Terms and Abbreviations {.unnumbered}
+| Acronym | Term | Synonyms | Definition |
+| ----- | ----- | ----- | ----- |
+| MPD | Mobile Phone Data | Mobile Positioning Data, Mobile Network Data, CDR data, Signalling data, MNO data | A term used to describe the data source representing location data from the logs of Mobile Network Operators (MNOs) |
+|  | Local Administrative Units | Administrative Division | Subnational administrative divisions, such as municipalities or districts, used for governance and statistical reporting |
+|  | Point of Interest |  | A specific location of significance, such as a landmark, business, or facility, used in MPD processing to analyse mobility patterns and contextualise user behaviour within geographic spaces |
+|  | Raw data | Raw MNO data | Raw CDR/DDR/XDR/Signalling data from a mobile network operator (MNO) |
+|  | Pseudonymised data |  | Identifier hashed and only relevant fields remain |
+|  | Pre-processed data |  | Cleaned and pre-processed data. Can include some aggregation (hour and approximate location) |
+|  | Processed data |  | Processed MPD data into continuity model (stay and move sections) |
+|  | Individual aggregation |  | Individually aggregated data output (e.g. individual anchors) |
+|  | Aggregates |  | Aggregates according to business rules for quality checking (e.g. statistical indicators) |
+|  | Statistical indicators | Indicators | Statistical indicators that have undergone QA and statistical disclosure control |
+| CDR | Call Detail Records |  | Mobile network operator event data about the call activities (calling, sending SMS etc). Usually within billing database |
+| IPDR | Internet Protocol Detail Records | Data Detail Records (DDR, XDR) | Mobile network operator event data about the usage of the internet. These can be useful data fields to request from MNO billing records as they capture both active and passive internet engagement (e.g. background app data usage) by subscribers. |
+|  | Signalling data | Probe data | Signalling data is the extra data generated in communication networks to support users in having a smooth connection. Usually includes everything from xDR to location updates, cell handover to other measurement reports at the base station level. This type of data is frequently generated in the network, but usually deleted after a short period of time. Separate network probes are installed to store the data, which results in very voluminous datasets. |
+|  | Domestic MPD | Domestic data | Domestic subscribers data in the country’s operator’s database |
+|  | Inbound MPD | Inbound data, Roaming in MPD | Foreign mobile network operator subscribers roaming in the country’s operator’s database |
+|  | Outbound MPD | Outbound data, Roaming Out MPD | Domestic mobile network operator subscribers roaming outside the country (data with a delay in the country’s operator’s database) |
+|  | Event Data | Records | Mobile network generated records, such as CDRs or location updates, that capture discrete user activities (time and location) and are main component of MPD |
+|  | Network Data |  | Information about the mobile network infrastructure, including cell tower locations, coverage areas, and network configurations, used to interpret and process MPD for spatial and mobility analysis |
+| CRM | Customer Relationship Management Data | Client Portfolio Data | Information that the operator has for each contract. It typically includes sociodemographic attributes such as age, gender, place of residence, and occupation, with varying levels of accuracy and completeness. |
+|  | Reference Data |  | Additional datasets, such as surveys, census, or official statistics used as a benchmark to validate and assess the quality and representativeness of MPD. |
+| QA | Quality Assurance |  | A systematic process ensuring the accuracy, consistency, and reliability of MPD |
+| ETL | Extract, Transform, Load |  | A data processing workflow that involves extracting data from sources, transforming it into a suitable format, and loading it into a target system |
+| VPN | Virtual Private Network |  | A secure network connection that encrypts data transmission and allows remote access to private networks over the internet |
+|  | Country of Residence |  | The country where a mobile network operator subscriber has their primary long-term presence |
+|  | Place of Residence | Home location, Home anchor | The main home location where a mobile network operator subscriber has their primary long-term presence |
+|  | Home Detection Algorithm | Anchor Point methodology | A method used to determine a mobile subscriber's primary residence based on long-term mobile network usage patterns |
+|  | Stay |  | A period when a person remains within a limited area for a certain duration. |
+|  | Movement | Move | A transition between two distinct locations (between 2 consecutive stays). |
+|  | Usual Environment |  | The area where an individual regularly resides and carries out daily activities |
+| OD matrices | Origin Destination matrices |  | Statistical tables that represent the movement of individuals between different geographic locations |
+| SDC | Statistical Disclosure Control |  | Techniques applied to protect individual privacy in statistical data by preventing the identification of personal information |
+| BTS | Base Transceiver Station | Cell | Base Transceiver Station (same as mobile network cell, or simply cell) |
+| CGI | Cell Global Identity | Full cell identifier | A unique number that identifies every subscriber on a cellular network, stored on the SIM card. Composed of the Mobile Country Code (MCC), Mobile Network Code (MNC), and Mobile Subscription Identification Number (MSIN). Used by networks to authenticate subscribers and facilitate roaming.  |
+|  | Cell Coverage Area |  | A specific zone defined for each BTS, which includes the whole area where a mobile subscriber can be served by the BTS. |
+|  | Cell Tower | Cell base tower, Cellphone tower, Tower | A single location housing multiple BTSs. Typically, a cell tower consists of a radio mast, tower, or other elevated structure that supports several BTSs (ranging from a few to a few dozen) positioned at different heights and orientations to provide coverage in all directions. |
+|  | Cell Tower Coverage Area |  | A specific zone defined for each Cell Tower, which includes the whole area where a mobile subscriber can be served by at least one BTS contained in the Cell Tower. |
+|  | Mobile subscriber | User | Person registered and actively using a mobile service from a mobile network operator. |
+| IMSI | International mobile subscriber identity |  | International mobile subscriber identity. Associated with a SIM card. Consists of MCC, MNC and subscriber identity number. |
+| IMEI | International Mobile Equipment Identity |  | International Mobile Equipment Identity. Associated with a device/handset. Helpful to filter out IoT devices. |
+| MCC | Mobile Country Code |  | A three-digit numeric code, defined by ITU-T Recommendation E.212, used to identify the country associated with a mobile network. Used in combination with the Mobile Network Code (MNC) to uniquely identify a mobile network operator, and as a component of the IMSI. |
+| MSISDN | Mobile Station International Subscriber Directory Number |  | The phone number assigned to a mobile subscriber that is used for making and receiving calls |
+| MNO | Mobile Network Operator |  | A company that provides mobile telecommunications services, including infrastructure, spectrum, and customer subscriptions |
+| NSO | National Statistic Office |  | A government agency responsible for collecting, analysing, and disseminating official statistics |
+| TRA | Telecommunications Regulatory Authority |  | The national body responsible for regulating and overseeing telecommunications services and policies |
+| DPA | Data Protection Authority |  | A regulatory body responsible for enforcing data protection laws and ensuring privacy rights are upheld |
+| ITU | International Telecommunication Union |  | A United Nations agency that coordinates global telecommunication and ICT standards and policies |

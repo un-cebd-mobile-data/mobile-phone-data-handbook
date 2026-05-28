@@ -1,0 +1,75 @@
+# Chapter 4: Data Processing and Data Pipelines for MPD Initiatives
+MPD initiatives rely on complex data processing and pipeline architectures to transform raw network events into robust, policy-relevant statistics. This chapter provides practitioners and decision-makers with a coherent, end-to-end description of different components of MPD pipelines; from generation and collection to processing, aggregation, and dissemination while at the same time focusing on the need to maintain data quality, privacy, and statistical validity.
+
+## Overview of the MPD Pipeline
+
+An MPD pipeline can be understood as a sequence of interdependent stages that progressively transform raw network data into usable statistical outputs. While implementations differ across countries and institutions, most pipelines share five core stages: data collection, extract–transform–load (ETL), data cleaning and processing, aggregation and scaling, and dissemination. Each stage introduces specific technical, methodological, and governance considerations, and weaknesses at any point can compromise the integrity of the final results.
+
+The pipeline begins with data generation and collection at the MNO, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use.
+
+## Data Collection and Generation
+
+MPD originates from routine interactions between subscribers and the mobile network. Each time a user makes a call, sends a message, or uses mobile data, the activity is routed through a specific network antenna or cell. The network operator records this interaction as an event, typically capturing three fundamental attributes: a subscriber identifier, a timestamp, and a location reference linked to the serving antenna.
+
+Although this structure is simple, the scale is immense. Large operators generate billions of such records over relatively short periods. This volume underscores the importance of designing efficient downstream processes and minimising unnecessary data handling. Before data can leave the operational systems where it is generated, several preparatory steps are required. These include agreeing on a standardised data structure, defining formats for timestamps and identifiers, and ensuring that all parties share a common understanding of variable definitions. Without such alignment, downstream processing becomes error-prone and costly.
+
+A critical element of this stage is pseudonymisation. Direct identifiers, such as phone numbers, are replaced with non-reversible codes so that individuals cannot be directly identified in subsequent processing stages. While pseudonymisation reduces risk, it does not eliminate sensitivity; MPD remains highly granular and requires strong safeguards throughout the pipeline.
+
+## Extract, Transform, and Load (ETL)
+
+The ETL stage bridges raw data collection and analytical processing. During extraction, the agreed subset of network data is selected from operator systems. Transformation then reshapes this data into standardised formats, applies pseudonymisation, and derives additional attributes where necessary. For example, mobile country codes may be extracted to distinguish domestic subscribers from inbound roamers, which is essential for tourism analysis.
+
+Data minimisation is a central principle at this stage. Given the sheer volume of records, unnecessary attributes should be removed, and efficient storage formats should be used. minimisation reduces transmission costs, lowers processing overhead, and limits exposure of sensitive information.
+
+Secure transmission is another key concern. Data is typically transferred from the network operator to a processing environment, which may be internal to the operator or managed by a government body or service provider. Encryption, strong authentication, and integrity checks are essential to ensure that data is neither intercepted nor altered during transfer. In practice, large datasets are often partitioned into batches, by time period, geography, or subscriber group, to improve reliability and performance.
+
+## Data Cleaning: Ensuring Analytical Validity
+
+Raw MPD contains numerous artefacts that can distort analysis if left unaddressed. Data cleaning is therefore a foundational step in the pipeline, motivated by the principle that flawed inputs inevitably produce flawed outputs.
+
+One common source of error is non-human activity. Internet-of-Things devices, such as vehicle trackers or security systems, generate network events but do not represent human behaviour. These records must be identified and removed when the objective is to measure population mobility.
+Other errors arise from the physical characteristics of networks and user behaviour. Phones used on aircraft or ships may connect to terrestrial antennas, creating the illusion that people are present on land when they are not. Similarly, accidental roaming near borders can cause subscribers to appear in a neighbouring country without having crossed it. Network artefacts can even produce “ghost events,” where a subscriber appears to be in two places simultaneously. Each of these phenomena requires explicit filtering rules.
+
+Cleaning also serves a practical purpose by reducing data volume. Removing irrelevant or erroneous records lowers computational costs and improves the efficiency of subsequent processing stages.
+
+## Core Data Processing and Methodological Models
+
+Once cleaned, data enters the core processing stage, where analytical value is created. A key design choice at this point is whether to adopt a centralised core data model or a decentralised, domain-specific approach. A centralised core model transforms cleaned event data into a common intermediate representation that supports multiple analytical domains, such as tourism, migration, or transportation. Domain-specific algorithms are then applied on top of this shared foundation. This approach promotes consistency and comparability across outputs. In contrast, decentralised models develop separate pipelines for each domain, which may be easier to implement initially but risk producing incompatible results over time.
+
+Within a core model, several methodological techniques are commonly applied. Continuity models address the sparse nature of event data by inferring presence between observed activities. Rather than assuming that a person is present only at the moment of a recorded event, continuity models extend presence over plausible time intervals. This correction is essential for accurate population counts and exposure estimates.
+
+Continuity models also enable the identification of “stays” and “moves.” Stays represent periods when an individual remains in a location, while moves capture transitions between locations. This distinction underpins analyses of commuting, travel behaviour, and transport mode inference.
+Another critical processing step is the detection of meaningful locations, such as home and work. By analysing spatial-temporal patterns such as where a subscriber spends most nights, analysts can infer habitual locations and define a person’s usual environment. Departures from this environment form the basis for identifying tourism trips and other forms of temporary mobility.
+
+Accuracy can be further improved by integrating auxiliary data sources. Building footprints, land-use data, and road networks help constrain probabilistic location assignments, ensuring that inferred positions are plausible. These enhancements improve both spatial and temporal precision without increasing intrusiveness.
+
+## Aggregation and Indicator Construction
+
+Processed data must be aggregated before it can be disseminated. Aggregation typically occurs along spatial and temporal dimensions, but the choice of units has profound implications for interpretation and privacy.
+
+Spatial aggregation may align with administrative boundaries, such as municipalities or regions, or use regular or adaptive grids. Each approach involves trade-offs between interpretability, accuracy, and disclosure risk. Temporal aggregation similarly requires careful planning, as indicators may be produced at hourly, daily, monthly, or annual resolutions.
+
+Beyond space and time, aggregation also reflects analytical intent. In tourism statistics, for example, analysts must decide whether to count visits, visitor-days, or nights spent, and whether to disaggregate by country of residence. These decisions should be made early, as they influence upstream processing requirements.
+
+## Scaling, Bias Adjustment, and Quality Assurance
+
+MPD does not directly represent the total population. Some individuals carry multiple devices, while others may not use mobile phones at all. As a result, raw counts must be scaled and adjusted to correct for over-coverage and under-coverage. [@flowminder2023bias]
+
+Scaling models often rely on operator market shares or external benchmarks to align mobile phone-based indicators with known population totals. This step is methodologically challenging due to limited ground truth data, but it is essential for producing credible official statistics.
+Quality assurance accompanies scaling. Analysts must assess completeness, consistency, and plausibility, and apply statistical disclosure control techniques to prevent re-identification, particularly when publishing highly granular data.
+
+## Privacy by Design in the Pipeline
+
+Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the MNO. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination.
+
+Understanding these tiers helps organisations design appropriate technical and organisational safeguards at each stage of the pipeline. Access controls, encryption, auditing, and strict role-based permissions are essential for Tier 1 and Tier 2 data, where risks of re-identification or commercial sensitivity are highest. Even at Tier 3, where data are aggregated and prepared for release, disclosure control remains necessary to ensure that small cell sizes, rare combinations of attributes, or extreme values do not inadvertently reveal information about individuals or commercially sensitive patterns. Privacy by design therefore operates as a continuous principle across the entire pipeline, rather than a single compliance step.
+
+## Pipeline Deployment Models
+
+Finally, organisations must decide where processing occurs. In some models, MNOs perform all processing and provide only aggregated outputs to government users. In others, governments or trusted service providers process pseudonymised data within secure environments, sometimes hosted by the operator. Each model involves trade-offs between control, cost, capacity, and risk.
+
+Regardless of the chosen arrangement, clarity of roles, responsibilities, and safeguards is critical. Successful MPD initiatives are characterised not only by technical sophistication, but by careful institutional design and sustained collaboration between data providers and users.
+
+## Conclusion
+
+Effective planning for MPD initiatives requires a holistic understanding of data processing and pipelines. By viewing the pipeline as an integrated system, rather than a series of isolated steps, practitioners can make informed decisions that balance analytical ambition with feasibility, privacy, and quality. The principles outlined in this manual provide a foundation for designing robust, transparent, and policy-relevant MPD pipelines.
