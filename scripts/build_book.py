@@ -80,7 +80,7 @@ PROJECT_STATUS_CALLOUT = """
 ::: {.callout-note icon="false"}
 ## Project status
 
-Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. DOI is TBC. Except where otherwise noted, this work is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
+Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. DOI: [10.5281/zenodo.20451460](https://doi.org/10.5281/zenodo.20451460). Except where otherwise noted, this work is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
 :::
 
 """
@@ -101,7 +101,7 @@ RECOMMENDED_CITATION = """
 
 ::: {.callout-note icon="false"}
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
 
@@ -708,6 +708,7 @@ book:
     - "Trevor Monroe"
   date: "2026-05-26"
   publisher: "United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team"
+  doi: "10.5281/zenodo.20451460"
   edition: "Version 1.4"
   license: "CC BY 4.0"
   site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
@@ -1000,7 +1001,7 @@ Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-han
 
 - Licence: Creative Commons Attribution 4.0 International Licence (CC BY 4.0), except where otherwise noted
 - Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team
-- DOI: TBC
+- DOI: <https://doi.org/10.5281/zenodo.20451460>
 - Deployment: GitHub Pages
 - Outputs: HTML website, PDF, EPUB
 
@@ -1046,7 +1047,7 @@ Zenodo metadata is provided in `.zenodo.json`. GitHub citation metadata is provi
 
 Before publishing the first GitHub release, enable this repository in Zenodo under the `un-cebd-mobile-data` GitHub organisation. The suggested first release tag is `v1.4.0`, using the release notes in `.github/release-notes-v1.4.0.md`.
 
-After Zenodo archives the release and mints a DOI, replace the remaining DOI TBC placeholders in the book metadata, README, recommended citation, and PDF front matter.
+Zenodo archived `v1.4.0` at <https://doi.org/10.5281/zenodo.20451460>. The all-versions concept DOI is <https://doi.org/10.5281/zenodo.20451459>.
 
 ## Logo assets
 

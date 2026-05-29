@@ -11,4 +11,4 @@ This release includes:
 - Zenodo metadata in `.zenodo.json`; and
 - GitHub citation metadata in `CITATION.cff`.
 
-The publication DOI remains TBC and should be added after Zenodo archives the release and mints the DOI.
+Zenodo archived this release at <https://doi.org/10.5281/zenodo.20451460>. The all-versions concept DOI is <https://doi.org/10.5281/zenodo.20451459>.

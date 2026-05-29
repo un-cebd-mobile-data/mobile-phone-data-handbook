@@ -8,7 +8,7 @@ Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-han
 
 - Licence: Creative Commons Attribution 4.0 International Licence (CC BY 4.0), except where otherwise noted
 - Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team
-- DOI: TBC
+- DOI: <https://doi.org/10.5281/zenodo.20451460>
 - Deployment: GitHub Pages
 - Outputs: HTML website, PDF, EPUB
 
@@ -54,7 +54,7 @@ Zenodo metadata is provided in `.zenodo.json`. GitHub citation metadata is provi
 
 Before publishing the first GitHub release, enable this repository in Zenodo under the `un-cebd-mobile-data` GitHub organisation. The suggested first release tag is `v1.4.0`, using the release notes in `.github/release-notes-v1.4.0.md`.
 
-After Zenodo archives the release and mints a DOI, replace the remaining DOI TBC placeholders in the book metadata, README, recommended citation, and PDF front matter.
+Zenodo archived `v1.4.0` at <https://doi.org/10.5281/zenodo.20451460>. The all-versions concept DOI is <https://doi.org/10.5281/zenodo.20451459>.
 
 ## Logo assets
 

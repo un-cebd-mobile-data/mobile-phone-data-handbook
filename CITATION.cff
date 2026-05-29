@@ -3,6 +3,7 @@ message: "If you use this manual, please cite it as below."
 title: "Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual"
 version: "1.4.0"
 date-released: "2026-05-26"
+doi: "10.5281/zenodo.20451460"
 license: "CC-BY-4.0"
 type: software
 abstract: "A practical manual for designing and implementing mobile phone data initiatives for official statistics, public policy, development, and humanitarian applications. The handbook covers planning, partnerships, data access, processing pipelines, quality, governance, safeguards, and communication."
