@@ -48,6 +48,14 @@ The GitHub Actions workflow in `.github/workflows/publish.yml` renders the book 
 
 In the GitHub repository settings, set **Pages** source to **GitHub Actions**.
 
+## Zenodo release preparation
+
+Zenodo metadata is provided in `.zenodo.json`. GitHub citation metadata is provided in `CITATION.cff`.
+
+Before publishing the first GitHub release, enable this repository in Zenodo under the `un-cebd-mobile-data` GitHub organisation. The suggested first release tag is `v1.4.0`, using the release notes in `.github/release-notes-v1.4.0.md`.
+
+After Zenodo archives the release and mints a DOI, replace the remaining DOI TBC placeholders in the book metadata, README, recommended citation, and PDF front matter.
+
 ## Logo assets
 
 The site uses the official UN-CEBD logo downloaded from the UN Big Data website:

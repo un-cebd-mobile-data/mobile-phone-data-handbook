@@ -1,0 +1,86 @@
+{
+  "title": "Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "version": "1.4.0",
+  "publication_date": "2026-05-26",
+  "language": "eng",
+  "description": "A practical manual for designing and implementing mobile phone data initiatives for official statistics, public policy, development, and humanitarian applications. The handbook covers planning, partnerships, data access, processing pipelines, quality, governance, safeguards, and communication.",
+  "creators": [
+    {
+      "name": "Riley, Cathy"
+    },
+    {
+      "name": "Rowe, Francisco"
+    },
+    {
+      "name": "Magpantay, Esperanza"
+    },
+    {
+      "name": "Eyre, Robert"
+    },
+    {
+      "name": "Delaporte, Sophie"
+    },
+    {
+      "name": "Harrison, James"
+    },
+    {
+      "name": "Hosner, Roland"
+    },
+    {
+      "name": "Lefebvre, Veronique"
+    },
+    {
+      "name": "Smallwood, Thomas"
+    },
+    {
+      "name": "Chavez, Luisa"
+    },
+    {
+      "name": "Ruiz, Pablo"
+    },
+    {
+      "name": "Sales, Maria Henar"
+    },
+    {
+      "name": "Picornell, Miguel"
+    },
+    {
+      "name": "Rüütli, Egle"
+    },
+    {
+      "name": "Vent, Kaisa"
+    },
+    {
+      "name": "Esko, Siim"
+    },
+    {
+      "name": "Saluveer, Erki"
+    },
+    {
+      "name": "Arai, Ayumi"
+    },
+    {
+      "name": "Blanchard, Paul"
+    },
+    {
+      "name": "Milusheva, Sveta"
+    },
+    {
+      "name": "Monroe, Trevor"
+    }
+  ],
+  "keywords": [
+    "mobile phone data",
+    "official statistics",
+    "population mobility",
+    "call detail records",
+    "CDR",
+    "signalling data",
+    "data governance",
+    "United Nations",
+    "Quarto book"
+  ]
+}

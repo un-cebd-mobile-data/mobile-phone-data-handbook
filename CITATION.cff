@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use this manual, please cite it as below."
+title: "Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual"
+version: "1.4.0"
+date-released: "2026-05-26"
+license: "CC-BY-4.0"
+type: software
+abstract: "A practical manual for designing and implementing mobile phone data initiatives for official statistics, public policy, development, and humanitarian applications. The handbook covers planning, partnerships, data access, processing pipelines, quality, governance, safeguards, and communication."
+repository-code: "https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook"
+url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
+authors:
+  - family-names: Riley
+    given-names: Cathy
+  - family-names: Rowe
+    given-names: Francisco
+  - family-names: Magpantay
+    given-names: Esperanza
+  - family-names: Eyre
+    given-names: Robert
+  - family-names: Delaporte
+    given-names: Sophie
+  - family-names: Harrison
+    given-names: James
+  - family-names: Hosner
+    given-names: Roland
+  - family-names: Lefebvre
+    given-names: Veronique
+  - family-names: Smallwood
+    given-names: Thomas
+  - family-names: Chavez
+    given-names: Luisa
+  - family-names: Ruiz
+    given-names: Pablo
+  - family-names: Sales
+    given-names: Maria Henar
+  - family-names: Picornell
+    given-names: Miguel
+  - family-names: Rüütli
+    given-names: Egle
+  - family-names: Vent
+    given-names: Kaisa
+  - family-names: Esko
+    given-names: Siim
+  - family-names: Saluveer
+    given-names: Erki
+  - family-names: Arai
+    given-names: Ayumi
+  - family-names: Blanchard
+    given-names: Paul
+  - family-names: Milusheva
+    given-names: Sveta
+  - family-names: Monroe
+    given-names: Trevor
+keywords:
+  - mobile phone data
+  - official statistics
+  - population mobility
+  - call detail records
+  - CDR
+  - signalling data
+  - data governance
+  - United Nations
+  - Quarto book
