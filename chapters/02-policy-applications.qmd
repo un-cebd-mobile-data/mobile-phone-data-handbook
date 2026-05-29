@@ -3,7 +3,7 @@ In recent years MPD has emerged as a transformative resource for governments, NS
 
 ## Why and How is MPD Useful?
 
-As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:
+As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility [@louail2014spatial_structure]. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:
 
 * **High temporal resolution**: daily or even near–real-time indicators
 * **Fine spatial granularity**: insights at neighbourhood, district, or corridor level
@@ -128,7 +128,7 @@ Haiti cholera outbreaks (2010, 2022): After the 2010 earthquake in Haiti, MPD wa
 
 ### Tourism Statistics
 
-MPD can help to overcome some of the common limitations of tourism surveys by capturing cross-border and short-duration movements. [@uncebd_tourism_statistics] The specific ways in which MPD can be used for tourism statistics and data include:
+MPD can help to overcome some of the common limitations of tourism surveys by capturing cross-border and short-duration movements. [@uncebd_tourism_statistics; @ahas2008tourism] The specific ways in which MPD can be used for tourism statistics and data include:
 
 **Measuring inbound and cross-border visitor arrivals.** The most widespread use of MPD in tourism is to measure the number of people crossing international borders. This is particularly valuable where traditional border controls have been removed or weakened (see Estonia case study).
 
@@ -161,7 +161,7 @@ In the transport arena, MPD has been applied to a wide range of policy-relevant 
 * the optimization of public transport services, and
 * the assessment of policy measures such as congestion management or low-emission zones, among others.
 
-Case studies, particularly from Latin America and Europe, have demonstrated the strong value of MPD, highlighting improvements in the quality, spatial coverage, and temporal continuity of mobility statistics, as well as the ability to analyse mobility patterns over multiple days and time periods. [@caceres2007origin_destination; @alexander2015od]
+Case studies, particularly from Latin America and Europe, have demonstrated the strong value of MPD, highlighting improvements in the quality, spatial coverage, and temporal continuity of mobility statistics, as well as the ability to analyse mobility patterns over multiple days and time periods. [@caceres2007origin_destination; @calabrese2011od; @alexander2015od; @toole2015travel_demand]
 
 MPD offers several advantages compared to traditional data collection methods. Its large sample size, often covering a significant share of the population, enhances representativeness and enables detailed spatial analysis, particularly for the estimation of origin–destination matrices. In addition, MPD provides continuous observations over time, allowing for more frequent updates and enabling the monitoring of mobility dynamics, including responses to transport policy interventions such as congestion pricing schemes, public transport reforms, or mobility restrictions. When combined with other data sources, such as surveys or smart card data, MPD can also support more comprehensive analyses, including modal segmentation.
 
@@ -173,7 +173,7 @@ Ministry of Transport and Sustainable Mobility (MITMS), Spain (2017-2025). Withi
 
 ## Socio-Economic Applications: Poverty Mapping
 
-Traditional poverty data can often become quickly outdated, particularly in low- and middle-income countries and contexts with highly dynamic populations. In combination with traditional sources such as census and survey data, in periods between their data collection, and sometimes in combination with other forms of data such as geospatial datasets, MPD can be a useful tool for generating updated and spatially refined estimates of socio-economic variables such as wealth or poverty.
+Traditional poverty data can often become quickly outdated, particularly in low- and middle-income countries and contexts with highly dynamic populations. In combination with traditional sources such as census and survey data, in periods between their data collection, and sometimes in combination with other forms of data such as geospatial datasets, MPD can be a useful tool for generating updated and spatially refined estimates of socio-economic variables such as wealth or poverty [@eagle2010network_diversity; @blumenstock2015poverty].
 
 Work in this area is still relatively nascent with exploratory analysis and in-depth research being undertaken by a number of researchers and institutions. Some initial findings and examples of application to real-world scenarios are described below.
 

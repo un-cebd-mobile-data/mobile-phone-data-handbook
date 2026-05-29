@@ -14,8 +14,8 @@ FOOTNOTE_CITES = {
     "5": "[@itu_sdg_case_study]",
     "6": "[@uncebd_dynamic_population; @deville2014dynamic_population; @ricciato2020present_population]",
     "7": "[@uncebd_migration_statistics]",
-    "8": "[@uncebd_tourism_statistics]",
-    "9": "[@caceres2007origin_destination; @alexander2015od]",
+    "8": "[@uncebd_tourism_statistics; @ahas2008tourism]",
+    "9": "[@caceres2007origin_destination; @calabrese2011od; @alexander2015od; @toole2015travel_demand]",
     "10": "[@blumenstock2015poverty; @steele2017poverty]",
     "11": "[@aiken2022machine_learning]",
     "12": "[@worldbank2021novissi]",
@@ -277,6 +277,18 @@ BIBTEX = r"""
   url = {https://digital-library.theiet.org/doi/10.1049/iet-its%3A20060020}
 }
 
+@article{calabrese2011od,
+  title = {Estimating origin-destination flows using mobile phone location data},
+  author = {Calabrese, Francesco and Di Lorenzo, Giusy and Liu, Liang and Ratti, Carlo},
+  journal = {IEEE Pervasive Computing},
+  volume = {10},
+  number = {4},
+  pages = {36--44},
+  year = {2011},
+  doi = {10.1109/MPRV.2011.41},
+  url = {https://doi.org/10.1109/MPRV.2011.41}
+}
+
 @article{alexander2015od,
   title = {Origin-destination trips by purpose and time of day inferred from mobile phone data},
   author = {Alexander, Lauren and Jiang, Shan and Murga, Mikel and Gonzalez, Marta C.},
@@ -286,6 +298,29 @@ BIBTEX = r"""
   year = {2015},
   doi = {10.1016/j.trc.2015.02.018},
   url = {https://doi.org/10.1016/j.trc.2015.02.018}
+}
+
+@article{toole2015travel_demand,
+  title = {The path most traveled: Travel demand estimation using big data resources},
+  author = {Toole, Jameson L. and Colak, Serdar and Sturt, Bradley and Alexander, Lauren P. and Evsukoff, Alexandre and Gonzalez, Marta C.},
+  journal = {Transportation Research Part C: Emerging Technologies},
+  volume = {58},
+  pages = {162--177},
+  year = {2015},
+  doi = {10.1016/j.trc.2015.04.022},
+  url = {https://doi.org/10.1016/j.trc.2015.04.022}
+}
+
+@article{ahas2008tourism,
+  title = {Evaluating passive mobile positioning data for tourism surveys: An Estonian case study},
+  author = {Ahas, Rein and Aasa, Anto and Roose, Antti and Mark, Ülar and Silm, Siiri},
+  journal = {Tourism Management},
+  volume = {29},
+  number = {3},
+  pages = {469--486},
+  year = {2008},
+  doi = {10.1016/j.tourman.2007.05.014},
+  url = {https://doi.org/10.1016/j.tourman.2007.05.014}
 }
 
 @article{blumenstock2015poverty,
@@ -310,6 +345,18 @@ BIBTEX = r"""
   year = {2017},
   doi = {10.1098/rsif.2016.0690},
   url = {https://doi.org/10.1098/rsif.2016.0690}
+}
+
+@article{eagle2010network_diversity,
+  title = {Network diversity and economic development},
+  author = {Eagle, Nathan and Macy, Michael and Claxton, Rob},
+  journal = {Science},
+  volume = {328},
+  number = {5981},
+  pages = {1029--1031},
+  year = {2010},
+  doi = {10.1126/science.1186605},
+  url = {https://doi.org/10.1126/science.1186605}
 }
 
 @article{aiken2022machine_learning,
@@ -426,6 +473,19 @@ BIBTEX = r"""
   url = {https://doi.org/10.1140/epjds/s13688-021-00275-w}
 }
 
+@inproceedings{isaacman2011important_places,
+  title = {Identifying important places in people's lives from cellular network data},
+  author = {Isaacman, Sibren and Becker, Richard and Caceres, Ramon and Kobourov, Stephen and Martonosi, Margaret and Rowland, James and Varshavsky, Alexander},
+  booktitle = {Pervasive Computing},
+  series = {Lecture Notes in Computer Science},
+  volume = {6696},
+  pages = {133--151},
+  year = {2011},
+  publisher = {Springer},
+  doi = {10.1007/978-3-642-21726-5_9},
+  url = {https://doi.org/10.1007/978-3-642-21726-5_9}
+}
+
 @article{li2021ghana_cdr,
   title = {Analysis of call detail records to inform the COVID-19 response in Ghana: Opportunities and challenges},
   author = {Li, Tong and Bowers, Cordelia and Seidu, Alhassan and Akoto-Bamfo, Gloria and Ofori-Boateng, Daniel and others},
@@ -516,6 +576,15 @@ BIBTEX = r"""
   url = {https://doi.org/10.1080/21681376.2022.2135458}
 }
 
+@misc{rowe2024,
+  title = {Digital Data and Population Studies},
+  author = {Rowe, Francisco and {González-Leonardo}, Miguel},
+  year = {2024},
+  month = {10},
+  date = {2024-10-15},
+  url = {http://dx.doi.org/10.31219/osf.io/jb3e5}
+}
+
 @article{iradukunda_rowe_pietrostefani2025ukraine,
   title = {Estimating internal displacement in Ukraine from high-frequency GPS mobile phone data},
   author = {Iradukunda, Rodgers and Rowe, Francisco and Pietrostefani, Elisabetta},
@@ -562,6 +631,41 @@ BIBTEX = r"""
   archivePrefix = {arXiv},
   doi = {10.48550/arXiv.2504.15871},
   url = {https://arxiv.org/abs/2504.15871}
+}
+
+@article{barreras2024,
+  title = {The exciting potential and daunting challenge of using GPS human-mobility data for epidemic modeling},
+  author = {Barreras, Francisco and Watts, Duncan J.},
+  year = {2024},
+  month = {06},
+  date = {2024-06-19},
+  journal = {Nature Computational Science},
+  pages = {398--411},
+  volume = {4},
+  number = {6},
+  doi = {10.1038/s43588-024-00637-0},
+  url = {http://dx.doi.org/10.1038/s43588-024-00637-0},
+  langid = {en}
+}
+
+@article{louail2014spatial_structure,
+  title = {From mobile phone data to the spatial structure of cities},
+  author = {Louail, Thomas and Lenormand, Maxime and Cantu Ros, Oliva G. and Picornell, Miguel and Herranz, Ricardo and Frias-Martinez, Enrique and Ramasco, Jose J. and Barthelemy, Marc},
+  journal = {Scientific Reports},
+  volume = {4},
+  pages = {5276},
+  year = {2014},
+  doi = {10.1038/srep05276},
+  url = {https://doi.org/10.1038/srep05276}
+}
+
+@misc{mpd_crossborder_flows_2025,
+  title = {Mobile Phone Data for Cross-border Population \& Expenditure Flows: Ideas \& Challenges},
+  year = {2025},
+  date = {2025-05-14},
+  type = {Presentation},
+  howpublished = {Workshop: Measurement of the flows across the internal borders of the European Union},
+  abstract = {This workshop talk discusses the use of mobile phone data to estimate cross-border population and expenditure flows across internal European Union borders, focusing on methodological opportunities and practical challenges for robust measurement.}
 }
 """
 
@@ -1185,7 +1289,11 @@ def clean_text(text: str) -> str:
     # Add directly relevant academic sources where the manuscript makes methodological claims.
     text = text.replace(
         "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics.",
-        "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics [@gonzalez2008human_mobility; @song2010predictability; @blondel2015survey].",
+        "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices [@rowe2024]. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics [@gonzalez2008human_mobility; @song2010predictability; @blondel2015survey].",
+    )
+    text = text.replace(
+        "**GPS-derived mobile phone data** refers to location information captured directly by the **global positioning system (GPS) sensors** embedded in smartphones and other mobile devices, typically via apps that have permission to record and share location. Unlike the network-generated datasets described above, GPS data are collected from a device’s onboard navigation chipset and can provide **latitude/longitude coordinates, with high geographical precision** (**often within a few metres**) and **temporal frequency** (e.g., seconds to minutes). They can collect continuous data on devices anywhere in the globe, thus offering global data coverage. However, the geographical precision and temporal frequency of data may vary depending on how the app is configured, users engage with the app, user consent is managed, and the type of technology used to build the device collecting the data. ",
+        "**GPS-derived mobile phone data** refers to location information captured directly by the **global positioning system (GPS) sensors** embedded in smartphones and other mobile devices, typically via apps that have permission to record and share location [@barreras2024]. Unlike the network-generated datasets described above, GPS data are collected from a device’s onboard navigation chipset and can provide **latitude/longitude coordinates, with high geographical precision** (**often within a few metres**) and **temporal frequency** (e.g., seconds to minutes). They can collect continuous data on devices anywhere in the globe, thus offering global data coverage. However, the geographical precision and temporal frequency of data may vary depending on how the app is configured, users engage with the app, user consent is managed, and the type of technology used to build the device collecting the data. ",
     )
     text = text.replace(
         "This training manual focuses exclusively on the former, and more specifically on Call Detail Records, because this is the data type most commonly available at national scale and most frequently used in official statistics and public policy applications.",
@@ -1204,8 +1312,20 @@ def clean_text(text: str) -> str:
         "MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households [@wesolowski2013biases; @cabrera_rowe2025bias].",
     )
     text = text.replace(
+        "As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:",
+        "As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility [@louail2014spatial_structure]. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:",
+    )
+    text = text.replace(
+        "Traditional poverty data can often become quickly outdated, particularly in low- and middle-income countries and contexts with highly dynamic populations. In combination with traditional sources such as census and survey data, in periods between their data collection, and sometimes in combination with other forms of data such as geospatial datasets, MPD can be a useful tool for generating updated and spatially refined estimates of socio-economic variables such as wealth or poverty. ",
+        "Traditional poverty data can often become quickly outdated, particularly in low- and middle-income countries and contexts with highly dynamic populations. In combination with traditional sources such as census and survey data, in periods between their data collection, and sometimes in combination with other forms of data such as geospatial datasets, MPD can be a useful tool for generating updated and spatially refined estimates of socio-economic variables such as wealth or poverty [@eagle2010network_diversity; @blumenstock2015poverty]. ",
+    )
+    text = text.replace(
         "The pipeline begins with data generation and collection at the mobile network operator, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use.",
         "The pipeline begins with data generation and collection at the mobile network operator, where individual phone activities create network events. These events are then prepared for analytical use through transformation and pseudonymisation. Subsequent processing stages add analytical value by correcting errors, inferring behaviour, and constructing meaningful indicators. Finally, aggregation and scaling convert processed data into population-level statistics suitable for publication and policy use [@ricciato2020present_population; @salgado2021end_to_end].",
+    )
+    text = text.replace(
+        "Another critical processing step is the detection of meaningful locations, such as home and work. By analysing spatial-temporal patterns such as where a subscriber spends most nights, analysts can infer habitual locations and define a person’s usual environment. Departures from this environment form the basis for identifying tourism trips and other forms of temporary mobility.",
+        "Another critical processing step is the detection of meaningful locations, such as home and work. By analysing spatial-temporal patterns such as where a subscriber spends most nights, analysts can infer habitual locations and define a person’s usual environment. Departures from this environment form the basis for identifying tourism trips and other forms of temporary mobility [@isaacman2011important_places].",
     )
     text = text.replace(
         "Privacy by design is operationalised by distinguishing between three tiers of data sensitivity. Tier 1 data consists of raw, identifiable records and remains under the strict control of the mobile network operator. Tier 2 data is pseudonymised and used for processing under controlled conditions. Tier 3 data is fully aggregated and suitable for dissemination.",
