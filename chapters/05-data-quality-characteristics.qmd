@@ -1,5 +1,5 @@
 # Chapter 5: Data Quality and Characteristics
-This chapter revisits what CDRs are, what information they contain, why its characteristics matter for statistical quality, how common biases arise and can be adjusted, and how to operationalise quality assurance so that CDR-derived statistics are reliable and trusted for policy use.
+This chapter revisits what CDRs are, what information they contain, why its characteristics matter for statistical quality, how common biases arise and can be adjusted, and how to operationalise quality assurance so that CDR-derived statistics are reliable and trusted for policy use [@blondel2015survey; @wesolowski2013biases; @ricciato2020present_population].
 
 
 ## How CDRs are generated and key data fields
@@ -32,7 +32,7 @@ CDR data should not be assumed to provide a direct record of individual persons.
 
 ### Strengths: coverage, timeliness, and passive generation
 
-CDR’s major advantages for policy analytics are that it can include **all subscribers** (regardless of device type or operating system) because it is collected primarily for billing and network management. It is generated passively and routinely collected as part of ordinary network operation, without the need to design a new data-collection instrument. It can also be near real-time and granular in the sense of high record volume.
+CDR’s major advantages for policy analytics are that it can include **all subscribers** (regardless of device type or operating system) because it is collected primarily for billing and network management [@unstats2019mpdhandbook; @blondel2015survey]. It is generated passively and routinely collected as part of ordinary network operation, without the need to design a new data-collection instrument. It can also be near real-time and granular in the sense of high record volume.
 
 ### Limitations: spatial precision, temporal intermittency, and representativeness
 
@@ -42,7 +42,7 @@ CDR quality constraints arise directly from how it is created:
 * **Temporal resolution is behaviour-dependent.** CDR observations occur when network events occur. A user who rarely calls/texts/uses data will have sparse observations, producing intermittent trajectories (unlike many GPS streams that are logged at regular intervals).
 * **Representativeness is not guaranteed.** Not everyone owns a phone, not everyone is on the same operator, and not everyone uses their phone in the same way. Demographics and socioeconomic factors influence who appears in the data and how. Note also that one subscription does not always equal one individual (shared phones, multiple SIMs per person).
 
-A useful way to internalise these limitations is to treat CDR as a high-volume observational dataset whose measurement properties vary across geography, network configuration, and subpopulations, rather than as a direct census of “people” or “movements.”
+A useful way to internalise these limitations is to treat CDR as a high-volume observational dataset whose measurement properties vary across geography, network configuration, and subpopulations, rather than as a direct census of “people” or “movements” [@blondel2015survey; @wesolowski2013biases; @ricciato2020present_population].
 
 ## Interpreting location in CDR: from records to meaningful places
 
@@ -53,7 +53,7 @@ CDR-based mobility is observed as changes in connected tower IDs recorded in net
 
 ### Using timestamps to infer home and work
 
-CDR does not label locations as “home” or “work.” These locations are usually inferred from repeated time-of-day patterns, based on the assumption that people are typically at home at night, away during working hours, and return in the evening. Therefore, towers observed late at night may be used as proxies for home, while towers observed consistently during working hours are candidates for workplace location. This inference is not perfect, but it is a pragmatic, explainable method grounded in time-of-day behaviour.
+CDR does not label locations as “home” or “work.” These locations are usually inferred from repeated time-of-day patterns, based on the assumption that people are typically at home at night, away during working hours, and return in the evening. Therefore, towers observed late at night may be used as proxies for home, while towers observed consistently during working hours are candidates for workplace location. This inference is not perfect, but it is a pragmatic, explainable method grounded in time-of-day behaviour [@isaacman2011important_places].
 To apply this responsibly, it is generally necessary to:
 
 * Define time windows carefully (e.g., “night” vs “work hours”) and test sensitivity.
@@ -64,7 +64,7 @@ To apply this responsibly, it is generally necessary to:
 
 ### Voronoi cells as a workable model of tower coverage
 
-A useful tool for modeling spatial coverage is the **Voronoi diagram.** A tool for approximating coverage, Voronois partition space into regions where each point is closest to a given tower. Each polygon (“Voronoi cell”) can serve as a practical unit for associating CDR events to geographic areas. Note that Voronois are only a useful simplification of reality. The true network coverage will depend on factors such as terrain, capacity, and network configuration. But Voronoi cells provide a useful baseline for analysis in the absence of more detailed or nuanced network coverage data.
+The **Voronoi diagram** is a useful tool for approximating spatial coverage, partitioning space into regions where each point is closest to a given tower [@ricciato2020present_population]. Each polygon (“Voronoi cell”) can serve as a practical unit for associating CDR events to geographic areas. Note that Voronois are only a useful simplification of reality. The true network coverage will depend on factors such as terrain, capacity, and network configuration. But Voronoi cells provide a useful baseline for analysis in the absence of more detailed or nuanced network coverage data.
 
 ### Why CDR trajectories can deviate from “actual mobility”
 
@@ -73,19 +73,19 @@ Note that flows among towers can deviate from real-world movement paths. Two rea
 1. **Variable cell size:** urban areas have many towers, smaller cells, and therefore finer spatial precision; rural areas can have large cells where within-cell movement is invisible.
 2. **Sparse observation:** if a device generates few events, you will only observe fragments of movement, and tower-to-tower transitions will appear as “straight jumps” that omit intermediate routes.
 
-Therefore, CDR data is often excellent for measuring *aggregate flows and population dynamics* at suitable spatial-temporal scales, while reconstructing precise routes or micro-mobility in low-density tower environments usually requires supplementary data, stronger assumptions, or additional modelling.
+Therefore, CDR data is often excellent for measuring *aggregate flows and population dynamics* at suitable spatial-temporal scales, while reconstructing precise routes or micro-mobility in low-density tower environments usually requires supplementary data, stronger assumptions, or additional modelling [@calabrese2011od; @toole2015travel_demand; @deville2014dynamic_population].
 
 ## Key data-quality considerations driven by network behaviour
 
 ### Tower density and the visibility of short trips
 
-Tower density is closely related to population density because operators deploy more infrastructure where there are more users and higher demand. In urban areas, the high tower density makes it more likely that short trips (e.g., within a neighbourhood) will register as changes in connected towers. In rural areas, short trips may remain entirely within one tower’s coverage and therefore appear as “no movement.”
+Tower density is closely related to population density because operators deploy more infrastructure where there are more users and higher demand [@blondel2015survey; @ricciato2020present_population]. In urban areas, the high tower density makes it more likely that short trips (e.g., within a neighbourhood) will register as changes in connected towers. In rural areas, short trips may remain entirely within one tower’s coverage and therefore appear as “no movement.”
 
 This matters because many downstream indicators (commuting intensity, localised displacement, neighbourhood-level service catchments) are highly sensitive to the minimum observable movement unit. If tower-density effects are not explicitly accounted for, the analysis may inadvertently under-detect mobility in rural or low-coverage regions.
 
 ### Handover and location noise: false mobility signals
 
- One common source of location noise is frequent tower switching (handover), which can occur due to fluctuating signal strength, load balancing, or switching among technologies. The key risk is that CDR may show multiple tower changes even when a person is essentially stationary, creating false mobility signals, especially where tower coverage overlaps.
+ One common source of location noise is frequent tower switching (handover), which can occur due to fluctuating signal strength, load balancing, or switching among technologies [@blondel2015survey; @salgado2021end_to_end]. The key risk is that CDR may show multiple tower changes even when a person is essentially stationary, creating false mobility signals, especially where tower coverage overlaps.
 
 One possible mitigation approach is to **cluster nearby towers**: when towers are very close and frequent switching occurs among them, treating them as a single “location cluster” can reduce false movement and produce more stable mobility signals.
 
@@ -100,7 +100,7 @@ CDR-based analysis observes only a subset of the population:
 * Even within a given operator, **inactive subscribers** contribute little or no usable data because they rarely generate events.
 
 
-Survey data from Ghana has shown the differential phone use across groups, for example, differences by gender, age, and urban/rural locality, illustrating how underrepresentation can arise even when overall penetration is high. From a statistical-quality perspective, this creates a classic problem: the dataset is not a random sample of the target population. Instead, it is shaped by access (ownership), [@wesolowski2013biases; @cabrera_rowe2025bias] operator market share, and usage intensity, all of which correlate with demographic and socioeconomic factors. The result is **systematic bias** unless addressed explicitly.
+Survey data from Ghana has shown the differential phone use across groups, for example, differences by gender, age, and urban/rural locality, illustrating how underrepresentation can arise even when overall penetration is high. From a statistical-quality perspective, this creates a classic problem: the dataset is not a random sample of the target population. Instead, it is shaped by access (ownership), operator market share, and usage intensity, all of which correlate with demographic and socioeconomic factors [@wesolowski2013biases; @cabrera_rowe2025bias]. The result is **systematic bias** unless addressed explicitly.
 
 For practical quality assessment, representativeness bias can be organised into several layers, each reflecting how the observed CDR population may differ from the target population:
 
@@ -111,7 +111,7 @@ For practical quality assessment, representativeness bias can be organised into 
 
 ## Adjusting for bias: population-weighted adjustment and triangulation with other sources
 
-**Population-weighted adjustment** is one approach to improving representativeness by combining CDR with other population data such as censuses, gridded population estimates, or surveys. The basic workflow is:
+**Population-weighted adjustment** is one approach to improving representativeness by combining CDR with other population data such as censuses, gridded population estimates, or surveys [@wesolowski2013biases; @cabrera_rowe2025bias; @ricciato2020present_population]. The basic workflow is:
 
 * Estimate residential population associated with towers using CDR and aggregate to an administrative unit (e.g., district).
 * Compute a scaling factor per unit as (reference population) / (CDR-estimated population).

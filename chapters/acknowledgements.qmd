@@ -1,1 +1,25 @@
 # Acknowledgements {.unnumbered}
+
+This manual is the product of collective effort by organisations and individuals working on mobile phone data. It was prepared under the auspices of the UN Committee of Experts on Big Data and Data Science for Official Statistics (UN-CEBD) Task Team on Mobile Phone Data, chaired by Esperanza Magpantay (ITU), and vice-chaired by Cathy Riley (Flowminder Foundation) and Francisco Rowe (University of Liverpool).
+
+The content draws extensively on inputs provided by active members of the UN Committee of Experts on Big Data and Official Statistics (UN-CEBD) Mobile Phone Data Task Team (MPD-TT). It also draws extensively from materials and experiences generated through the ITU/World Bank Global Data Facility Mobile Phone Data (GDF-MPD) project, whose resources and capacity building efforts provided an important foundation for many of the approaches, examples, and practices presented herein.
+
+## Authors and contributors {.unnumbered}
+
+The lead author and editor of this handbook was Cathy Riley, Strategic Partnerships Director at Flowminder Foundation and Project Director of the "Foundations in Mobile Phone Data for Policy and Statistics" training project. Co-authors of content presented in this manual, and their organisational affiliations, are as follows:
+
+- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood
+- **International Telecommunication Union (ITU):** Esperanza Magpantay
+- **Nommon:** Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
+- **Positium:** Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer
+- **University of Liverpool:** Francisco Rowe
+- **University of Tokyo:** Ayumi Arai
+- **World Bank:** Paul Blanchard, Sveta Milusheva, Trevor Monroe
+
+Additional contributions, including comments on drafts and content for case studies, were received from Titi Kanti Lestari, Matthias Offermans and Avik Sarkar. The formatting and development of the e-book version of the Manual were led by Francisco Rowe (University of Liverpool), whose efforts contributed substantially to improving the accessibility and presentation of the publication.
+
+## Funders {.unnumbered}
+
+The compilation of this manual was made possible through in-kind contributions from most of the organisations involved in producing it. Flowminder Foundation wishes to acknowledge the contribution of funds from the UK Foreign, Commonwealth and Development Office (FCDO) towards enabling staff attendance at the UN-CEBD MPD-TT meetings necessary for coordination efforts in production of this handbook.
+
+The original content from which this handbook has drawn substantially was funded by the World Bank's GDF-MPD window, a multi-partner window funded by the Spanish Government, Ministry of Economy, Commerce and Business and jointly managed by DEC (DECDG, DIME), Poverty and Digital Development Global Practices in technical partnership with the International Telecommunication Union (ITU).

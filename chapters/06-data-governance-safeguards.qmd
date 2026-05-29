@@ -1,5 +1,5 @@
 # Chapter 6: Data Governance and Safeguards in MPD Initiatives
-The processing of data within an MPD initiative must be conducted in a legal, ethical, and equitable manner, with due regard for the interests of all affected stakeholders. Because MPD initiatives rely on data generated through the everyday use of mobile networks, they raise distinct governance challenges related to privacy, security, commercial sensitivity, and public trust. These challenges are not peripheral to technical implementation; they are foundational to whether an initiative is lawful, credible, and sustainable.
+The processing of data within an MPD initiative must be conducted in a legal, ethical, and equitable manner, with due regard for the interests of all affected stakeholders. Because MPD initiatives rely on data generated through the everyday use of mobile networks, they raise distinct governance challenges related to privacy, security, commercial sensitivity, and public trust [@jansen2021publictrust; @demontjoye2018privacy]. These challenges are not peripheral to technical implementation; they are foundational to whether an initiative is lawful, credible, and sustainable.
 
 This chapter provides a structured overview of data governance as it applies to MPD initiatives. It explains what it means to process MPD, identifies the relevant stakeholders and their interests, clarifies the distinction between personal and non-personal data, and outlines the principal legal, ethical, and security risks. It then introduces practical safeguards and principles that support the responsible and sustainable use of MPD for public policy and statistical purposes. Introductory courses to data governance and online resources are signposted in Appendix 1. [@itu_academy_data_governance; @flowgeek_data_governance]
 
@@ -7,7 +7,7 @@ This chapter provides a structured overview of data governance as it applies to 
 
 Data processing encompasses a wide range of activities, including the collection, storage, transformation, analysis, sharing, and dissemination of data. In the context of MPD initiatives, processing most often involves handling data originally collected by MNOs for operational and billing purposes, such as CDRs. Although these data are not collected for analytical or policy use, any subsequent use constitutes processing and is therefore subject to legal and ethical constraints.
 
-Processing becomes particularly sensitive when it involves personal data or data derived from personal data. In addition to privacy considerations, MPD initiatives may also involve commercially sensitive information, national infrastructure data, or information relating to vulnerable populations. Effective data governance must therefore address a broad range of sensitivities and risks, not only those associated with individual privacy.
+Processing becomes particularly sensitive when it involves personal data or data derived from personal data [@demontjoye2013unique; @demontjoye2018privacy]. In addition to privacy considerations, MPD initiatives may also involve commercially sensitive information, national infrastructure data, or information relating to vulnerable populations. Effective data governance must therefore address a broad range of sensitivities and risks, not only those associated with individual privacy.
 
 ## Data Governance and the Stakeholder Ecosystem
 
@@ -43,7 +43,7 @@ These risks are not hypothetical. Experience shows that even well-intentioned in
 
 Mitigating governance risks requires a combination of technical, organisational, and procedural safeguards. From a privacy perspective, common measures include Pseudonymisation, aggregation, and redaction. Pseudonymisation replaces direct identifiers with random values, allowing records to be linked without revealing identities. Aggregation summarises data across space and time, reducing the visibility of individual behaviour. Redaction techniques, such as enforcing minimum group sizes, help prevent disclosure in sparsely populated areas or time periods.
 
-These measures must be applied thoughtfully, balancing privacy protection against data utility. Stronger safeguards generally reduce analytical precision, making it essential to align protection levels with clearly defined purposes.
+These measures must be applied thoughtfully, balancing privacy protection against data utility [@demontjoye2018privacy]. Stronger safeguards generally reduce analytical precision, making it essential to align protection levels with clearly defined purposes.
 
 Security measures are equally critical. Sensitive data should be stored behind secure firewalls, encrypted at rest and in transit, and accessed only by authorised personnel under strict access controls. Wherever possible, anonymisation and aggregation should occur within the secure environments of operators or regulators, minimising data movement and exposure. Logging, auditing, and regular security reviews further strengthen accountability.
 
@@ -59,11 +59,11 @@ Personal data must have strong protections to preserve the privacy of individual
 
 #### **Pseudonymisation** {#pseudonymisation}
 
-Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical). For MPD, this might involve replacing subscribers identifiers (e.g. phone number, IMSI, MSISDN) with a random string.
+Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical) [@demontjoye2018privacy]. For MPD, this might involve replacing subscribers identifiers (e.g. phone number, IMSI, MSISDN) with a random string.
 
 Known as ‘hashing’ this process removes the personal information which allows the direct identification of subscribers, whilst still enabling the records from an individual subscriber to be linked together in order to analyse mobility.
 
-As result, pseudonymisation obscures subscribers identity but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process.
+As a result, pseudonymisation obscures subscribers' identities but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process [@demontjoye2013unique].
 
 #### **Aggregation** {#aggregation}
 
@@ -77,7 +77,7 @@ However, aggregation may not be sufficient to protect the individual privacy of 
 
 #### **Redaction** {#redaction}
 
-To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity. A dataset can be described as k-anonymised if each subset of data points for a given individual (i.e. their location at each time point) is shared by at least k-1 other subscribers. For example, if we set k to 15 this means that the aggregated CDR must have at least 16 subscribers associated with (present or resident in) each location at each time point. Any combinations of location and time associated with fewer than 15 subscribers are redacted from the data set.
+To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity [@demontjoye2013unique; @demontjoye2018privacy]. A dataset can be described as k-anonymised if each subset of data points for a given individual (i.e. their location at each time point) is shared by at least k-1 other subscribers. For example, if we set k to 15 this means that the aggregated CDR must have at least 16 subscribers associated with (present or resident in) each location at each time point. Any combinations of location and time associated with fewer than 15 subscribers are redacted from the data set.
 
 While ensuring k-anonymity with a suitable threshold is currently sufficient to preserve the individual privacy of subscribers in a CDR dataset, anonymisation is a moving target as new methods for reidentification of subscribers and for data protection continue to be developed [@demontjoye2018privacy].
 

@@ -86,6 +86,35 @@ Publisher: United Nations Committee of Experts on Big Data and Data Science for 
 """
 
 
+ACKNOWLEDGEMENTS_TEXT = """
+
+This manual is the product of collective effort by organisations and individuals working on mobile phone data. It was prepared under the auspices of the UN Committee of Experts on Big Data and Data Science for Official Statistics (UN-CEBD) Task Team on Mobile Phone Data, chaired by Esperanza Magpantay (ITU), and vice-chaired by Cathy Riley (Flowminder Foundation) and Francisco Rowe (University of Liverpool).
+
+The content draws extensively on inputs provided by active members of the UN Committee of Experts on Big Data and Official Statistics (UN-CEBD) Mobile Phone Data Task Team (MPD-TT). It also draws extensively from materials and experiences generated through the ITU/World Bank Global Data Facility Mobile Phone Data (GDF-MPD) project, whose resources and capacity building efforts provided an important foundation for many of the approaches, examples, and practices presented herein.
+
+## Authors and contributors {.unnumbered}
+
+The lead author and editor of this handbook was Cathy Riley, Strategic Partnerships Director at Flowminder Foundation and Project Director of the "Foundations in Mobile Phone Data for Policy and Statistics" training project. Co-authors of content presented in this manual, and their organisational affiliations, are as follows:
+
+- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood
+- **International Telecommunication Union (ITU):** Esperanza Magpantay
+- **Nommon:** Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
+- **Positium:** Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer
+- **University of Liverpool:** Francisco Rowe
+- **University of Tokyo:** Ayumi Arai
+- **World Bank:** Paul Blanchard, Sveta Milusheva, Trevor Monroe
+
+Additional contributions, including comments on drafts and content for case studies, were received from Titi Kanti Lestari, Matthias Offermans and Avik Sarkar. The formatting and development of the e-book version of the Manual were led by Francisco Rowe (University of Liverpool), whose efforts contributed substantially to improving the accessibility and presentation of the publication.
+
+## Funders {.unnumbered}
+
+The compilation of this manual was made possible through in-kind contributions from most of the organisations involved in producing it. Flowminder Foundation wishes to acknowledge the contribution of funds from the UK Foreign, Commonwealth and Development Office (FCDO) towards enabling staff attendance at the UN-CEBD MPD-TT meetings necessary for coordination efforts in production of this handbook.
+
+The original content from which this handbook has drawn substantially was funded by the World Bank's GDF-MPD window, a multi-partner window funded by the Spanish Government, Ministry of Economy, Commerce and Business and jointly managed by DEC (DECDG, DIME), Poverty and Digital Development Global Practices in technical partnership with the International Telecommunication Union (ITU).
+
+"""
+
+
 AUTHORS_PREFACE = """
 
 ## Authors {.unnumbered}
@@ -1178,6 +1207,7 @@ index.tex
 index.toc
 *.log
 *.docx
+*.docx.md
 /Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.pdf
 /Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.epub
 chapters/*.html
@@ -1330,6 +1360,64 @@ def apply_abbreviation_policy(title: str, content: str) -> str:
     return content
 
 
+def apply_selective_citation_policy(title: str, content: str) -> str:
+    replacements: dict[str, str] = {}
+
+    if title == "Chapter 2: Policy Applications for Mobile Phone Data":
+        replacements.update({
+            "This chapter addresses the use of MPD for policy-making with an emphasis on policy applications in which MPD has already been demonstrated to add value.": "This chapter addresses the use of MPD for policy-making with an emphasis on policy applications in which MPD has already been demonstrated to add value [@deville2014dynamic_population; @lu2012haiti_displacement; @blumenstock2015poverty].",
+            "These characteristics make MPD particularly valuable in policy areas where *where people are* and *how they move* directly affects outcomes.": "These characteristics make MPD particularly valuable in policy areas where *where people are* and *how they move* directly affects outcomes [@gonzalez2008human_mobility; @song2010predictability; @deville2014dynamic_population].",
+            "MPD can also be used to assess the impact of early warning, evacuation alerts and other government measures (e.g. lockdowns during COVID).": "MPD can also be used to assess the impact of early warning, evacuation alerts and other government measures (e.g. lockdowns during COVID) [@li2021ghana_cdr; @rowe2023urban_exodus].",
+            "MPD-derived population statistics can also be used to support health monitoring and metrics by producing dynamic population denominators which reflect actual population density numbers, rather than static census counts.": "MPD-derived population statistics can also be used to support health monitoring and metrics by producing dynamic population denominators which reflect actual population density numbers, rather than static census counts [@deville2014dynamic_population; @ricciato2020present_population].",
+            "MPD offers several advantages compared to traditional data collection methods. Its large sample size, often covering a significant share of the population, enhances representativeness and enables detailed spatial analysis, particularly for the estimation of origin–destination matrices.": "MPD offers several advantages compared to traditional data collection methods. Its large sample size, often covering a significant share of the population, enhances representativeness and enables detailed spatial analysis, particularly for the estimation of origin–destination matrices [@caceres2007origin_destination; @calabrese2011od; @toole2015travel_demand].",
+        })
+
+    elif title == "Chapter 3: Arranging Partnerships and Data Access":
+        replacements.update({
+            "Operators are the primary data holders. Through the operation of their networks, they collect and store CDRs or signaling data for their own operational and business purposes.": "Operators are the primary data holders. Through the operation of their networks, they collect and store CDRs or signaling data for their own operational and business purposes [@unstats2019mpdhandbook; @gsma2019bigdata].",
+            "Even when a proposed use is lawful, operators may fear public backlash or civil society criticism if subscriber data are perceived to be misused.": "Even when a proposed use is lawful, operators may fear public backlash or civil society criticism if subscriber data are perceived to be misused [@jansen2021publictrust; @demontjoye2018privacy].",
+            "These agreements should clearly address issues such as anonymisation, data handling procedures, permitted uses, access controls, retention and deletion policies, and compliance with applicable data protection laws.": "These agreements should clearly address issues such as anonymisation, data handling procedures, permitted uses, access controls, retention and deletion policies, and compliance with applicable data protection laws [@gsma2019bigdata; @demontjoye2018privacy].",
+        })
+
+    elif title == "Chapter 4: Data Processing and Data Pipelines for Mobile Phone Data Initiatives":
+        replacements.update({
+            "An MPD pipeline can be understood as a sequence of interdependent stages that progressively transform raw network data into usable statistical outputs.": "An MPD pipeline can be understood as a sequence of interdependent stages that progressively transform raw network data into usable statistical outputs [@ricciato2020present_population; @salgado2021end_to_end].",
+            "MPD originates from routine interactions between subscribers and the mobile network. Each time a user makes a call, sends a message, or uses mobile data, the activity is routed through a specific network antenna or cell.": "MPD originates from routine interactions between subscribers and the mobile network. Each time a user makes a call, sends a message, or uses mobile data, the activity is routed through a specific network antenna or cell [@unstats2019mpdhandbook; @blondel2015survey].",
+            "Data minimisation is a central principle at this stage. Given the sheer volume of records, unnecessary attributes should be removed, and efficient storage formats should be used. minimisation reduces transmission costs, lowers processing overhead, and limits exposure of sensitive information.": "Data minimisation is a central principle at this stage. Given the sheer volume of records, unnecessary attributes should be removed, and efficient storage formats should be used [@demontjoye2018privacy]. Data minimisation reduces transmission costs, lowers processing overhead, and limits exposure of sensitive information.",
+            "Raw MPD contains numerous artefacts that can distort analysis if left unaddressed.": "Raw MPD contains numerous artefacts that can distort analysis if left unaddressed [@blondel2015survey; @salgado2021end_to_end].",
+            "Continuity models address the sparse nature of event data by inferring presence between observed activities.": "Continuity models address the sparse nature of event data by inferring presence between observed activities [@ricciato2020present_population; @salgado2021end_to_end].",
+            "Scaling models often rely on operator market shares or external benchmarks to align mobile phone-based indicators with known population totals.": "Scaling models often rely on operator market shares or external benchmarks to align mobile phone-based indicators with known population totals [@wesolowski2013biases; @cabrera_rowe2025bias; @ricciato2020present_population].",
+        })
+
+    elif title == "Chapter 5: Data Quality and Characteristics":
+        replacements.update({
+            "This chapter revisits what CDRs are, what information they contain, why its characteristics matter for statistical quality, how common biases arise and can be adjusted, and how to operationalise quality assurance so that CDR-derived statistics are reliable and trusted for policy use.": "This chapter revisits what CDRs are, what information they contain, why its characteristics matter for statistical quality, how common biases arise and can be adjusted, and how to operationalise quality assurance so that CDR-derived statistics are reliable and trusted for policy use [@blondel2015survey; @wesolowski2013biases; @ricciato2020present_population].",
+            "CDR’s major advantages for policy analytics are that it can include **all subscribers** (regardless of device type or operating system) because it is collected primarily for billing and network management.": "CDR’s major advantages for policy analytics are that it can include **all subscribers** (regardless of device type or operating system) because it is collected primarily for billing and network management [@unstats2019mpdhandbook; @blondel2015survey].",
+            "A useful way to internalise these limitations is to treat CDR as a high-volume observational dataset whose measurement properties vary across geography, network configuration, and subpopulations, rather than as a direct census of “people” or “movements.”": "A useful way to internalise these limitations is to treat CDR as a high-volume observational dataset whose measurement properties vary across geography, network configuration, and subpopulations, rather than as a direct census of “people” or “movements” [@blondel2015survey; @wesolowski2013biases; @ricciato2020present_population].",
+            "This inference is not perfect, but it is a pragmatic, explainable method grounded in time-of-day behaviour.": "This inference is not perfect, but it is a pragmatic, explainable method grounded in time-of-day behaviour [@isaacman2011important_places].",
+            "A useful tool for modeling spatial coverage is the **Voronoi diagram.** A tool for approximating coverage, Voronois partition space into regions where each point is closest to a given tower.": "The **Voronoi diagram** is a useful tool for approximating spatial coverage, partitioning space into regions where each point is closest to a given tower [@ricciato2020present_population].",
+            "Therefore, CDR data is often excellent for measuring *aggregate flows and population dynamics* at suitable spatial-temporal scales, while reconstructing precise routes or micro-mobility in low-density tower environments usually requires supplementary data, stronger assumptions, or additional modelling.": "Therefore, CDR data is often excellent for measuring *aggregate flows and population dynamics* at suitable spatial-temporal scales, while reconstructing precise routes or micro-mobility in low-density tower environments usually requires supplementary data, stronger assumptions, or additional modelling [@calabrese2011od; @toole2015travel_demand; @deville2014dynamic_population].",
+            "Tower density is closely related to population density because operators deploy more infrastructure where there are more users and higher demand.": "Tower density is closely related to population density because operators deploy more infrastructure where there are more users and higher demand [@blondel2015survey; @ricciato2020present_population].",
+            "One common source of location noise is frequent tower switching (handover), which can occur due to fluctuating signal strength, load balancing, or switching among technologies.": "One common source of location noise is frequent tower switching (handover), which can occur due to fluctuating signal strength, load balancing, or switching among technologies [@blondel2015survey; @salgado2021end_to_end].",
+            "Instead, it is shaped by access (ownership), [@wesolowski2013biases; @cabrera_rowe2025bias] operator market share, and usage intensity, all of which correlate with demographic and socioeconomic factors.": "Instead, it is shaped by access (ownership), operator market share, and usage intensity, all of which correlate with demographic and socioeconomic factors [@wesolowski2013biases; @cabrera_rowe2025bias].",
+            "**Population-weighted adjustment** is one approach to improving representativeness by combining CDR with other population data such as censuses, gridded population estimates, or surveys.": "**Population-weighted adjustment** is one approach to improving representativeness by combining CDR with other population data such as censuses, gridded population estimates, or surveys [@wesolowski2013biases; @cabrera_rowe2025bias; @ricciato2020present_population].",
+        })
+
+    elif title == "Chapter 6: Data Governance and Safeguards in MPD Initiatives":
+        replacements.update({
+            "Because MPD initiatives rely on data generated through the everyday use of mobile networks, they raise distinct governance challenges related to privacy, security, commercial sensitivity, and public trust.": "Because MPD initiatives rely on data generated through the everyday use of mobile networks, they raise distinct governance challenges related to privacy, security, commercial sensitivity, and public trust [@jansen2021publictrust; @demontjoye2018privacy].",
+            "Processing becomes particularly sensitive when it involves personal data or data derived from personal data.": "Processing becomes particularly sensitive when it involves personal data or data derived from personal data [@demontjoye2013unique; @demontjoye2018privacy].",
+            "These measures must be applied thoughtfully, balancing privacy protection against data utility.": "These measures must be applied thoughtfully, balancing privacy protection against data utility [@demontjoye2018privacy].",
+            "Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical).": "Pseudonymising data involves replacing directly identifying information with randomly-generated values, such that the linkage between records is preserved (i.e. identical values remain identical) [@demontjoye2018privacy].",
+            "As result, pseudonymisation obscures subscribers identity but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process.": "As a result, pseudonymisation obscures subscribers' identities but may not anonymise the data as individuals may still be identified from their mobility patterns which are maintained in this process [@demontjoye2013unique].",
+            "To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity.": "To better ensure that the individual privacy of subscribers is preserved, we can use additional anonymisation frameworks such as k-anonymity [@demontjoye2013unique; @demontjoye2018privacy].",
+        })
+
+    for old, new in replacements.items():
+        content = content.replace(old, new)
+    return content
+
+
 def clean_text(text: str) -> str:
     start = text.find("# Preface")
     if start == -1:
@@ -1371,6 +1459,10 @@ def clean_text(text: str) -> str:
         "Mobile phone data refers to digital traces generated through the operation and use of mobile communication devices [@rowe2024]. These traces are created as mobile phones interact either with mobile network infrastructure or with software applications installed on the device. Across all forms, mobile phone data has one defining characteristic: it can be used to approximate the geographic position of a device, and by extension its user, over time. This makes it particularly valuable for analysing patterns of human mobility and population dynamics [@gonzalez2008human_mobility; @song2010predictability; @blondel2015survey].",
     )
     text = text.replace(
+        "As mobile phones have become nearly ubiquitous across diverse socioeconomic contexts, the digital traces they generate offer unprecedented opportunities to inform public policy, development planning, and humanitarian action.",
+        "As mobile phones have become nearly ubiquitous across diverse socioeconomic contexts, the digital traces they generate offer unprecedented opportunities to inform public policy, development planning, and humanitarian action [@rowe2022digitalfootprint; @rowe2023urban_exodus].",
+    )
+    text = text.replace(
         "**GPS-derived mobile phone data** refers to location information captured directly by the **global positioning system (GPS) sensors** embedded in smartphones and other mobile devices, typically via apps that have permission to record and share location. Unlike the network-generated datasets described above, GPS data are collected from a device’s onboard navigation chipset and can provide **latitude/longitude coordinates, with high geographical precision** (**often within a few metres**) and **temporal frequency** (e.g., seconds to minutes). They can collect continuous data on devices anywhere in the globe, thus offering global data coverage. However, the geographical precision and temporal frequency of data may vary depending on how the app is configured, users engage with the app, user consent is managed, and the type of technology used to build the device collecting the data. ",
         "**GPS-derived mobile phone data** refers to location information captured directly by the **global positioning system (GPS) sensors** embedded in smartphones and other mobile devices, typically via apps that have permission to record and share location [@barreras2024]. Unlike the network-generated datasets described above, GPS data are collected from a device’s onboard navigation chipset and can provide **latitude/longitude coordinates, with high geographical precision** (**often within a few metres**) and **temporal frequency** (e.g., seconds to minutes). They can collect continuous data on devices anywhere in the globe, thus offering global data coverage. However, the geographical precision and temporal frequency of data may vary depending on how the app is configured, users engage with the app, user consent is managed, and the type of technology used to build the device collecting the data. ",
     )
@@ -1389,6 +1481,10 @@ def clean_text(text: str) -> str:
     text = text.replace(
         "MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households.",
         "MPD is not designed to entirely replace conducting a census. Rather, it can be used to strengthen such data collection activities by, among other things: (a) Assisting in production of sample frames or enumeration areas; (b) Identifying populations that have been, or are at risk of being, undercounted; and (c) Providing interim updates between census rounds. When using MPD for such use cases, it is critical that planners explicitly address **bias risks**, given that mobile phone ownership is lower among children, the elderly, women in some contexts, and poorer households [@wesolowski2013biases; @cabrera_rowe2025bias].",
+    )
+    text = text.replace(
+        "They can also support the development of validation frameworks, advise on weighting and adjustment procedures, and help interpret discrepancies between sources.",
+        "They can also support the development of validation frameworks, advise on weighting and adjustment procedures, and help interpret discrepancies between sources [@cabrera_rowe2025bias].",
     )
     text = text.replace(
         "As discussed in Chapter 1, MPD provides a continuous, passively collected record of population presence and mobility. Unlike traditional surveys or censuses, which are costly, infrequent, and static, MPD enables:",
@@ -1463,6 +1559,10 @@ def clean_text(text: str) -> str:
     text = text.replace(
         "The UN Committee of Experts on Big Data and Data Science for Official Statistics has a Mobile Phone Data task team which has published guidance on using this data source for different specific use cases.",
         "The UN Committee of Experts on Big Data and Data Science for Official Statistics has a Mobile Phone Data task team which has published guidance on using this data source for different specific use cases [@uncebd_mobile_phone_task_team].",
+    )
+    text = text.replace(
+        "* Supporting rapid decision-making during crises or shocks",
+        "* Supporting rapid decision-making during crises or shocks [@rowe2023urban_exodus]",
     )
     text = text.replace(
         "Recognising these concerns is not a concession; it is a prerequisite for designing an engagement strategy that is realistic and credible.",
@@ -1540,8 +1640,11 @@ def main() -> None:
 
     for title, path in SPLIT_FILES.items():
         content = apply_abbreviation_policy(title, sections[title])
+        content = apply_selective_citation_policy(title, content)
         if title == "Preface":
             content = content.replace("# Preface", "# Preface {.unnumbered}" + PROJECT_STATUS_CALLOUT, 1)
+        elif title == "Acknowledgements":
+            content = "# Acknowledgements {.unnumbered}" + ACKNOWLEDGEMENTS_TEXT
         elif title in FRONT_MATTER_SECTIONS:
             content = content.replace(f"# {title}", f"# {title} {{.unnumbered}}", 1)
         if path == "index.qmd":
