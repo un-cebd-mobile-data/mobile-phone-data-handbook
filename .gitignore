@@ -11,6 +11,7 @@ index.tex
 index.toc
 *.log
 *.docx
+*.docx.md
 /Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.pdf
 /Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.epub
 chapters/*.html
