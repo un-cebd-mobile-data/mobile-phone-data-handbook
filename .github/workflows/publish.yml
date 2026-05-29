@@ -27,8 +27,8 @@ jobs:
       - name: Set up TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
 
-      - name: Render book
-        uses: quarto-dev/quarto-actions/render@v2
+      - name: Render book and downloads
+        run: bash scripts/render_book.sh
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3

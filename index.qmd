@@ -9,7 +9,7 @@
 ::: {.callout-note icon="false"}
 ## Project status
 
-Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
+Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. DOI is TBC. Except where otherwise noted, this work is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
 :::
 
 
@@ -28,6 +28,12 @@ Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte,
 
 ::: {.callout-note icon="false"}
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
+
+## Licence {.unnumbered}
+
+Except where otherwise noted, the text of this manual is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.

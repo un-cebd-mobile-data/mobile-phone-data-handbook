@@ -80,7 +80,7 @@ PROJECT_STATUS_CALLOUT = """
 ::: {.callout-note icon="false"}
 ## Project status
 
-Publisher/imprint wording, licence, and DOI are TBC. The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
+Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. DOI is TBC. Except where otherwise noted, this work is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/). The public website is configured for GitHub Pages at <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>.
 :::
 
 """
@@ -101,9 +101,15 @@ RECOMMENDED_CITATION = """
 
 ::: {.callout-note icon="false"}
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. Publisher/imprint TBC. Licence TBC. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. DOI TBC. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
+
+## Licence {.unnumbered}
+
+Except where otherwise noted, the text of this manual is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.
 """
 
 
@@ -701,9 +707,9 @@ book:
     - "Sveta Milusheva"
     - "Trevor Monroe"
   date: "2026-05-26"
-  publisher: "TBC"
+  publisher: "United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team"
   edition: "Version 1.4"
-  license: "TBC"
+  license: "CC BY 4.0"
   site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
   repo-url: "https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook"
   repo-branch: main
@@ -712,7 +718,7 @@ book:
   favicon: assets/un-cebd-logo.png
   page-footer:
     left: |
-      UN-CEBD Mobile Phone Data Task Team | Publisher/imprint TBC | Licence TBC
+      United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team | CC BY 4.0
     right: |
       Built with <a href="https://quarto.org/">Quarto</a>.
   chapters:
@@ -992,11 +998,17 @@ Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-han
 
 ## Status
 
-- Licence: TBC
-- Publisher/imprint wording: TBC
+- Licence: Creative Commons Attribution 4.0 International Licence (CC BY 4.0), except where otherwise noted
+- Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team
 - DOI: TBC
 - Deployment: GitHub Pages
 - Outputs: HTML website, PDF, EPUB
+
+## Licence
+
+Except where otherwise noted, the text of this manual is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.
 
 ## Local preview
 
@@ -1007,8 +1019,10 @@ quarto preview
 ## Render all outputs
 
 ```bash
-quarto render
+bash scripts/render_book.sh
 ```
+
+The render script builds the PDF and EPUB first, keeps them temporarily, renders the HTML website, and then copies the downloadable files into `_book/` so the website download links work.
 
 To render individual formats:
 
@@ -1033,6 +1047,20 @@ The site uses the official UN-CEBD logo downloaded from the UN Big Data website:
 <https://unstats.un.org/bigdata/assets/img/logo/logo_2021_long.png>
 
 Logo usage is assumed to be appropriate for this UN-CEBD task-team manual, but final branding approval should be confirmed.
+"""
+
+
+LICENSE_MD = """# Creative Commons Attribution 4.0 International
+
+Except where otherwise noted, the text of *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* is licensed under a Creative Commons Attribution 4.0 International Licence (CC BY 4.0).
+
+Licence deed: <https://creativecommons.org/licenses/by/4.0/>
+
+Legal code: <https://creativecommons.org/licenses/by/4.0/legalcode>
+
+This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.
+
+No separate software licence is granted for build scripts or automation files unless explicitly stated.
 """
 
 
@@ -1065,8 +1093,8 @@ jobs:
       - name: Set up TinyTeX
         uses: r-lib/actions/setup-tinytex@v2
 
-      - name: Render book
-        uses: quarto-dev/quarto-actions/render@v2
+      - name: Render book and downloads
+        run: bash scripts/render_book.sh
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -1083,6 +1111,33 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+"""
+
+
+RENDER_BOOK_SH = """#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
+
+PDF="Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.pdf"
+EPUB="Design-and-Implementation-of-Mobile-Phone-Data-Initiatives.epub"
+TMP_DIR="$(mktemp -d)"
+
+cleanup() {
+  rm -rf "$TMP_DIR"
+}
+trap cleanup EXIT
+
+quarto render --to pdf
+cp "_book/$PDF" "$TMP_DIR/$PDF"
+
+quarto render --to epub
+cp "_book/$EPUB" "$TMP_DIR/$EPUB"
+
+quarto render --to html
+cp "$TMP_DIR/$PDF" "_book/$PDF"
+cp "$TMP_DIR/$EPUB" "_book/$EPUB"
 """
 
 
@@ -1475,6 +1530,8 @@ def main() -> None:
     write("style/theme.scss", THEME_SCSS)
     write("style/dark.scss", DARK_SCSS)
     write("README.md", README)
+    write("LICENSE.md", LICENSE_MD)
+    write("scripts/render_book.sh", RENDER_BOOK_SH)
     write(".gitignore", GITIGNORE)
     write(".github/workflows/publish.yml", PUBLISH_YML)
 

@@ -6,11 +6,17 @@ Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-han
 
 ## Status
 
-- Licence: TBC
-- Publisher/imprint wording: TBC
+- Licence: Creative Commons Attribution 4.0 International Licence (CC BY 4.0), except where otherwise noted
+- Publisher: United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team
 - DOI: TBC
 - Deployment: GitHub Pages
 - Outputs: HTML website, PDF, EPUB
+
+## Licence
+
+Except where otherwise noted, the text of this manual is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+
+This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.
 
 ## Local preview
 
@@ -21,8 +27,10 @@ quarto preview
 ## Render all outputs
 
 ```bash
-quarto render
+bash scripts/render_book.sh
 ```
+
+The render script builds the PDF and EPUB first, keeps them temporarily, renders the HTML website, and then copies the downloadable files into `_book/` so the website download links work.
 
 To render individual formats:
 

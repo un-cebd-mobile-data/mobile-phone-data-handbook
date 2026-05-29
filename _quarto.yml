@@ -29,9 +29,9 @@ book:
     - "Sveta Milusheva"
     - "Trevor Monroe"
   date: "2026-05-26"
-  publisher: "TBC"
+  publisher: "United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team"
   edition: "Version 1.4"
-  license: "TBC"
+  license: "CC BY 4.0"
   site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
   repo-url: "https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook"
   repo-branch: main
@@ -40,7 +40,7 @@ book:
   favicon: assets/un-cebd-logo.png
   page-footer:
     left: |
-      UN-CEBD Mobile Phone Data Task Team | Publisher/imprint TBC | Licence TBC
+      United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team | CC BY 4.0
     right: |
       Built with <a href="https://quarto.org/">Quarto</a>.
   chapters:
