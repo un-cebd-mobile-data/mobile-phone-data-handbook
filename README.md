@@ -1,6 +1,6 @@
 # Design and Implementation of Mobile Phone Data Initiatives
 
-This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood, Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
+This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood, Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
 
 Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
@@ -50,7 +50,7 @@ Zenodo metadata is provided in `.zenodo.json`. GitHub citation metadata is provi
 
 ## Suggested citation
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Lefebvre, V., Smallwood, T., Chaves, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 ## Logo assets
 

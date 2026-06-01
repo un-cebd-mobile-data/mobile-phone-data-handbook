@@ -96,9 +96,9 @@ The content draws extensively on inputs provided by active members of the UN Com
 
 The lead author and editor of this handbook was Cathy Riley, Strategic Partnerships Director at Flowminder Foundation and Project Director of the "Foundations in Mobile Phone Data for Policy and Statistics" training project. Co-authors of content presented in this manual, and their organisational affiliations, are as follows:
 
-- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood
+- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood
 - **International Telecommunication Union (ITU):** Esperanza Magpantay
-- **Nommon:** Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
+- **Nommon:** Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
 - **Positium:** Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer
 - **University of Liverpool:** Francisco Rowe
 - **University of Tokyo:** Ayumi Arai
@@ -119,7 +119,7 @@ AUTHORS_PREFACE = """
 
 ## Authors {.unnumbered}
 
-Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood, Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
+Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood, Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
 
 """
 
@@ -130,7 +130,7 @@ RECOMMENDED_CITATION = """
 
 ::: {.callout-note icon="false"}
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Lefebvre, V., Smallwood, T., Chaves, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 :::
 
@@ -720,10 +720,9 @@ book:
     - "Robert Eyre"
     - "Sophie Delaporte"
     - "James Harrison"
-    - "Roland Hosner"
     - "Veronique Lefebvre"
     - "Thomas Smallwood"
-    - "Luisa Chavez"
+    - "Luisa Chaves"
     - "Pablo Ruiz"
     - "Maria Henar Sales"
     - "Miguel Picornell"
@@ -1022,7 +1021,7 @@ figcaption {
 
 README = """# Design and Implementation of Mobile Phone Data Initiatives
 
-This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood, Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
+This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood, Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
 
 Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
@@ -1072,7 +1071,7 @@ Zenodo metadata is provided in `.zenodo.json`. GitHub citation metadata is provi
 
 ## Suggested citation
 
-Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Hosner, R., Lefebvre, V., Smallwood, T., Chavez, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+Riley, C., Rowe, F., Magpantay, E., Eyre, R., Delaporte, S., Harrison, J., Lefebvre, V., Smallwood, T., Chaves, L., Ruiz, P., Sales, M. H., Picornell, M., Rüütli, E., Vent, K., Esko, S., Saluveer, E., Arai, A., Blanchard, P., Milusheva, S., & Monroe, T. (2026). *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual*. United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team. CC BY 4.0. <https://doi.org/10.5281/zenodo.20451460>. <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
 ## Logo assets
 

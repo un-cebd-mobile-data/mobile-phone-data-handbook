@@ -8,9 +8,9 @@ The content draws extensively on inputs provided by active members of the UN Com
 
 The lead author and editor of this handbook was Cathy Riley, Strategic Partnerships Director at Flowminder Foundation and Project Director of the "Foundations in Mobile Phone Data for Policy and Statistics" training project. Co-authors of content presented in this manual, and their organisational affiliations, are as follows:
 
-- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Roland Hosner, Veronique Lefebvre, Thomas Smallwood
+- **Flowminder Foundation:** Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood
 - **International Telecommunication Union (ITU):** Esperanza Magpantay
-- **Nommon:** Luisa Chavez, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
+- **Nommon:** Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell
 - **Positium:** Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer
 - **University of Liverpool:** Francisco Rowe
 - **University of Tokyo:** Ayumi Arai
