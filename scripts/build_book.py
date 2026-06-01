@@ -1021,6 +1021,8 @@ figcaption {
 
 README = """# Design and Implementation of Mobile Phone Data Initiatives
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20451460.svg)](https://doi.org/10.5281/zenodo.20451460)
+
 This repository contains the Quarto website book for *Design and Implementation of Mobile Phone Data Initiatives: A Practical Manual* by Cathy Riley, Francisco Rowe, Esperanza Magpantay, Robert Eyre, Sophie Delaporte, James Harrison, Veronique Lefebvre, Thomas Smallwood, Luisa Chaves, Pablo Ruiz, Maria Henar Sales, Miguel Picornell, Egle Rüütli, Kaisa Vent, Siim Esko, Erki Saluveer, Ayumi Arai, Paul Blanchard, Sveta Milusheva, and Trevor Monroe.
 
 Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
