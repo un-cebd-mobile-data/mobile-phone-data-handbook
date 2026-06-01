@@ -29,7 +29,7 @@ book:
     - "Trevor Monroe"
   date: "2026-05-26"
   publisher: "United Nations Committee of Experts on Big Data and Data Science for Official Statistics, Mobile Phone Data Task Team"
-  doi: "10.5281/zenodo.20451460"
+  doi: "10.5281/zenodo.20498954"
   edition: "Version 1.4"
   license: "CC BY 4.0"
   site-url: "https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/"
