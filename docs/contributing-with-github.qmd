@@ -1,0 +1,167 @@
+---
+title: "Contributing with GitHub"
+format:
+  html:
+    toc: true
+  pdf:
+    documentclass: article
+    papersize: a4
+    geometry:
+      - margin=1in
+---
+
+# Contributing with GitHub
+
+This guide is for contributors who are comfortable using GitHub, or who are willing to use it for a specific correction or review comment. GitHub is useful because it keeps each suggestion visible, reviewable, and linked to the part of the manual that may change.
+
+Use the non-GitHub guide instead if you prefer to send comments by email, shared document, annotated PDF, or meeting notes.
+
+## Choose the Right Route
+
+Use a **GitHub issue** when you want to report a problem, suggest a change, add specialist context, or ask maintainers to make the edit.
+
+Use a **pull request** when you want to make the edit directly in the repository and ask maintainers to review it.
+
+Use a **discussion with the maintainer** before opening a large pull request if the contribution would change the structure of a chapter, add a substantial new case study, or introduce sensitive policy, legal, or methodological claims.
+
+## Option 1: Open an Issue
+
+Issues are the easiest GitHub route for most contributors.
+
+1. Open the public manual website:
+
+   <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
+
+2. Find the chapter, section, paragraph, table, figure, or reference that needs attention.
+
+3. Copy the page URL from your browser address bar.
+
+4. Open the repository issues page:
+
+   <https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook/issues>
+
+5. Select **New issue**.
+
+6. Add a short, specific title.
+
+   Good titles identify the location and the change, for example:
+
+   `Clarify data access responsibilities in Chapter 3`
+
+7. Add the suggestion using this template:
+
+```markdown
+## Page or chapter
+
+Paste the page URL, chapter title, section heading, or file name here.
+
+## Current text or issue
+
+Paste the current sentence, paragraph, table entry, figure caption, reference, or describe the issue.
+
+## Suggested change
+
+Write the proposed replacement text, or describe what should change.
+
+## Reason
+
+Explain why the change is needed. Include practical context, evidence, or references where useful.
+
+## Type of contribution
+
+- [ ] Typo or wording
+- [ ] Factual correction
+- [ ] Methodological clarification
+- [ ] Policy, legal, or governance clarification
+- [ ] Citation or reference
+- [ ] Example, case study, or practical resource
+- [ ] Structure, navigation, or accessibility
+- [ ] Other
+
+## Permission or sensitivity check
+
+Confirm that the suggestion does not include confidential, proprietary, restricted, or personally identifiable information.
+```
+
+8. Select **Submit new issue**.
+
+9. Create a separate issue for unrelated suggestions.
+
+## Option 2: Edit a Page in GitHub
+
+Use this route for small text corrections when you are comfortable editing Markdown or Quarto files in the browser.
+
+1. Open the manual website page you want to change.
+
+2. Use the page's GitHub edit link if it is available, or locate the corresponding `.qmd` file in the repository.
+
+3. Select the pencil icon to edit the file.
+
+4. Make the smallest clear change that solves the issue.
+
+5. Add a short description of the change.
+
+6. Follow GitHub's prompts to propose the change as a pull request.
+
+Small pull requests are easier to review when they focus on one topic, chapter, or correction.
+
+## Option 3: Work Locally and Open a Pull Request
+
+Use this route for larger edits, repeated changes across files, or updates that need a local preview.
+
+1. Clone the repository.
+
+```bash
+git clone https://github.com/un-cebd-mobile-data/mobile-phone-data-handbook.git
+cd mobile-phone-data-handbook
+```
+
+2. Create a branch for the contribution.
+
+```bash
+git switch -c update-short-description
+```
+
+3. Edit the relevant `.qmd`, `.md`, `.bib`, image, or support file.
+
+4. Preview the manual locally.
+
+```bash
+quarto preview
+```
+
+5. For broader changes, render the full manual.
+
+```bash
+bash scripts/render_book.sh
+```
+
+6. Commit the change with a clear message.
+
+```bash
+git add path/to/changed-file.qmd
+git commit -m "Clarify data access responsibilities"
+```
+
+7. Push the branch and open a pull request.
+
+```bash
+git push -u origin update-short-description
+```
+
+## Pull Request Checklist
+
+Before opening a pull request, check that:
+
+- the change has a clear purpose and scope;
+- unrelated formatting, whitespace, or generated output has not been changed accidentally;
+- links and references have been checked where possible;
+- any new example, case study, figure, table, or quotation has publication permission;
+- no confidential, proprietary, restricted, or personally identifiable information has been included;
+- the manual still renders, or you have explained why you could not render it.
+
+## Review Expectations
+
+Maintainers may edit accepted contributions for consistency with the manual's terminology, structure, and tone. They may also ask for supporting evidence, permission details, or a narrower scope before merging a change.
+
+Substantive subject-matter contributions may require review by members of the task team or by specialists in the relevant area. This is especially likely for legal, policy, methodological, or governance guidance.

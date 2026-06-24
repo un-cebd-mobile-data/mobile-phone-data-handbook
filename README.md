@@ -6,6 +6,8 @@ This repository contains the Quarto website book for *Design and Implementation 
 
 Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-handbook/>
 
+**Repository links:** [Readme](README.md) | [Licence](LICENSE.md) | [Contributing](CONTRIBUTING.md)
+
 ## Status
 
 - Licence: Creative Commons Attribution 4.0 International Licence (CC BY 4.0), except where otherwise noted
@@ -19,6 +21,17 @@ Public site target: <https://un-cebd-mobile-data.github.io/mobile-phone-data-han
 Except where otherwise noted, the text of this manual is licensed under a [Creative Commons Attribution 4.0 International Licence (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
 
 This licence does not apply to UN/CEBD logos, trademarks, third-party images, or other third-party material reproduced with permission. Reuse of the manual must not imply endorsement by the authors, the United Nations, UN-CEBD, or affiliated organisations.
+
+## Contributing
+
+Contributions are welcome from technical contributors, policy specialists, data governance experts, practitioners, editors, and readers. See [CONTRIBUTING.md](CONTRIBUTING.md) for the main contribution guide.
+
+Two routes are available:
+
+- [Contributing with GitHub](docs/contributing-with-github.qmd) ([PDF](docs/contributing-with-github.pdf)) for contributors who want to open issues or pull requests.
+- [Contributing without GitHub](docs/contributing-without-github.qmd) ([PDF](docs/contributing-without-github.pdf)) for specialists who prefer email, shared documents, annotated PDFs, tracked changes, or review notes.
+
+Please do not submit confidential, proprietary, restricted, or personally identifiable information. Examples involving mobile phone data should be public, aggregated, anonymised, synthetic, or clearly approved for open publication.
 
 ## Local preview
 

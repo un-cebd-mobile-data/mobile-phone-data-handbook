@@ -1,0 +1,108 @@
+---
+title: "Contributing without GitHub"
+format:
+  html:
+    toc: true
+  pdf:
+    documentclass: article
+    papersize: a4
+    geometry:
+      - margin=1in
+---
+
+# Contributing without GitHub
+
+This guide is for contributors who have useful specialist knowledge but do not want to use GitHub. You can still contribute by sending structured comments, replacement text, annotated files, or review notes to the person coordinating the manual.
+
+This route is especially useful for subject-matter experts, policy specialists, legal and governance reviewers, mobile network operator partners, national statistical office staff, and practitioners who can improve the manual's accuracy or practical usefulness.
+
+## How to Send a Contribution
+
+Use the channel agreed with the project coordinator or maintainer. This may be email, a shared document, an annotated PDF, a Word file with tracked changes, a spreadsheet of comments, or notes from a review meeting.
+
+The most useful non-GitHub contributions are specific. They identify exactly where the manual should change, explain why, and provide replacement text or evidence when available.
+
+## What You Can Contribute
+
+Useful contributions include:
+
+- factual corrections;
+- clearer explanations of specialist concepts;
+- comments on whether advice is practical in real institutional settings;
+- updates to legal, policy, governance, or partnership guidance;
+- methodological clarifications;
+- examples, case studies, templates, checklists, or suggested resources;
+- comments on wording, structure, accessibility, or translation issues.
+
+You do not need to know how the website is built. Maintainers can convert your comments into GitHub issues, edits, or pull requests.
+
+## Short Email Template
+
+Use this template for one correction or a small set of closely related suggestions.
+
+```text
+Subject: Suggested change to the Mobile Phone Data Manual
+
+Chapter or section:
+
+Page URL, heading, or page number:
+
+Current text or issue:
+
+Suggested replacement text:
+
+Reason for the change:
+
+Evidence, reference, or practical experience:
+
+Permission or sensitivity note:
+I confirm that this suggestion does not include confidential, proprietary, restricted, or personally identifiable information.
+
+Name and affiliation, if you would like them recorded:
+```
+
+## Structured Review Template
+
+Use this format for reviewing a chapter, section, or draft document.
+
+| Location | Current text or issue | Suggested change | Reason | Evidence or source | Priority |
+|---|---|---|---|---|---|
+| Chapter, section, page, paragraph, table, or figure | Paste or describe the relevant text | Provide replacement text or a clear instruction | Explain why the change is needed | Add source, experience, or uncertainty | High, medium, or low |
+
+If you are using Word or a shared document, tracked changes and margin comments are also helpful. Please keep comments tied to specific text wherever possible.
+
+## Longer Specialist Contributions
+
+For a larger contribution, send a short outline before drafting the full text. This helps maintainers confirm that the proposed content fits the manual's scope and avoids duplicate work.
+
+Include:
+
+- the chapter or section where the material should fit;
+- the intended reader and practical purpose;
+- the main points the contribution would add;
+- any examples, references, or evidence you would use;
+- any permission, sensitivity, or attribution requirements.
+
+Larger additions may be edited substantially so that they match the manual's structure, terminology, and level of detail.
+
+## Permission and Sensitivity Checks
+
+Please do not send confidential, proprietary, restricted, or personally identifiable information. This is especially important for examples involving mobile network operator data, administrative data, individual mobility records, operational systems, contracts, legal advice, or unpublished institutional material.
+
+Examples should be public, aggregated, anonymised, synthetic, or explicitly approved for open publication. If a contribution draws on internal experience but cannot disclose the institution, data, or operational details, say so clearly and suggest a generalised version.
+
+By contributing text, examples, or other material, you confirm that you have the right to share it and that it can be included in the manual under the repository licence unless a different permission statement is agreed in advance.
+
+## What Maintainers Will Do
+
+Maintainers will review the contribution, decide whether it fits the manual, and convert accepted suggestions into repository edits. They may contact you to clarify wording, evidence, permissions, or context.
+
+Not every suggestion will be included exactly as submitted. Accepted contributions may be edited for accuracy, length, style, terminology, accessibility, and consistency with the rest of the manual.
+
+## Practical Tips
+
+Write the suggested replacement text when you can. Maintainers can work faster from a concrete sentence, paragraph, table entry, or bullet point than from a general comment.
+
+Separate unrelated suggestions. A correction to a reference, a methodological concern, and a new case study should usually be sent as separate items.
+
+State uncertainty clearly. If a point depends on country context, institutional practice, legal interpretation, or data-sharing model, include that qualification so the manual can avoid overgeneralising.
